@@ -206,10 +206,6 @@ img {
   height: auto;
 }
 
-.contact-map {
-  width: 100%;
-  margin: 0 auto;
-}
 
 /********************
   padding/ margin sections
@@ -392,9 +388,6 @@ h6 {
 /********************
  centered text mobile
 *********************/
-.pillars-item,
-.text_section,
-.get_started_banner,
 .info_banner,
 .copy {
   text-align: center;
@@ -586,9 +579,7 @@ a.banner_link {
  *********************************************/
 .header_big,
 .header_small,
-.info_banner,
-.get_started_banner,
-.signup_section {
+.info_banner {
   position: relative;
 
   &.lightblue {
@@ -1115,14 +1106,6 @@ nav {
       }
     }
 
-    a.play_btn {
-      margin: auto;
-
-      @media all and (min-width: $sm-min) {
-        margin-right: auto;
-        margin-left: 0;
-      }
-    }
   }
 
   &.lightblue {
@@ -1212,19 +1195,6 @@ nav {
         @media all and (min-width: $sm-min) {
           text-align: left;
         }
-      }
-    }
-
-    .header_image_section {
-      img {
-        max-width: 230px;
-      }
-
-      text-align: center;
-      display: none;
-
-      @media all and (min-width: $lg-min) {
-        display: block;
       }
     }
   }
@@ -1818,84 +1788,6 @@ nav {
 
       input {
         max-width: 100%;
-      }
-    }
-  }
-
-  // Newsletter {
-  .newsletter {
-    background: $themecolorBlueBg;
-    border-radius: $themeBorder_radius;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 3rem 0;
-    padding: 2rem;
-    text-align: center;
-
-    @media all and (min-width: $md-min) {
-      padding: 3rem 3.5rem;
-    }
-
-    .newsletter_content {
-
-      .heading,
-      .text {
-        color: #fff;
-      }
-
-      #mailjetSubscriptionForm {
-        display: flex;
-        flex-direction: column;
-
-        @media all and (min-width: $md-min) {
-          flex-direction: row;
-        }
-
-        input#mailjet_widget_email {
-          width: 100%;
-          border: none;
-          color: #565c76;
-          padding-left: 30px;
-          height: 40px;
-          border-radius: $themeBorder_radius;
-
-          @media all and (min-width: $md-min) {
-            width: 25rem;
-          }
-        }
-
-        input[type="submit"] {
-          width: 100%;
-          border: none;
-          background: #fff;
-          font-size: 1.3em;
-          padding: 7px 15px;
-          height: 40px;
-          border-radius: $themeBorder_radius;
-          transition: all 1s;
-          color: $themecolorBlue;
-          border: 1px solid #fff;
-          font-size: initial;
-          line-height: 1;
-          cursor: pointer;
-
-          @media all and (min-width: $md-min) {
-            width: initial;
-            margin-left: 0.5rem;
-          }
-
-          &:hover {
-            background: transparent;
-            color: #fff;
-          }
-        }
-      }
-    }
-
-    &.single {
-      @media all and (min-width: $sm-min) {
-        margin: 3rem 2rem;
       }
     }
   }

@@ -94,10 +94,6 @@ img {
   max-width: 100%;
   height: auto; }
 
-.contact-map {
-  width: 100%;
-  margin: 0 auto; }
-
 /********************
   padding/ margin sections
 *********************/
@@ -233,16 +229,10 @@ h6 {
 /********************
  centered text mobile
 *********************/
-.pillars-item,
-.text_section,
-.get_started_banner,
 .info_banner,
 .copy {
   text-align: center; }
   @media all and (min-width: 576px) {
-    .pillars-item,
-    .text_section,
-    .get_started_banner,
     .info_banner,
     .copy {
       text-align: left; } }
@@ -389,39 +379,27 @@ a.banner_link {
  *********************************************/
 .header_big,
 .header_small,
-.info_banner,
-.get_started_banner,
-.signup_section {
+.info_banner {
   position: relative; }
   .header_big.lightblue,
   .header_small.lightblue,
-  .info_banner.lightblue,
-  .get_started_banner.lightblue,
-  .signup_section.lightblue {
+  .info_banner.lightblue {
     background-image: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1); }
   .header_big.blue,
   .header_small.blue,
-  .info_banner.blue,
-  .get_started_banner.blue,
-  .signup_section.blue {
+  .info_banner.blue {
     background-image: linear-gradient(to right bottom, #1b2fe4, #4852eb, #6871f1, #868ff3, #a4acf4); }
   .header_big.green,
   .header_small.green,
-  .info_banner.green,
-  .get_started_banner.green,
-  .signup_section.green {
+  .info_banner.green {
     background-image: linear-gradient(to right bottom, #09907e, #0aa18d, #0bb39d, #0dc6ad, #0ed8bd); }
   .header_big.lightgrey,
   .header_small.lightgrey,
-  .info_banner.lightgrey,
-  .get_started_banner.lightgrey,
-  .signup_section.lightgrey {
+  .info_banner.lightgrey {
     background: #f6f9fc; }
   .header_big.overlay-dark::before,
   .header_small.overlay-dark::before,
-  .info_banner.overlay-dark::before,
-  .get_started_banner.overlay-dark::before,
-  .signup_section.overlay-dark::before {
+  .info_banner.overlay-dark::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -432,9 +410,7 @@ a.banner_link {
     display: block; }
   .header_big.overlay-lightblue::before,
   .header_small.overlay-lightblue::before,
-  .info_banner.overlay-lightblue::before,
-  .get_started_banner.overlay-lightblue::before,
-  .signup_section.overlay-lightblue::before {
+  .info_banner.overlay-lightblue::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -445,9 +421,7 @@ a.banner_link {
     display: block; }
   .header_big.overlay-blue::before,
   .header_small.overlay-blue::before,
-  .info_banner.overlay-blue::before,
-  .get_started_banner.overlay-blue::before,
-  .signup_section.overlay-blue::before {
+  .info_banner.overlay-blue::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -458,9 +432,7 @@ a.banner_link {
     display: block; }
   .header_big.overlay-green::before,
   .header_small.overlay-green::before,
-  .info_banner.overlay-green::before,
-  .get_started_banner.overlay-green::before,
-  .signup_section.overlay-green::before {
+  .info_banner.overlay-green::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -799,14 +771,6 @@ nav {
       .header_small .header_links_section .header_btn_section .demo_btn:hover {
         background: #fff;
         color: #2e9ce6; }
-  .header_big .header_links_section a.play_btn,
-  .header_small .header_links_section a.play_btn {
-    margin: auto; }
-    @media all and (min-width: 576px) {
-      .header_big .header_links_section a.play_btn,
-      .header_small .header_links_section a.play_btn {
-        margin-right: auto;
-        margin-left: 0; } }
 .header_big.lightblue .signup ul li:last-of-type a,
 .header_small.lightblue .signup ul li:last-of-type a {
   color: #2e9ce6; }
@@ -876,17 +840,6 @@ nav {
         .header_big .header_items_section .header_text.front,
         .header_small .header_items_section .header_text.front {
           text-align: left; } }
-  .header_big .header_items_section .header_image_section,
-  .header_small .header_items_section .header_image_section {
-    text-align: center;
-    display: none; }
-    .header_big .header_items_section .header_image_section img,
-    .header_small .header_items_section .header_image_section img {
-      max-width: 230px; }
-    @media all and (min-width: 992px) {
-      .header_big .header_items_section .header_image_section,
-      .header_small .header_items_section .header_image_section {
-        display: block; } }
 
 .header_big .header_items_section {
   padding-top: calc(500px/3); }
@@ -1273,61 +1226,6 @@ nav {
       max-width: 100%; }
       .blog_flow .wpcf7 label input {
         max-width: 100%; }
-  .blog_flow .newsletter {
-    background: linear-gradient(to right bottom, #1b2fe4, #4852eb, #6871f1, #868ff3, #a4acf4);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 3rem 0;
-    padding: 2rem;
-    text-align: center; }
-    @media all and (min-width: 768px) {
-      .blog_flow .newsletter {
-        padding: 3rem 3.5rem; } }
-    .blog_flow .newsletter .newsletter_content .heading,
-    .blog_flow .newsletter .newsletter_content .text {
-      color: #fff; }
-    .blog_flow .newsletter .newsletter_content #mailjetSubscriptionForm {
-      display: flex;
-      flex-direction: column; }
-      @media all and (min-width: 768px) {
-        .blog_flow .newsletter .newsletter_content #mailjetSubscriptionForm {
-          flex-direction: row; } }
-      .blog_flow .newsletter .newsletter_content #mailjetSubscriptionForm input#mailjet_widget_email {
-        width: 100%;
-        border: none;
-        color: #565c76;
-        padding-left: 30px;
-        height: 40px;
-        border-radius: 10px; }
-        @media all and (min-width: 768px) {
-          .blog_flow .newsletter .newsletter_content #mailjetSubscriptionForm input#mailjet_widget_email {
-            width: 25rem; } }
-      .blog_flow .newsletter .newsletter_content #mailjetSubscriptionForm input[type="submit"] {
-        width: 100%;
-        border: none;
-        background: #fff;
-        font-size: 1.3em;
-        padding: 7px 15px;
-        height: 40px;
-        border-radius: 10px;
-        transition: all 1s;
-        color: #1b2fe4;
-        border: 1px solid #fff;
-        font-size: initial;
-        line-height: 1;
-        cursor: pointer; }
-        @media all and (min-width: 768px) {
-          .blog_flow .newsletter .newsletter_content #mailjetSubscriptionForm input[type="submit"] {
-            width: initial;
-            margin-left: 0.5rem; } }
-        .blog_flow .newsletter .newsletter_content #mailjetSubscriptionForm input[type="submit"]:hover {
-          background: transparent;
-          color: #fff; }
-    @media all and (min-width: 576px) {
-      .blog_flow .newsletter.single {
-        margin: 3rem 2rem; } }
 
 /**********************************
 text layout for Pages Content block
