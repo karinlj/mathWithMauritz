@@ -1861,6 +1861,11 @@ text layout for Pages Content block
   .contact {
     text-align: center;
 
+    .logo a,
+    .adress_field {
+      color: #fff;
+    }
+
     .social-icons {
       padding: 1.5rem 0;
 
@@ -1881,6 +1886,7 @@ text layout for Pages Content block
             text-decoration: none;
             border-radius: 50%;
             transition: 1s;
+            color: $linkcolor;
 
             // &:hover {
             //   color: $themecolorBlueLight;
@@ -1894,8 +1900,6 @@ text layout for Pages Content block
       }
     }
   }
-
-
 
   .links {
 
@@ -1923,8 +1927,6 @@ text layout for Pages Content block
       float: right;
     }
   }
-
-
 
   .footer-copy {
     .copy {
@@ -1968,20 +1970,41 @@ text layout for Pages Content block
     }
 
     .box {
-      position: relative;
+      &.image {
+        position: relative;
 
-      .heading_part {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        top: 0px;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
-        transition: all 0.7s ease 0s;
+        .heading_part {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+          left: 0px;
+          right: 0px;
+          transition: all 0.7s ease 0s;
 
-        .heading {
-          color: #fff;
+          .heading {
+            color: #fff;
+          }
+        }
+
+        &:before {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.5);
+          content: '';
+          display: block;
+        }
+      }
+
+      &.text {
+        min-height: 400px;
+
+        @media all and (min-width: $sm-min) {
+          min-height: auto;
         }
       }
     }

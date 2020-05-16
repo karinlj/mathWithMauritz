@@ -1273,6 +1273,9 @@ text layout for Pages Content block
         padding-bottom: 0px; } }
   .footer-main .contact {
     text-align: center; }
+    .footer-main .contact .logo a,
+    .footer-main .contact .adress_field {
+      color: #fff; }
     .footer-main .contact .social-icons {
       padding: 1.5rem 0; }
       .footer-main .contact .social-icons ul.social {
@@ -1289,7 +1292,8 @@ text layout for Pages Content block
             text-align: center;
             text-decoration: none;
             border-radius: 50%;
-            transition: 1s; }
+            transition: 1s;
+            color: #2e9ce6; }
       @media all and (min-width: 768px) {
         .footer-main .contact .social-icons {
           padding: 0; } }
@@ -1341,9 +1345,9 @@ text layout for Pages Content block
     @media all and (min-width: 768px) {
       .two-columns .aspect-wrapper {
         width: 50%; } }
-    .two-columns .aspect-wrapper .box {
+    .two-columns .aspect-wrapper .box.image {
       position: relative; }
-      .two-columns .aspect-wrapper .box .heading_part {
+      .two-columns .aspect-wrapper .box.image .heading_part {
         display: flex;
         align-items: center;
         position: absolute;
@@ -1352,8 +1356,22 @@ text layout for Pages Content block
         left: 0px;
         right: 0px;
         transition: all 0.7s ease 0s; }
-        .two-columns .aspect-wrapper .box .heading_part .heading {
+        .two-columns .aspect-wrapper .box.image .heading_part .heading {
           color: #fff; }
+      .two-columns .aspect-wrapper .box.image:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        content: '';
+        display: block; }
+    .two-columns .aspect-wrapper .box.text {
+      min-height: 400px; }
+      @media all and (min-width: 576px) {
+        .two-columns .aspect-wrapper .box.text {
+          min-height: auto; } }
     .two-columns .aspect-wrapper:nth-of-type(odd) .box .text-part,
     .two-columns .aspect-wrapper:nth-of-type(odd) .box .heading_part {
       padding: 0 1.5rem; }

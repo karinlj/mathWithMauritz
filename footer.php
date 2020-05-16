@@ -7,27 +7,27 @@
 
       <div class="col-md-4">
         <div class="contact">
-          <div class="logo">
 
-            <?php if (function_exists('acf_add_options_page')) {
+          <?php if (function_exists('acf_add_options_page')) {
 
     $site_url = get_field('site_url', 'option');
     $site_name = get_field('site_name', 'option');?>
 
+          <div class="logo">
             <h2>
               <a class="" href="<?php echo $site_url; ?>"><?php echo $site_name; ?></a>
             </h2>
           </div>
-          <p class=""><?php the_field('adress_field', 'option')?></p>
+          <p class="adress_field"><?php the_field('adress_field', 'option')?></p>
 
           <div class="social-icons">
             <ul class="social">
 
               <?php $link = get_field('mail_link', 'option');?>
 
-              <li class=" social-item">
-                <a href="mailto:<?php echo $link; ?>" target="_top"><i class="fas fa-envelope"
-                    aria-hidden="true"></i></a>
+              <li class="social-item">
+                <a href="mailto:<?php echo $link; ?>" target="_top"><i class="fas fa-envelope" aria-hidden="true"></i>
+                  <?php echo $link; ?></a>
               </li>
 
               <?php if (have_rows('social_icons', 'option')) { //repeater field ?>
@@ -39,7 +39,8 @@ while (have_rows('social_icons', 'option')) {
         $social_site = get_sub_field('social_site');?>
 
               <li class="social-item">
-                <a href="<?php echo $social_url; ?>"><i class="fab fa-<?php echo $social_site; ?>"></i></a>
+                <a href="<?php echo $social_url; ?>"><i class="fab fa-<?php echo $social_site; ?>"></i>
+                  <?php echo $social_site; ?></a>
               </li>
 
               <?php
