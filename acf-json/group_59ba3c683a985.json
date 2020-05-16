@@ -1,0 +1,122 @@
+{
+    "key": "group_59ba3c683a985",
+    "title": "Header background",
+    "fields": [
+        {
+            "key": "field_5b467dcae5056",
+            "label": "Color theme",
+            "name": "color_theme",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "blue": "Blue",
+                "green": "Green",
+                "lightblue": "Lightblue"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_59ba3c7fc46c0",
+            "label": "Header image",
+            "name": "header_image",
+            "type": "image",
+            "instructions": "Bilden ska vara mellan 1280 och 1920 pixlar bred och i liggande format.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": 1280,
+            "min_height": "",
+            "min_size": "",
+            "max_width": 1920,
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5b5a07394f69b",
+            "label": "Overlay color",
+            "name": "overlay_color",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "overlay-blue": "Overlay blue",
+                "overlay-green": "Overlay green",
+                "overlay-lightblue": "Overlay lightblue",
+                "overlay-dark": "Overlay dark"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "default"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "front-page.php"
+            }
+        ],
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "posts_page"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-videos.php"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1589117421
+}
