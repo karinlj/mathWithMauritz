@@ -113,7 +113,7 @@ $navcolor: #fff;
 $navBg_transp: transparent;
 
 $themewarmgrey: #d9d1ce;
-$themedarkgrey: #5ad02f; // #93c178; // vermillion// #81b135; //grass  //#1b7b34; //palm // // #6bbaa7; //aqua  //#328cc1; //linear-gradient(40deg, #111111 33%, #333333);
+$themedarkgrey: linear-gradient(40deg, #111111 33%, #333333); // #60d136;//johans // #93c178; // vermillion// #81b135; //grass  //#1b7b34; //palm // // #6bbaa7; //aqua  //#328cc1; 
 
 /*radio button-background colors for content fields and infoboxes*/
 .lightgrey,
@@ -1832,9 +1832,9 @@ text layout for Pages Content block
   padding-bottom: 1rem;
   width: 100%;
   color: #fff;
-  // background-image: linear-gradient(40deg, rgb(17, 17, 17) 33%, rgb(51, 51, 51));
+  background-image: linear-gradient(40deg, rgb(17, 17, 17) 33%, rgb(51, 51, 51));
 
-  background: #1e392a;
+  // background: #199E48;
   min-height: 350px;
   text-align: center;
 
