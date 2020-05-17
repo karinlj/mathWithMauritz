@@ -1,5 +1,4 @@
-Theme for mathWithMauritz made by Karin.
+Theme for Math with Mauritz made by Karin.
 =========================
-Custom WordPress theme for new mathWithMauritz 2020# math-with-mauritz
-# mathWithMauritz
+Custom WordPress theme: math-with-mauritz 2020#
 

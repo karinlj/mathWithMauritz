@@ -55,7 +55,7 @@ Author: Karin Ljunggren
   background: linear-gradient(40deg, #23a947 20%, #66cc99); }
 
 .darkgrey {
-  background: linear-gradient(40deg, #111111 33%, #333333);
+  background: #5ad02f;
   color: #fff; }
 
 .lightblue {
@@ -1253,7 +1253,7 @@ text layout for Pages Content block
   padding-bottom: 1rem;
   width: 100%;
   color: #fff;
-  background-image: linear-gradient(40deg, #111111 33%, #333333);
+  background: #1e392a;
   min-height: 350px;
   text-align: center; }
   @media all and (max-width: 480px) {
@@ -1358,15 +1358,6 @@ text layout for Pages Content block
         transition: all 0.7s ease 0s; }
         .two-columns .aspect-wrapper .box.image .heading_part .heading {
           color: #fff; }
-      .two-columns .aspect-wrapper .box.image:before {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: rgba(0, 0, 0, 0.5);
-        content: '';
-        display: block; }
     .two-columns .aspect-wrapper .box.text {
       min-height: 400px; }
       @media all and (min-width: 576px) {
@@ -1434,5 +1425,76 @@ text layout for Pages Content block
       @media all and (min-width: 1200px) {
         .two-columns .box.text .text-part {
           max-width: calc((1380px /2) + 2.25rem); } }
+
+/**********************
+  two columns white
+***********************/
+.two-columns-white {
+  min-height: 500px; }
+  .two-columns-white:last-of-type {
+    border-bottom: none; }
+  .two-columns-white .text-part:nth-of-type(even) {
+    padding-left: 5rem; }
+  .two-columns-white img {
+    margin-left: -15px; }
+
+/**********************
+ text-block
+***********************/
+.text-block {
+  margin-top: 3rem; }
+  .text-block .text-header .preamble {
+    padding-top: 2rem; }
+
+/*
+* Contact Form layout
+*/
+p {
+  margin-bottom: 0; }
+
+label {
+  width: 100%;
+  font-weight: 500;
+  font-size: 90%;
+  margin: 0.5em 0; }
+  label span {
+    color: #aaa;
+    margin-left: .25em;
+    font-weight: 400; }
+
+label input,
+label textarea {
+  color: #181818;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 14px; }
+
+input[text] {
+  width: 50%; }
+
+textarea {
+  width: 100%; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background-color: #897248;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 14px 22px;
+  transition: 1s;
+  border: 1.5px solid #fff;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"]:hover {
+  background-color: #fff;
+  color: #897248;
+  border: 1.5px solid #897248; }
 
 /*# sourceMappingURL=custom.css.map */

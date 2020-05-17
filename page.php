@@ -17,9 +17,9 @@
 //Loopa ACF flex Content
 if (function_exists('have_rows')) {
 
-    if (have_rows('content_block_pages')) {
+    if (have_rows('content')) {
 
-        while (have_rows('content_block_pages')) {
+        while (have_rows('content')) {
             the_row();
 
             $layout = get_row_layout();
