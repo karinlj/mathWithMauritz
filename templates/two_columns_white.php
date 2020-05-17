@@ -5,7 +5,7 @@
 $color = get_sub_field('color_theme');
 ?>
 
-<section class="two-columns-white <?php echo $color; ?>">
+<section class="two-columns-white <?php echo $color; ?> section_spacing_top_medium">
 
   <div class="container">
     <div class="row justify-content-center">

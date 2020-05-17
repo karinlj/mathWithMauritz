@@ -1,26 +1,24 @@
 <?php
-// centered text layout for Pages Content block
-//centered wysiwyg for pages
 
-if (get_row_layout() == 'centered_text_content') {?>
+if (get_row_layout() == 'centered_text_content') { ?>
 
 <?php
-$text = get_sub_field('text');?>
+    $text = get_sub_field('text'); ?>
 
-<section class="text_section_pages section_spacing_top_medium">
+<section class="text-section">
   <div class="container">
-    <div class="row">
-      <div class="col-md-8 offset-md-2">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="preamble text-center">
 
-        <div class="text_content">
-          <?php echo $text; ?>
+          <h3>
+            <?php echo $text; ?>
+          </h3>
         </div>
-
       </div>
     </div>
   </div><!-- /.container -->
 </section>
-
 <?php
 }
 ?>

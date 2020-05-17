@@ -104,7 +104,7 @@ $orange: linear-gradient(40deg, #ec9f05 33%, #ead637);
 
 $pink: #e75a7c;
 
-$linkcolor: #2e9ce6;
+$linkcolor: #24afc2; //#2e9ce6;
 $linkcolorLight: #5fb4ec;
 
 $linkhoverOpacity: 0.7;
@@ -114,11 +114,14 @@ $navcolor: #fff;
 $navBg_transp: transparent;
 
 $themewarmgrey: #d9d1ce;
-$themedarkgrey: $themecolorBlue; //linear-gradient(40deg, #111111 33%, #333333); // #60d136;//johans // #93c178; // vermillion// #81b135; //grass  //#1b7b34; //palm // // #6bbaa7; //aqua  //#328cc1;  //#cdbb98;
+$themedarkgrey: linear-gradient(40deg, #111111 33%, #333333); // #60d136;//johans // #93c178; // vermillion// #81b135; //grass  //#1b7b34; //palm // // #6bbaa7; //aqua  //#328cc1;  //#cdbb98; //$themecolorBlue;
+
+$themeskyblue: #afe8f0;
 
 /*radio button-background colors for content fields and infoboxes*/
 .lightgrey,
-.white {
+.white,
+.skyblue {
 
   h1,
   h2,
@@ -139,9 +142,10 @@ $themedarkgrey: $themecolorBlue; //linear-gradient(40deg, #111111 33%, #333333);
   background: #fafafb;
 }
 
-.darkgrey,
+
 .green,
-.orange {
+.orange,
+.darkgrey {
 
   h1,
   h2,
@@ -152,6 +156,10 @@ $themedarkgrey: $themecolorBlue; //linear-gradient(40deg, #111111 33%, #333333);
   p {
     color: #fff;
   }
+}
+
+.skyblue {
+  background: $themeskyblue;
 }
 
 .green {
@@ -1835,51 +1843,87 @@ text layout for Pages Content block
   color: #fff;
   background-image: linear-gradient(40deg, rgb(17, 17, 17) 33%, rgb(51, 51, 51));
 
-  // background: #199E48;
+  background: #199E48;
+
+  background: #fafafb;
+  background: #fff;
+
   min-height: 350px;
-  text-align: center;
 
   @media all and (max-width: $xs-max) {
     min-height: 540px;
   }
 
-  @media all and (min-width: $md-min) {
-    text-align: left;
-  }
-
   >.container {
-    padding-top: 2rem;
-  }
-
-  .contact_phrase {
-    color: rgb(255, 255, 255);
-    font-size: 2rem;
-    padding-bottom: 2rem;
-
-    @media all and (min-width: $md-min) {
-      padding-bottom: 0px;
-    }
+    padding-top: 3rem;
+    border-top: 2px solid $themeBorderColor;
   }
 
   .contact {
-    text-align: center;
 
-    .logo a,
-    .adress_field {
-      color: #fff;
+    .contact_phrase {
+      //color: #fff;
+      color: $themecolor;
+      font-size: 2.1rem;
+      padding-bottom: 2rem;
+
+      @media all and (min-width: $md-min) {
+        padding-bottom: 1rem;
+      }
     }
 
-    .social-icons {
-      padding: 1.5rem 0;
+    .logo a {
+      color: $themecolor;
 
-      ul.social {
-        width: 100%;
-        list-style: none;
-        margin: 0px;
-        padding: 0px;
+      &:hover {
+        color: $linkcolor;
+      }
+    }
 
-        li.social-item {
-          padding: 0.4rem 0;
+    .adress_field {
+      //color: #fff;
+      color: $themecolor;
+    }
+  }
+
+  .social-icons {
+    padding-top: 1rem;
+
+    ul.social {
+      width: 100%;
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+
+      li.social-item {
+        padding-right: 2rem;
+
+        a {
+          display: inline-block;
+          position: relative;
+
+          &:before {
+            opacity: 0;
+            position: absolute;
+            bottom: 0;
+            left: 1px;
+            content: '';
+            // width: 100%;
+            width: 0;
+            height: 2px;
+            background: $linkcolor;
+            -webkit-transition: width .2s ease-in;
+            transition: width .2s ease-in;
+          }
+
+          &:hover {
+            opacity: 1;
+
+            &:before {
+              width: 100%;
+              opacity: .7;
+            }
+          }
 
           .fab,
           .fas {
@@ -1890,44 +1934,74 @@ text layout for Pages Content block
             border-radius: 50%;
             transition: 1s;
             color: $linkcolor;
-
-            // &:hover {
-            //   color: $themecolorBlueLight;
-            // }
           }
         }
       }
 
       @media all and (min-width: $md-min) {
-        padding: 0;
+        display: flex;
       }
     }
   }
 
   .links {
+    width: 100%;
 
     ul.footer-links {
+      display: flex;
       list-style: none;
       padding: 0;
       margin: 0;
+      padding-bottom: 2rem;
 
       li {
-        padding-bottom: 0.4rem;
+        padding-right: 2rem;
 
         a {
-          color: #fff;
-          font-size: 1rem;
+          display: inline-block;
+          position: relative;
+
+          &:before {
+            opacity: .4;
+            position: absolute;
+            bottom: 0;
+            left: 1px;
+            content: '';
+            width: 100%;
+            // width: 0;
+            height: 2px;
+            background: $linkcolor;
+            -webkit-transition: width .2s ease-in;
+            transition: width .2s ease-in;
+          }
 
           &:hover {
-            color: $themecolorBlueLight;
-            text-decoration: none;
+            opacity: 1;
+
+            &:before {
+              width: 100%;
+              opacity: .7;
+            }
           }
         }
-      }
-    }
 
-    @media all and (min-width: $md-min) {
-      float: right;
+        @media all and (min-width: $md-min) {
+          padding-left: 2rem;
+          padding-right: 0;
+        }
+
+        @media all and (max-width: $xs-max) {
+          padding-bottom: 1rem;
+        }
+      }
+
+      @media all and (min-width: $md-min) {
+        justify-content: flex-end;
+      }
+
+      @media all and (max-width: $xs-max) {
+        display: block;
+      }
     }
   }
 
@@ -1935,8 +2009,9 @@ text layout for Pages Content block
     .copy {
 
       p {
+        text-align: center;
         margin-top: 4rem;
-        color: #cbd6e2;
+        // color: #cbd6e2;
         font-size: 70%;
         margin-bottom: 0;
       }
@@ -1957,51 +2032,53 @@ text layout for Pages Content block
 /**********************
   Two columns
 ***********************/
+
+
 .two-columns {
   @include d-flex;
   @include flex-column;
 
-  @media all and (min-width: $md-min) {
+  @media all and (min-width:$md-min) {
     flex-direction: row !important;
   }
 
   .aspect-wrapper {
     width: 100%;
 
-    @media all and (min-width: $md-min) {
+    @media all and (min-width:$md-min) {
       width: 50%;
     }
 
     .box {
-      &.image {
-        position: relative;
+      // &.image {
+      //   position: relative;
 
-        .heading_part {
-          display: flex;
-          align-items: center;
-          position: absolute;
-          top: 0px;
-          bottom: 0px;
-          left: 0px;
-          right: 0px;
-          transition: all 0.7s ease 0s;
+      //   .heading_part {
+      //     display: flex;
+      //     align-items: center;
+      //     position: absolute;
+      //     top: 0px;
+      //     bottom: 0px;
+      //     left: 0px;
+      //     right: 0px;
+      //     transition: all 0.7s ease 0s;
 
-          .heading {
-            color: #fff;
-          }
-        }
+      //     .heading {
+      //       color: #fff;
+      //     }
+      //   }
 
-        // &:before {
-        //   position: absolute;
-        //   top: 0;
-        //   right: 0;
-        //   bottom: 0;
-        //   left: 0;
-        //   background: rgba(0, 0, 0, 0.5);
-        //   content: '';
-        //   display: block;
-        // }
-      }
+      //   &:before {
+      //     position: absolute;
+      //     top: 0;
+      //     right: 0;
+      //     bottom: 0;
+      //     left: 0;
+      //     background: rgba(0, 0, 0, 0.5);
+      //     content: '';
+      //     display: block;
+      //   }
+      // }
 
       &.text {
         min-height: 400px;
@@ -2012,62 +2089,60 @@ text layout for Pages Content block
       }
     }
 
+
+
     &:nth-of-type(odd) {
       //first half
 
-      .box {
+      .box.text .text-part {
+        //padding for the left .text-part
+        padding: 0 1.5rem;
 
-        .text-part,
-        .heading_part {
-          //padding for the left .text-part
-          padding: 0 1.5rem;
-
-          @media all and (min-width: $sm-min) {
-            padding-left: 2.25rem;
-          }
-
-          @media all and (min-width: $md-min) {
-            padding-left: 3rem;
-          }
-
-          @media all and (min-width: $lg-min) {
-            padding-left: calc(3.75rem);
-            padding-right: 5rem;
-            right: 0;
-            left: auto;
-          }
+        @media all and (min-width:$sm-min) {
+          padding-left: 2.25rem;
         }
+
+        @media all and (min-width:$md-min) {
+          padding-left: 3rem;
+        }
+
+        @media all and (min-width:$lg-min) {
+          padding-left: calc(3.75rem);
+          padding-right: 5rem;
+          right: 0;
+          left: auto;
+        }
+
       }
     }
 
     &:nth-of-type(even) {
       //second half
 
-      .box {
+      .box.text .text-part {
+        //padding for the right .text-part
+        padding: 0 1.5rem;
 
-        .text-part,
-        .heading_part {
-          //padding for the right .text-part
-          padding: 0 1.5rem;
+        @media all and (min-width:$sm-min) {
+          padding-right: 2.25rem;
+        }
 
-          @media all and (min-width: $sm-min) {
-            padding-right: 2.25rem;
-          }
+        @media all and (min-width:$md-min) {
+          padding-right: 3rem;
+        }
 
-          @media all and (min-width: $md-min) {
-            padding-right: 3rem;
-          }
-
-          @media all and (min-width: $lg-min) {
-            padding-right: calc(2.25rem + 15px);
-            padding-left: 5rem;
-            left: 0;
-            right: auto;
-          }
+        @media all and (min-width:$lg-min) {
+          padding-right: calc(2.25rem + 15px);
+          padding-left: 5rem;
+          left: 0;
+          right: auto;
         }
       }
     }
+
   }
+
+
 
   .box.text {
     //for aspect ratio div
@@ -2075,12 +2150,12 @@ text layout for Pages Content block
     position: relative;
     padding-bottom: 60%;
 
-    @media all and (min-width: $sm-min) {
-      padding-bottom: 43%;
+    @media all and (min-width:$sm-min) {
+      padding-bottom: 43%
     }
 
-    @media all and (min-width: $md-min) {
-      padding-bottom: 66.67%;
+    @media all and (min-width:$md-min) {
+      padding-bottom: 66.67%
     }
 
     .text-part {
@@ -2097,22 +2172,173 @@ text layout for Pages Content block
         text-decoration: none !important;
       }
 
-      @media all and (min-width: $xl-min) {
+      @media all and (min-width:$xl-min) {
         //max-width half of container
         max-width: calc((1380px /2) + 2.25rem);
       }
+
+
     }
   }
 }
+
+
+
+// /**********************
+//   Two columns
+// ***********************/
+// .two-columns {
+//   @include d-flex;
+//   @include flex-column;
+
+//   @media all and (min-width: $md-min) {
+//     flex-direction: row !important;
+//   }
+
+//   .aspect-wrapper {
+//     width: 100%;
+
+//     @media all and (min-width: $md-min) {
+//       width: 50%;
+//     }
+
+//     .box {
+//       &.image {
+//         // position: relative;
+
+//         // .heading_part {
+//         //   display: flex;
+//         //   align-items: center;
+//         //   position: absolute;
+//         //   top: 0px;
+//         //   bottom: 0px;
+//         //   left: 0px;
+//         //   right: 0px;
+//         //   transition: all 0.7s ease 0s;
+
+//         //   .heading {
+//         //     color: #fff;
+//         //   }
+//         // }
+
+//         // &:before {
+//         //   position: absolute;
+//         //   top: 0;
+//         //   right: 0;
+//         //   bottom: 0;
+//         //   left: 0;
+//         //   background: rgba(0, 0, 0, 0.5);
+//         //   content: '';
+//         //   display: block;
+//         // }
+//       }
+
+//       &.text {
+//         min-height: 400px;
+
+//         @media all and (min-width: $sm-min) {
+//           min-height: auto;
+//         }
+//       }
+//     }
+
+//     &:nth-of-type(odd) {
+//       //first half
+
+//       .box.text {
+
+//         .text-part {
+//           //padding for the left .text-part
+//           padding: 0 1.5rem;
+
+//           @media all and (min-width: $sm-min) {
+//             padding-left: 2.25rem;
+//           }
+
+//           @media all and (min-width: $md-min) {
+//             padding-left: 3rem;
+//           }
+
+//           @media all and (min-width: $lg-min) {
+//             padding-left: calc(3.75rem);
+//             padding-right: 5rem;
+//             right: 0;
+//             left: auto;
+//           }
+//         }
+//       }
+//     }
+
+//     &:nth-of-type(even) {
+//       //second half
+
+//       .box.text {
+
+//         .text-part {
+//           //padding for the right .text-part
+//           padding: 0 1.5rem;
+
+//           @media all and (min-width: $sm-min) {
+//             padding-right: 2.25rem;
+//           }
+
+//           @media all and (min-width: $md-min) {
+//             padding-right: 3rem;
+//           }
+
+//           @media all and (min-width: $lg-min) {
+//             padding-right: calc(2.25rem + 15px);
+//             padding-left: 5rem;
+//             left: 0;
+//             right: auto;
+//           }
+//         }
+//       }
+//     }
+
+//     .box.text {
+//       //for aspect ratio div
+//       width: 100%;
+//       position: relative;
+//       padding-bottom: 60%;
+
+//       @media all and (min-width: $sm-min) {
+//         padding-bottom: 43%;
+//       }
+
+//       @media all and (min-width: $md-min) {
+//         padding-bottom: 66.67%;
+//       }
+
+//       .text-part {
+//         //for aspect ratio div
+//         position: absolute;
+//         top: 0;
+//         bottom: 0;
+//         left: 0;
+//         right: 0;
+//         @include d-flex;
+//         align-items: center;
+
+//         a {
+//           text-decoration: none !important;
+//         }
+
+//         @media all and (min-width: $xl-min) {
+//           //max-width half of container
+//           max-width: calc((1380px /2) + 2.25rem);
+//         }
+//       }
+//     }
+//   }
+// }
 
 /**********************
   two columns white
 ***********************/
 
 .two-columns-white {
-  // min-height: 300px;
-
-  min-height: 500px;
+  min-height: 300px;
 
   &:last-of-type {
     border-bottom: none;
@@ -2131,18 +2357,16 @@ text layout for Pages Content block
   }
 
   img {
-    // max-width: 200px !important;
-    // margin: 0 auto;
+    max-width: 200px !important;
+    margin: 0 auto;
     // max-width: 70% !important;
-    // border: 5px solid #eee;
-    // border-radius: 50%;
-    // box-shadow: 0 0 15px rgba(0, 0, 0, 0.07);
+    border: 5px solid #eee;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.07);
 
-    margin-left: -15px;
-
-    // @media all and (max-width: $xs-max) {
-    //   margin-bottom: 2rem;
-    // }
+    @media all and (max-width: $xs-max) {
+      margin-bottom: 2rem;
+    }
   }
 }
 

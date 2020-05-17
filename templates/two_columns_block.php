@@ -23,11 +23,11 @@ if (have_rows('column_content')) {
             $link = get_sub_field('url'); //linking image ?>
 
     <div class="box image">
-      <div class="heading_part">
+      <!-- <div class="heading_part">
         <div class="heading_part_inner">
           <h2 class="heading"><?php the_sub_field('heading');?></h2>
         </div>
-      </div>
+      </div> -->
 
       <?php
 if ($link) {?>
@@ -67,7 +67,6 @@ if ($link) {?>
 if ((get_sub_field('heading')) || (get_sub_field('text'))) {?>
 
           <h3><?php the_sub_field('heading');?></h3>
-
           <p><?php the_sub_field('text');?></p>
 
           <?php

@@ -259,25 +259,6 @@
                                     "display": "block",
                                     "sub_fields": [
                                         {
-                                            "key": "field_5b34c9def8558",
-                                            "label": "Heading",
-                                            "name": "heading",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "maxlength": ""
-                                        },
-                                        {
                                             "key": "field_59bbd26437b80",
                                             "label": "Image",
                                             "name": "img",
@@ -300,22 +281,6 @@
                                             "max_height": "",
                                             "max_size": 1,
                                             "mime_types": ""
-                                        },
-                                        {
-                                            "key": "field_5b34c7a19ec0d",
-                                            "label": "Link image?",
-                                            "name": "url",
-                                            "type": "url",
-                                            "instructions": "If you put an url here, the text will link to that page.",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "placeholder": ""
                                         }
                                     ],
                                     "min": "",
@@ -327,6 +292,51 @@
                                     "label": "Text",
                                     "display": "block",
                                     "sub_fields": [
+                                        {
+                                            "key": "field_59ba8629bffa5",
+                                            "label": "Color_theme",
+                                            "name": "color_theme",
+                                            "type": "radio",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "choices": {
+                                                "white": "White",
+                                                "lightgrey": "Lightgrey",
+                                                "darkgrey": "Dark Grey",
+                                                "skyblue": "Skyblue"
+                                            },
+                                            "allow_null": 0,
+                                            "other_choice": 0,
+                                            "default_value": "",
+                                            "layout": "vertical",
+                                            "return_format": "value",
+                                            "save_other_choice": 0
+                                        },
+                                        {
+                                            "key": "field_5b34c9def8558",
+                                            "label": "Heading",
+                                            "name": "heading",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
                                         {
                                             "key": "field_59bbd28b37b82",
                                             "label": "Content",
@@ -345,31 +355,6 @@
                                             "toolbar": "full",
                                             "media_upload": 1,
                                             "delay": 0
-                                        },
-                                        {
-                                            "key": "field_59ba8629bffa5",
-                                            "label": "Color_theme",
-                                            "name": "color_theme",
-                                            "type": "radio",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "choices": {
-                                                "white": "White",
-                                                "lightgrey": "Lightgrey",
-                                                "darkgrey": "Dark Grey"
-                                            },
-                                            "allow_null": 0,
-                                            "other_choice": 0,
-                                            "save_other_choice": 0,
-                                            "default_value": "",
-                                            "layout": "vertical",
-                                            "return_format": "value"
                                         }
                                     ],
                                     "min": "",
@@ -1454,5 +1439,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1589652779
+    "modified": 1589723972
 }
