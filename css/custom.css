@@ -55,7 +55,7 @@ Author: Karin Ljunggren
   background: linear-gradient(40deg, #23a947 20%, #66cc99); }
 
 .darkgrey {
-  background: linear-gradient(40deg, #111111 33%, #333333);
+  background: linear-gradient(40deg, #0e9ddc 33%, #137fb1);
   color: #fff; }
 
 .lightblue {
@@ -776,13 +776,13 @@ nav {
   color: #2e9ce6; }
 .header_big.blue .signup_btn,
 .header_small.blue .signup_btn {
-  color: #1b2fe4; }
+  color: linear-gradient(40deg, #0e9ddc 33%, #137fb1); }
 .header_big.blue .demo_btn:hover,
 .header_small.blue .demo_btn:hover {
-  color: #1b2fe4; }
+  color: linear-gradient(40deg, #0e9ddc 33%, #137fb1); }
 .header_big.blue .signup ul li:last-of-type a,
 .header_small.blue .signup ul li:last-of-type a {
-  color: #1b2fe4; }
+  color: linear-gradient(40deg, #0e9ddc 33%, #137fb1); }
 .header_big.green .signup_btn,
 .header_small.green .signup_btn {
   color: #0ba893; }
@@ -985,9 +985,9 @@ nav {
           color: #373c49;
           font-size: 1.5em; }
     .testimonials-section-new .testimonials-container .testimonials-item.blue {
-      border-left: 5px solid #1b2fe4; }
+      border-left: 5px solid linear-gradient(40deg, #0e9ddc 33%, #137fb1); }
       .testimonials-section-new .testimonials-container .testimonials-item.blue .signature {
-        color: #1b2fe4; }
+        color: linear-gradient(40deg, #0e9ddc 33%, #137fb1); }
     .testimonials-section-new .testimonials-container .testimonials-item.green {
       border-left: 5px solid #0ba893; }
       .testimonials-section-new .testimonials-container .testimonials-item.green .signature {

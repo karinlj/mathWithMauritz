@@ -96,6 +96,7 @@ $linkcolor: #1b94e4; //$themecolorBlueLight;
 
 
 //karins
+$themecolorBlue: linear-gradient(40deg, #0e9ddc 33%, #137fb1);
 
 $green: linear-gradient(40deg, #23a947 20%, #66cc99);
 
@@ -113,7 +114,7 @@ $navcolor: #fff;
 $navBg_transp: transparent;
 
 $themewarmgrey: #d9d1ce;
-$themedarkgrey: linear-gradient(40deg, #111111 33%, #333333); // #60d136;//johans // #93c178; // vermillion// #81b135; //grass  //#1b7b34; //palm // // #6bbaa7; //aqua  //#328cc1; 
+$themedarkgrey: $themecolorBlue; //linear-gradient(40deg, #111111 33%, #333333); // #60d136;//johans // #93c178; // vermillion// #81b135; //grass  //#1b7b34; //palm // // #6bbaa7; //aqua  //#328cc1;  //#cdbb98;
 
 /*radio button-background colors for content fields and infoboxes*/
 .lightgrey,
