@@ -47,29 +47,24 @@ $themecolorBlueLight: #2e9ce6;
 
 $themecolorBlueLightBg: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1);
 
-
-// $themecolorBlueLightOverlay: linear-gradient(to right bottom,
-//   rgba(47, 128, 237, 0.95),
-//   rgba(86, 204, 242, 0.85));
-
-
 $themecolorBlueLightOverlay: linear-gradient(to right bottom,
   rgba(27, 148, 228, 0.85),
   rgba(142, 201, 241, 0.95));
 
 //GreenNew
-$themecolorGreenNew: #0ba893;
-$themecolorGreenNewBg: linear-gradient(to right bottom, #09907e, #0aa18d, #0bb39d, #0dc6ad, #0ed8bd);
-$themecolorGreenNewOverlay: linear-gradient(to right bottom,
-  rgba(9, 144, 126, 0.85),
-  rgba(14, 216, 189, 0.95));
+$themecolorGreenNewBg: #9EE37D;
+$themecolorGreenNew: #9EE37D;
 
-//Purple
-$themecoloPurple: #8e66c8;
-$themecoloPurpleBg: linear-gradient(to right bottom, #4568dc, #7266d2, #8e66c8, #a267bd, #b06ab3);
-$themecoloPurpleOverlay: linear-gradient(to right bottom,
-  rgba(69, 104, 220, 0.85),
-  rgba(162, 103, 189, 0.95));
+$themecolorLightgreen: #9EE37D;
+$themecolorLightgreenBg: linear-gradient(to right bottom, #4ea824, #5bb532, #68c13e, #74ce4b, #81db57);
+// linear-gradient(to right bottom, #9ee37d, #a3e583, #a7e68a, #ace890, #b0e996);
+// $themecolorLightgreenOverlay: linear-gradient(to right bottom,
+//   rgba(158, 227, 125, 0.85),
+//   rgba(176, 233, 150, 0.95));
+$themecolorLightgreenOverlay: linear-gradient(to right bottom,
+  rgba(72, 166, 38, 0.85),
+  rgba(140, 222, 110, 0.95));
+
 
 //DarkGrey
 $themecolorDarkGrey: #21242c;
@@ -116,7 +111,11 @@ $navBg_transp: transparent;
 $themewarmgrey: #d9d1ce;
 $themedarkgrey: linear-gradient(40deg, #111111 33%, #333333); // #60d136;//johans // #93c178; // vermillion// #81b135; //grass  //#1b7b34; //palm // // #6bbaa7; //aqua  //#328cc1;  //#cdbb98; //$themecolorBlue;
 
-$themeskyblue: #afe8f0;
+$themeskyblue:linear-gradient(to right bottom, #afe8f0, #b9ebf2, #c2eef3, #cbf0f5, #d4f3f7); // #afe8f0; 
+
+$themeskyblueOverlay: linear-gradient(to right bottom,
+  rgba(175, 232, 240, 0.95),
+  rgba(212, 243, 247, 0.85));
 
 /*radio button-background colors for content fields and infoboxes*/
 .lightgrey,
@@ -184,7 +183,7 @@ $themeskyblue: #afe8f0;
      front_container 
 *********************/
 .front_container {
-  padding: 5rem 0px;
+  // padding: 5rem 0px;
 }
 
 /********************
@@ -592,15 +591,11 @@ a.banner_link {
   position: relative;
 
   &.lightblue {
-    background-image: $themecolorBlueLightBg;
+    background-image: $themeskyblue;
   }
 
-  &.blue {
-    background-image: $themecolorBlueBg;
-  }
-
-  &.green {
-    background-image: $themecolorGreenNewBg;
+  &.lightgreen {
+    background-image: $themecolorLightgreenBg;
   }
 
   &.lightgrey {
@@ -618,35 +613,24 @@ a.banner_link {
     display: block;
   }
 
-  &.overlay-lightblue::before {
+  &.overlay-skyblue::before {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: $themecolorBlueLightOverlay;
+    background-image: $themeskyblueOverlay;
     content: '';
     display: block;
   }
 
-  &.overlay-blue::before {
+  &.overlay-lightgreen::before {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: $themecolorBlueOverlay;
-    content: '';
-    display: block;
-  }
-
-  &.overlay-green::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: $themecolorGreenNewOverlay;
+    background-image: $themecolorLightgreenOverlay;
     content: '';
     display: block;
   }
@@ -1235,8 +1219,11 @@ nav {
    info banner
 *********************/
 .info_banner {
+  // background: #9EE37D; //#284B63;
+  border-radius: 3px;
+  margin: 4rem 0;
   //background and overlay: see scss section
-  min-height: 330px;
+  min-height: 200px;
 
   p {
     font-size: 1.1rem;
@@ -1246,14 +1233,17 @@ nav {
     }
   }
 
-  h3 {
+  h2 {
     margin-bottom: 1.6rem;
+    font-size: 1.9rem;
   }
 
   h5,
-  h3,
+  h2,
   p {
     color: #fff;
+    // color: #14616c;
+    // color: $themecolor;
 
     &::before {
       font-weight: 600;
@@ -1272,6 +1262,10 @@ nav {
     .link {
       background-color: rgba(255, 255, 255, .2);
       color: #fff;
+      // color: #14616c;
+      //c color: $themecolor;
+      //border: 1px solid #14616c;
+
 
       &:hover {
         opacity: 0.8;
@@ -1843,10 +1837,10 @@ text layout for Pages Content block
   color: #fff;
   background-image: linear-gradient(40deg, rgb(17, 17, 17) 33%, rgb(51, 51, 51));
 
-  background: #199E48;
+  // background: #199E48;
 
-  background: #fafafb;
-  background: #fff;
+  // background: #fafafb;
+  // background: #fff;
 
   min-height: 350px;
 
@@ -1854,16 +1848,16 @@ text layout for Pages Content block
     min-height: 540px;
   }
 
-  >.container {
-    padding-top: 3rem;
-    border-top: 2px solid $themeBorderColor;
-  }
+  // >.container {
+  //   padding-top: 3rem;
+  //   border-top: 2px solid $themeBorderColor;
+  // }
 
   .contact {
 
     .contact_phrase {
-      //color: #fff;
-      color: $themecolor;
+      color: #fff;
+      //color: $themecolor;
       font-size: 2.1rem;
       padding-bottom: 2rem;
 
@@ -1873,16 +1867,18 @@ text layout for Pages Content block
     }
 
     .logo a {
-      color: $themecolor;
+      color: #fff;
+      //color: $themecolor;
 
       &:hover {
         color: $linkcolor;
       }
     }
 
-    .adress_field {
-      //color: #fff;
-      color: $themecolor;
+    .adress_field,
+    .phone_field {
+      color: #fff;
+      //color: $themecolor;
     }
   }
 
@@ -2011,7 +2007,9 @@ text layout for Pages Content block
       p {
         text-align: center;
         margin-top: 4rem;
-        // color: #cbd6e2;
+
+        color: #cbd6e2;
+
         font-size: 70%;
         margin-bottom: 0;
       }
@@ -2338,7 +2336,13 @@ text layout for Pages Content block
 ***********************/
 
 .two-columns-white {
+  margin: 4rem 0;
   min-height: 300px;
+  // background: $lightgrey;
+  // background: #f7f7f7;
+  // background: #fff;
+  // border: 1px solid $themeBorderColor;
+  border-radius: 3px;
 
   &:last-of-type {
     border-bottom: none;
@@ -2357,16 +2361,16 @@ text layout for Pages Content block
   }
 
   img {
-    max-width: 200px !important;
-    margin: 0 auto;
-    // max-width: 70% !important;
-    border: 5px solid #eee;
-    border-radius: 50%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.07);
+    border-radius: 3px;
+    // max-width: 200px !important;
+    // margin: 0 auto;
+    // border: 5px solid #eee;
+    // border-radius: 50%;
+    // box-shadow: 0 0 15px rgba(0, 0, 0, 0.07);
 
-    @media all and (max-width: $xs-max) {
-      margin-bottom: 2rem;
-    }
+    // @media all and (max-width: $xs-max) {
+    //   margin-bottom: 2rem;
+    // }
   }
 }
 
@@ -2375,7 +2379,7 @@ text layout for Pages Content block
 ***********************/
 
 .text-block {
-  margin-top: 3rem;
+  margin: 3rem 0;
 
   .text-header {
     // text-align: center;
@@ -2426,6 +2430,7 @@ input[text] {
 
 textarea {
   width: 100%;
+  height: 170px;
 }
 
 button,

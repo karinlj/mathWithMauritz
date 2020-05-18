@@ -25,7 +25,7 @@ if (have_rows('two_columns_white')) {
 //Innehåll i kolumnerna
         if (get_row_layout() == 'img') {?>
           <!-- <div class="col-12 col-md-4 col-lg-3 part text-center"> -->
-          <div class="col-12 col-md-6 part text-center">
+          <div class="col-12 col-md-4 part text-center">
 
 
             <?php $img_id = get_sub_field('img');?>
@@ -43,7 +43,7 @@ echo wp_get_attachment_image($img_id, 'full');
 if (get_row_layout() == 'text') {?>
 
           <!-- <div class="col-12 col-md-8 text-part"> -->
-          <div class="col-12 col-md-6 text-part">
+          <div class="col-12 col-md-8 text-part">
 
 
             <div class="text-part-child">

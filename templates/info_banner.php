@@ -13,13 +13,15 @@ $style = '';
     }
     ?>
 
-<section class="info_banner <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_medium"
+<section class="info_banner <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_small text-center"
   <?php echo $style; ?>>
 
   <div class="container">
-    <div class="row">
-      <div class="col-lg-8">
-        <h3 class=""><?php the_sub_field('heading');?></h3>
+    <!-- <div class="row">
+      <div class="col-lg-6"> -->
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <h2 class=""><?php the_sub_field('heading');?></h2>
         <p class=""><?php the_sub_field('text');?></p>
 
         <!-- loopa flex content -->

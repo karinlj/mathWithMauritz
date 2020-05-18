@@ -59,7 +59,7 @@ Author: Karin Ljunggren
   color: #fff; }
 
 .skyblue {
-  background: #afe8f0; }
+  background: linear-gradient(to right bottom, #afe8f0, #b9ebf2, #c2eef3, #cbf0f5, #d4f3f7); }
 
 .green {
   background: linear-gradient(40deg, #23a947 20%, #66cc99); }
@@ -78,9 +78,6 @@ Author: Karin Ljunggren
 /********************
      front_container 
 *********************/
-.front_container {
-  padding: 5rem 0px; }
-
 /********************
      general
 *********************/
@@ -394,15 +391,11 @@ a.banner_link {
   .header_big.lightblue,
   .header_small.lightblue,
   .info_banner.lightblue {
-    background-image: linear-gradient(to right bottom, #1b94e4, #42a1e8, #5dafeb, #76bcee, #8ec9f1); }
-  .header_big.blue,
-  .header_small.blue,
-  .info_banner.blue {
-    background-image: linear-gradient(to right bottom, #1b2fe4, #4852eb, #6871f1, #868ff3, #a4acf4); }
-  .header_big.green,
-  .header_small.green,
-  .info_banner.green {
-    background-image: linear-gradient(to right bottom, #09907e, #0aa18d, #0bb39d, #0dc6ad, #0ed8bd); }
+    background-image: linear-gradient(to right bottom, #afe8f0, #b9ebf2, #c2eef3, #cbf0f5, #d4f3f7); }
+  .header_big.lightgreen,
+  .header_small.lightgreen,
+  .info_banner.lightgreen {
+    background-image: linear-gradient(to right bottom, #4ea824, #5bb532, #68c13e, #74ce4b, #81db57); }
   .header_big.lightgrey,
   .header_small.lightgrey,
   .info_banner.lightgrey {
@@ -418,37 +411,26 @@ a.banner_link {
     background: rgba(0, 0, 0, 0.5);
     content: '';
     display: block; }
-  .header_big.overlay-lightblue::before,
-  .header_small.overlay-lightblue::before,
-  .info_banner.overlay-lightblue::before {
+  .header_big.overlay-skyblue::before,
+  .header_small.overlay-skyblue::before,
+  .info_banner.overlay-skyblue::before {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(to right bottom, rgba(27, 148, 228, 0.85), rgba(142, 201, 241, 0.95));
+    background-image: linear-gradient(to right bottom, rgba(175, 232, 240, 0.95), rgba(212, 243, 247, 0.85));
     content: '';
     display: block; }
-  .header_big.overlay-blue::before,
-  .header_small.overlay-blue::before,
-  .info_banner.overlay-blue::before {
+  .header_big.overlay-lightgreen::before,
+  .header_small.overlay-lightgreen::before,
+  .info_banner.overlay-lightgreen::before {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(to right bottom, rgba(27, 47, 228, 0.85), rgba(164, 172, 244, 0.95));
-    content: '';
-    display: block; }
-  .header_big.overlay-green::before,
-  .header_small.overlay-green::before,
-  .info_banner.overlay-green::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(to right bottom, rgba(9, 144, 126, 0.85), rgba(14, 216, 189, 0.95));
+    background-image: linear-gradient(to right bottom, rgba(72, 166, 38, 0.85), rgba(140, 222, 110, 0.95));
     content: '';
     display: block; }
 
@@ -795,13 +777,13 @@ nav {
   color: linear-gradient(40deg, #0e9ddc 33%, #137fb1); }
 .header_big.green .signup_btn,
 .header_small.green .signup_btn {
-  color: #0ba893; }
+  color: #9EE37D; }
 .header_big.green .demo_btn:hover,
 .header_small.green .demo_btn:hover {
-  color: #0ba893; }
+  color: #9EE37D; }
 .header_big.green .signup ul li:last-of-type a,
 .header_small.green .signup ul li:last-of-type a {
-  color: #0ba893; }
+  color: #9EE37D; }
 .header_big .header_items_section,
 .header_small .header_items_section {
   padding: 0 calc(1.5rem - 15px) 4rem calc(1.5rem - 15px); }
@@ -868,20 +850,23 @@ nav {
    info banner
 *********************/
 .info_banner {
-  min-height: 330px; }
+  border-radius: 3px;
+  margin: 4rem 0;
+  min-height: 200px; }
   .info_banner p {
     font-size: 1.1rem; }
     @media all and (min-width: 992px) {
       .info_banner p {
         font-size: 1.2rem; } }
-  .info_banner h3 {
-    margin-bottom: 1.6rem; }
+  .info_banner h2 {
+    margin-bottom: 1.6rem;
+    font-size: 1.9rem; }
   .info_banner h5,
-  .info_banner h3,
+  .info_banner h2,
   .info_banner p {
     color: #fff; }
     .info_banner h5::before,
-    .info_banner h3::before,
+    .info_banner h2::before,
     .info_banner p::before {
       font-weight: 600;
       font-size: 40px;
@@ -999,9 +984,9 @@ nav {
       .testimonials-section-new .testimonials-container .testimonials-item.blue .signature {
         color: linear-gradient(40deg, #0e9ddc 33%, #137fb1); }
     .testimonials-section-new .testimonials-container .testimonials-item.green {
-      border-left: 5px solid #0ba893; }
+      border-left: 5px solid #9EE37D; }
       .testimonials-section-new .testimonials-container .testimonials-item.green .signature {
-        color: #0ba893; }
+        color: #9EE37D; }
     .testimonials-section-new .testimonials-container .testimonials-item.lightblue {
       border-left: 5px solid #2e9ce6; }
       .testimonials-section-new .testimonials-container .testimonials-item.lightblue .signature {
@@ -1264,29 +1249,24 @@ text layout for Pages Content block
   width: 100%;
   color: #fff;
   background-image: linear-gradient(40deg, #111111 33%, #333333);
-  background: #199E48;
-  background: #fafafb;
-  background: #fff;
   min-height: 350px; }
   @media all and (max-width: 480px) {
     .footer-main {
       min-height: 540px; } }
-  .footer-main > .container {
-    padding-top: 3rem;
-    border-top: 2px solid #ebebeb; }
   .footer-main .contact .contact_phrase {
-    color: #373c49;
+    color: #fff;
     font-size: 2.1rem;
     padding-bottom: 2rem; }
     @media all and (min-width: 768px) {
       .footer-main .contact .contact_phrase {
         padding-bottom: 1rem; } }
   .footer-main .contact .logo a {
-    color: #373c49; }
+    color: #fff; }
     .footer-main .contact .logo a:hover {
       color: #24afc2; }
-  .footer-main .contact .adress_field {
-    color: #373c49; }
+  .footer-main .contact .adress_field,
+  .footer-main .contact .phone_field {
+    color: #fff; }
   .footer-main .social-icons {
     padding-top: 1rem; }
     .footer-main .social-icons ul.social {
@@ -1372,6 +1352,7 @@ text layout for Pages Content block
   .footer-main .footer-copy .copy p {
     text-align: center;
     margin-top: 4rem;
+    color: #cbd6e2;
     font-size: 70%;
     margin-bottom: 0; }
 
@@ -1466,26 +1447,21 @@ text layout for Pages Content block
   two columns white
 ***********************/
 .two-columns-white {
-  min-height: 300px; }
+  margin: 4rem 0;
+  min-height: 300px;
+  border-radius: 3px; }
   .two-columns-white:last-of-type {
     border-bottom: none; }
   .two-columns-white .text-part:nth-of-type(even) {
     padding-left: 5rem; }
   .two-columns-white img {
-    max-width: 200px !important;
-    margin: 0 auto;
-    border: 5px solid #eee;
-    border-radius: 50%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.07); }
-    @media all and (max-width: 480px) {
-      .two-columns-white img {
-        margin-bottom: 2rem; } }
+    border-radius: 3px; }
 
 /**********************
  text-block
 ***********************/
 .text-block {
-  margin-top: 3rem; }
+  margin: 3rem 0; }
   .text-block .text-header .preamble {
     padding-top: 2rem; }
 
@@ -1516,7 +1492,8 @@ input[text] {
   width: 50%; }
 
 textarea {
-  width: 100%; }
+  width: 100%;
+  height: 170px; }
 
 button,
 html input[type="button"],
