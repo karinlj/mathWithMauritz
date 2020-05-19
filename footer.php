@@ -1,7 +1,7 @@
 <footer class="footer-main section_spacing_top_small">
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div class="contact">
           <h2 class="contact_phrase">Get in touch!</h2>
 
@@ -17,12 +17,40 @@
           </div>
           <p class="adress_field"><?php the_field('adress_field', 'option')?></p>
           <p class="phone_field"><?php the_field('phone_field', 'option')?></p>
+
+          <div class="social-icons">
+            <ul class="social">
+
+              <?php $link = get_field('mail_link', 'option');?>
+
+              <li class="social-item">
+                <a href="mailto:<?php echo $link; ?>" target="_top"><i class="fas fa-envelope" aria-hidden="true"></i>
+                  <?php echo $link; ?></a>
+              </li>
+
+              <?php if (have_rows('social_icons', 'option')) { //repeater field ?>
+              <?php
+while (have_rows('social_icons', 'option')) {
+        the_row();
+
+        $social_url = get_sub_field('social_url');
+        $social_site = get_sub_field('social_site');?>
+
+              <li class="social-item">
+                <a href="<?php echo $social_url; ?>"><i class="fab fa-<?php echo $social_site; ?>"></i>
+                  <?php echo $social_site; ?></a>
+              </li>
+
+              <?php
+}
+    }?>
+          </div>
           <?php
 }?>
         </div>
       </div>
 
-      <div class="col-md-8 order-first order-md-last">
+      <div class="col-md-4  offset-md-1 order-first order-md-last">
         <div class="links">
 
           <?php
@@ -61,45 +89,8 @@ $link = get_sub_field('link');?>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-12">
-        <?php if (function_exists('acf_add_options_page')) {?>
-
-        <div class="social-icons">
-          <ul class="social">
-
-            <?php $link = get_field('mail_link', 'option');?>
-
-            <li class="social-item">
-              <a href="mailto:<?php echo $link; ?>" target="_top"><i class="fas fa-envelope" aria-hidden="true"></i>
-                <?php echo $link; ?></a>
-            </li>
-
-            <?php if (have_rows('social_icons', 'option')) { //repeater field ?>
-            <?php
-while (have_rows('social_icons', 'option')) {
-    the_row();
-
-    $social_url = get_sub_field('social_url');
-    $social_site = get_sub_field('social_site');?>
-
-            <li class="social-item">
-              <a href="<?php echo $social_url; ?>"><i class="fab fa-<?php echo $social_site; ?>"></i>
-                <?php echo $social_site; ?></a>
-            </li>
-
-            <?php
-}
-}?>
-        </div>
-        <?php
-}?>
-      </div>
-    </div>
-
-
     <div class="row justify-content-center">
-      <div class="col-md-8">
+      <div class="col-md-6">
         <div class="footer-copy">
 
           <div class="copy">
@@ -111,7 +102,6 @@ while (have_rows('social_icons', 'option')) {
       </div>
     </div>
   </div>
-
 
 </footer>
 

@@ -13,14 +13,12 @@ $style = '';
     }
     ?>
 
-<section class="info_banner <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_small text-center"
+<section class="info_banner <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_big text-center"
   <?php echo $style; ?>>
 
   <div class="container">
-    <!-- <div class="row">
-      <div class="col-lg-6"> -->
-    <div class="row justify-content-center">
-      <div class="col-lg-6">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-8">
         <h2 class=""><?php the_sub_field('heading');?></h2>
         <p class=""><?php the_sub_field('text');?></p>
 

@@ -5,11 +5,11 @@
       <div class="col">
         <nav class="">
 
-          <h2 class="site-title">
+          <h3 class="site-title">
             <a class="logo" href="http://localhost/mathWithMauritz/">
               Math with Mauritz
             </a>
-          </h2>
+          </h3>
 
           <div class="nav-links">
 
@@ -18,21 +18,10 @@ wp_nav_menu(array(
     'theme_location' => 'primary',
 ));
 ?>
-            <div class="signup">
-              <ul>
-                <li>
-                  <a class="btn signup_btn" href="http://localhost/mathWithMauritz">
-                    Free Trial Lesson
-                  </a>
-                </li>
-              </ul>
-            </div>
           </div>
-
           <span class="toggle">☰</span>
           <!--hamburger-->
         </nav>
-
       </div>
     </div>
   </div>

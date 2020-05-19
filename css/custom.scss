@@ -80,7 +80,7 @@ $themefont: 'Roboto',
 sans-serif;
 $navfont: $themefont;
 $headingfont: $themefont;
-$themeBorder_radius: 10px;
+$themeBorder_radius: 3px;
 $themeBox_shadow: 0 2px 20px 1px rgba(0, 0, 0, .1);
 
 /*transparent nav*/
@@ -99,8 +99,6 @@ $orange: linear-gradient(40deg, #ec9f05 33%, #ead637);
 
 $pink: #e75a7c;
 
-$linkcolor: #24afc2; //#2e9ce6;
-$linkcolorLight: #5fb4ec;
 
 $linkhoverOpacity: 0.7;
 
@@ -563,8 +561,9 @@ a.banner_link {
   border-radius: $themeBorder_radius;
   transition: 1s all ease;
   -webkit-transition: 1s all ease;
-  font-size: 1em;
-  font-weight: 600;
+  font-size: 1.1em;
+  //font-weight: 600;
+  //text-transform: uppercase;
   letter-spacing: 0.2px;
   box-shadow: $themeBox_shadow;
 
@@ -1173,13 +1172,13 @@ nav {
     }
 
     .header_text {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       color: #fff;
       margin-bottom: 1.5rem;
       text-align: center;
 
       @media all and (min-width: $sm-min) {
-        font-size: 1.8em;
+        font-size: 1.5em;
       }
 
       &.front {
@@ -1188,6 +1187,15 @@ nav {
         @media all and (min-width: $sm-min) {
           text-align: left;
         }
+      }
+    }
+
+    .btn_wrapper {
+      text-align: center;
+
+      a {
+        color: #fff;
+        background: #1AC8ED; //#49C6E5; // #32E875; // #357DED; // #3dc9db; // $themecolorBlue; 
       }
     }
   }
@@ -1219,11 +1227,7 @@ nav {
    info banner
 *********************/
 .info_banner {
-  // background: #9EE37D; //#284B63;
-  border-radius: 3px;
-  margin: 4rem 0;
   //background and overlay: see scss section
-  min-height: 200px;
 
   p {
     font-size: 1.1rem;
@@ -1837,15 +1841,12 @@ text layout for Pages Content block
   color: #fff;
   background-image: linear-gradient(40deg, rgb(17, 17, 17) 33%, rgb(51, 51, 51));
 
-  // background: #199E48;
+  background: #fff;
 
-  // background: #fafafb;
-  // background: #fff;
-
-  min-height: 350px;
+  min-height: 400px;
 
   @media all and (max-width: $xs-max) {
-    min-height: 540px;
+    min-height: 600px;
   }
 
   // >.container {
@@ -1854,10 +1855,13 @@ text layout for Pages Content block
   // }
 
   .contact {
+    text-align: right;
+    padding-right: 4rem;
+    border-right: 1px solid $themecolorLighter;
 
     .contact_phrase {
-      color: #fff;
-      //color: $themecolor;
+      //color: #fff;
+      color: $themecolor;
       font-size: 2.1rem;
       padding-bottom: 2rem;
 
@@ -1867,8 +1871,8 @@ text layout for Pages Content block
     }
 
     .logo a {
-      color: #fff;
-      //color: $themecolor;
+      //color: #fff;
+      color: $themecolor;
 
       &:hover {
         color: $linkcolor;
@@ -1877,12 +1881,13 @@ text layout for Pages Content block
 
     .adress_field,
     .phone_field {
-      color: #fff;
-      //color: $themecolor;
+      //color: #fff;
+      color: $themecolor;
     }
   }
 
   .social-icons {
+    text-align: right;
     padding-top: 1rem;
 
     ul.social {
@@ -1892,7 +1897,8 @@ text layout for Pages Content block
       padding: 0px;
 
       li.social-item {
-        padding-right: 2rem;
+        // padding-right: 2rem;
+        padding-bottom: 1rem;
 
         a {
           display: inline-block;
@@ -1935,7 +1941,7 @@ text layout for Pages Content block
       }
 
       @media all and (min-width: $md-min) {
-        display: flex;
+        //display: flex;
       }
     }
   }
@@ -1981,6 +1987,10 @@ text layout for Pages Content block
           }
         }
 
+        &:first-of-type {
+          padding-left: 0;
+        }
+
         @media all and (min-width: $md-min) {
           padding-left: 2rem;
           padding-right: 0;
@@ -1992,7 +2002,7 @@ text layout for Pages Content block
       }
 
       @media all and (min-width: $md-min) {
-        justify-content: flex-end;
+        //justify-content: flex-end;
       }
 
       @media all and (max-width: $xs-max) {
@@ -2008,7 +2018,7 @@ text layout for Pages Content block
         text-align: center;
         margin-top: 4rem;
 
-        color: #cbd6e2;
+        //color: #cbd6e2;
 
         font-size: 70%;
         margin-bottom: 0;
@@ -2048,35 +2058,20 @@ text layout for Pages Content block
     }
 
     .box {
-      // &.image {
-      //   position: relative;
+      &.image {
+        position: relative;
 
-      //   .heading_part {
-      //     display: flex;
-      //     align-items: center;
-      //     position: absolute;
-      //     top: 0px;
-      //     bottom: 0px;
-      //     left: 0px;
-      //     right: 0px;
-      //     transition: all 0.7s ease 0s;
-
-      //     .heading {
-      //       color: #fff;
-      //     }
-      //   }
-
-      //   &:before {
-      //     position: absolute;
-      //     top: 0;
-      //     right: 0;
-      //     bottom: 0;
-      //     left: 0;
-      //     background: rgba(0, 0, 0, 0.5);
-      //     content: '';
-      //     display: block;
-      //   }
-      // }
+        &:before {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.3);
+          content: '';
+          display: block;
+        }
+      }
 
       &.text {
         min-height: 400px;
@@ -2338,11 +2333,6 @@ text layout for Pages Content block
 .two-columns-white {
   margin: 4rem 0;
   min-height: 300px;
-  // background: $lightgrey;
-  // background: #f7f7f7;
-  // background: #fff;
-  // border: 1px solid $themeBorderColor;
-  border-radius: 3px;
 
   &:last-of-type {
     border-bottom: none;
@@ -2355,18 +2345,19 @@ text layout for Pages Content block
     }
 
     &:nth-of-type(even) {
+      text-align: center;
       //second half
-      padding-left: 5rem;
+      // padding-left: 3rem;
     }
   }
 
   img {
     border-radius: 3px;
-    // max-width: 200px !important;
+    max-width: 210px !important;
     // margin: 0 auto;
-    // border: 5px solid #eee;
-    // border-radius: 50%;
-    // box-shadow: 0 0 15px rgba(0, 0, 0, 0.07);
+    border: 5px solid #eee;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.07);
 
     // @media all and (max-width: $xs-max) {
     //   margin-bottom: 2rem;
@@ -2379,14 +2370,13 @@ text layout for Pages Content block
 ***********************/
 
 .text-block {
-  margin: 3rem 0;
 
   .text-header {
     // text-align: center;
     //margin-bottom: 5rem;
 
     .preamble {
-      padding-top: 2rem;
+      padding: 1.5rem 0;
     }
   }
 }
@@ -2437,7 +2427,7 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background-color: #897248;
+  background-color: #1AC8ED; //#897248;
   border-radius: 5px;
   text-decoration: none;
   padding: 14px 22px;
@@ -2453,6 +2443,6 @@ html input[type="button"],
 input[type="reset"],
 input[type="submit"]:hover {
   background-color: #fff;
-  color: #897248;
-  border: 1.5px solid #897248;
+  color: #1AC8ED; //#897248;
+  border: 1.5px solid #1AC8ED; //#897248;
 }

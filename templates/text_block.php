@@ -18,9 +18,9 @@ $color = get_sub_field('color_theme');
           </h2>
 
           <div class="preamble">
-            <h5>
+            <p>
               <?php the_sub_field('text_preamble');?>
-            </h5>
+            </p>
           </div>
         </header>
 

@@ -28,6 +28,8 @@ $header_bgImage = get_field('header_image');
 $overlay_color = '';
 $header_heading_pages = get_field('header_heading_pages');
 $header_text_pages = get_field('header_text_pages');
+$button_link_url = get_field('button_link_url');
+$button_link_text = get_field('button_link_text');
 ?>
 
   <?php if (is_singular('post')) {
@@ -92,6 +94,10 @@ if (is_home() || is_singular('post') || is_archive()) {
             <p class="header_text">
               <?php echo $header_text_pages; ?>
             </p>
+
+            <div class="btn_wrapper">
+              <a class="btn link" href="<?php echo $button_link_url; ?>"><?php echo $button_link_text; ?></a>
+            </div>
           </div>
 
 

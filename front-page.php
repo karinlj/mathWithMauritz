@@ -8,31 +8,31 @@
 
 <section class="front_container">
 
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
-      <div class="col-lg-12">
-        <?php
+      <div class="col-lg-12"> -->
+  <?php
 //Loopa ACF Front Page Blocks -flexible content
 if (function_exists('have_rows')) {?>
 
-        <?php
+  <?php
 if (have_rows('content')) {?>
 
-        <?php while (have_rows('content')) {?>
-        <?php the_row();?>
+  <?php while (have_rows('content')) {?>
+  <?php the_row();?>
 
 
-        <?php $layout = get_row_layout();?>
+  <?php $layout = get_row_layout();?>
 
-        <?php // load the layout from the templates folder
+  <?php // load the layout from the templates folder
     get_template_part('templates/' . $layout);?>
 
-        <?php }
+  <?php }
 }
 }?>
-      </div>
+  <!-- </div>
     </div>
-  </div>
+  </div> -->
 </section>
 
 <?php get_footer();?>

@@ -1,14 +1,14 @@
 <?php
 
-if (get_row_layout() == 'centered_text_content') { ?>
+if (get_row_layout() == 'centered_text_content') {?>
 
 <?php
-    $text = get_sub_field('text'); ?>
+$text = get_sub_field('text');?>
 
-<section class="text-section">
+<section class="text-section section_spacing_top_small">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-8">
+      <div class="col-md-10">
         <div class="preamble text-center">
 
           <h3>
