@@ -96,7 +96,7 @@ if (is_home() || is_singular('post') || is_archive()) {
             </p>
 
             <div class="btn_wrapper">
-              <a class="btn" href="<?php echo $button_link_url; ?>"><?php echo $button_link_text; ?></a>
+              <a class="btn button_link" href="<?php echo $button_link_url; ?>"><?php echo $button_link_text; ?></a>
             </div>
           </div>
 

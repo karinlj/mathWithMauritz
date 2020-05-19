@@ -1205,10 +1205,19 @@ nav {
     .btn_wrapper {
       text-align: center;
 
-      a {
-        color: #fff;
+      a.button_link {
         background: #1AC8ED; // #0fd74e;
         // #1B5299;blue  // //#8AC4FF; //#49392C; //#1AC8ED; //#49C6E5; // #32E875; // #357DED; // #3dc9db; // $themecolorBlue; 
+
+        transition: 1s all ease-in-out;
+        color: #fff;
+        border: 1px solid #1AC8ED;
+
+        &:hover {
+          background: #fff;
+          border: 1px solid #fff;
+          color: #1AC8ED;
+        }
       }
     }
   }
@@ -2048,11 +2057,7 @@ text layout for Pages Content block
       p {
         text-align: center;
         margin-top: 4rem;
-
-        //color: #cbd6e2;
-
         color: #fff;
-
         font-size: 70%;
         margin-bottom: 0;
       }
@@ -2060,13 +2065,12 @@ text layout for Pages Content block
   }
 
   .to_top {
-    color: #fff;
-    border: 1px solid #fff;
-
     position: absolute;
     right: 70px;
     bottom: 50px;
     transition: 1s all ease-in-out;
+    color: #fff;
+    border: 1px solid #fff;
 
     &:hover {
       background: #fff;
@@ -2470,12 +2474,13 @@ html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   background-color: #1AC8ED; //#897248;
-  border-radius: 5px;
+  border-radius: 3px;
   text-decoration: none;
   padding: 10px 20px;
   transition: 1s all ease-in-out;
-  border: 1.5px solid #fff;
+  border: 1.5px solid transparent;
   color: #fff;
+  line-height: 1.3;
 }
 
 button,

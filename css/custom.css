@@ -842,10 +842,17 @@ nav {
   .header_big .header_items_section .btn_wrapper,
   .header_small .header_items_section .btn_wrapper {
     text-align: center; }
-    .header_big .header_items_section .btn_wrapper a,
-    .header_small .header_items_section .btn_wrapper a {
+    .header_big .header_items_section .btn_wrapper a.button_link,
+    .header_small .header_items_section .btn_wrapper a.button_link {
+      background: #1AC8ED;
+      transition: 1s all ease-in-out;
       color: #fff;
-      background: #1AC8ED; }
+      border: 1px solid #1AC8ED; }
+      .header_big .header_items_section .btn_wrapper a.button_link:hover,
+      .header_small .header_items_section .btn_wrapper a.button_link:hover {
+        background: #fff;
+        border: 1px solid #fff;
+        color: #1AC8ED; }
 
 .header_big .header_items_section {
   padding-top: calc(500px/3); }
@@ -1383,12 +1390,12 @@ text layout for Pages Content block
     font-size: 70%;
     margin-bottom: 0; }
   .footer_main .to_top {
-    color: #fff;
-    border: 1px solid #fff;
     position: absolute;
     right: 70px;
     bottom: 50px;
-    transition: 1s all ease-in-out; }
+    transition: 1s all ease-in-out;
+    color: #fff;
+    border: 1px solid #fff; }
     .footer_main .to_top:hover {
       background: #fff;
       border: 1px solid transparent;
@@ -1548,12 +1555,13 @@ html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   background-color: #1AC8ED;
-  border-radius: 5px;
+  border-radius: 3px;
   text-decoration: none;
   padding: 10px 20px;
   transition: 1s all ease-in-out;
-  border: 1.5px solid #fff;
-  color: #fff; }
+  border: 1.5px solid transparent;
+  color: #fff;
+  line-height: 1.3; }
 
 button,
 html input[type="button"],
