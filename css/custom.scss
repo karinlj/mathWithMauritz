@@ -573,10 +573,9 @@ a.banner_link {
   transition: 1s all ease;
   -webkit-transition: 1s all ease;
   font-size: 1.1em;
-  //font-weight: 600;
-  //text-transform: uppercase;
   letter-spacing: 0.2px;
   box-shadow: $themeBox_shadow;
+  line-height: 1.3;
 
   &:hover {
     opacity: 1;
@@ -1208,7 +1207,7 @@ nav {
 
       a {
         color: #fff;
-        background: #0fd74e;
+        background: #1AC8ED; // #0fd74e;
         // #1B5299;blue  // //#8AC4FF; //#49392C; //#1AC8ED; //#49C6E5; // #32E875; // #357DED; // #3dc9db; // $themecolorBlue; 
       }
     }
@@ -2059,6 +2058,22 @@ text layout for Pages Content block
       }
     }
   }
+
+  .to_top {
+    color: #fff;
+    border: 1px solid #fff;
+
+    position: absolute;
+    right: 70px;
+    bottom: 50px;
+    transition: 1s all ease-in-out;
+
+    &:hover {
+      background: #fff;
+      border: 1px solid transparent;
+      color: $themecolor;
+    }
+  }
 }
 
 /******************************
@@ -2401,11 +2416,8 @@ text layout for Pages Content block
 /**********************
 contact_form_block
 ***********************/
-
 .contact_form_block {
-
   .text-header {
-
     .preamble {
       padding: 1.5rem 0;
     }
@@ -2438,7 +2450,6 @@ label {
 
 label input,
 label textarea {
-  color: #181818;
   border: 1px solid #ccc;
   border-radius: 3px;
   padding: 14px;
@@ -2461,19 +2472,17 @@ input[type="submit"] {
   background-color: #1AC8ED; //#897248;
   border-radius: 5px;
   text-decoration: none;
-  padding: 14px 22px;
-  transition: 1s;
+  padding: 10px 20px;
+  transition: 1s all ease-in-out;
   border: 1.5px solid #fff;
   color: #fff;
-  font-weight: 600;
-  line-height: 1;
 }
 
 button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"]:hover {
-  background-color: #fff;
+  background-color: transparent;
   color: #1AC8ED; //#897248;
   border: 1.5px solid #1AC8ED; //#897248;
 }

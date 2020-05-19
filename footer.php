@@ -118,6 +118,9 @@ $link = get_sub_field('link');?>
           </div>
         </div>
       </div>
+
+      <a href="#header" class="btn to_top">Back to top </a>
+
     </div>
   </div>
 

@@ -67,7 +67,7 @@ if (is_home() || is_singular('post') || is_archive()) {
 }
 ?>
 
-  <header class="<?php echo $header_class; ?> <?php echo $color; ?> <?php echo $overlay_color; ?>"
+  <header id="header" class="<?php echo $header_class; ?> <?php echo $color; ?> <?php echo $overlay_color; ?>"
     <?php echo $style; ?>>
 
     <!-- get menu -->
@@ -96,7 +96,7 @@ if (is_home() || is_singular('post') || is_archive()) {
             </p>
 
             <div class="btn_wrapper">
-              <a class="btn link" href="<?php echo $button_link_url; ?>"><?php echo $button_link_text; ?></a>
+              <a class="btn" href="<?php echo $button_link_url; ?>"><?php echo $button_link_text; ?></a>
             </div>
           </div>
 
