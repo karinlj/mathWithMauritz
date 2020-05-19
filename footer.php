@@ -1,4 +1,19 @@
-<footer class="footer-main section_spacing_top_small">
+<?php
+$style = '';
+$color = get_field('color_theme', 'option');
+$bg_image = get_field('background_image', 'option');
+
+if ($bg_image) {
+    $style = 'style="background:url(\'' . wp_get_attachment_url($bg_image, 'full') . '\') no-repeat center; background-size: cover"';
+    $overlay_color = get_field('overlay_color', 'option');
+}
+?>
+
+
+
+<footer class="footer_main <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_small"
+  <?php echo $style; ?>>
+
   <div class="container">
     <div class="row">
       <div class="col-md-6">
