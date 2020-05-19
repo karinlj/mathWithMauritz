@@ -1262,23 +1262,39 @@ text layout for Pages Content block
     .footer_main {
       min-height: 600px; } }
   .footer_main .contact {
+    position: relative;
+    padding: 2em;
     text-align: right;
     padding-right: 4rem;
     border-right: 1px solid #373c49;
     border-right: 1px solid #fff; }
-    .footer_main .contact .contact_phrase {
-      color: #fff;
-      font-size: 2.1rem;
+    .footer_main .contact:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.3);
+      content: '';
+      display: block; }
+    .footer_main .contact .text {
       padding-bottom: 2rem; }
+      .footer_main .contact .text .contact_phrase {
+        position: relative;
+        color: #fff;
+        font-size: 2.1rem; }
       @media all and (min-width: 768px) {
-        .footer_main .contact .contact_phrase {
-          padding-bottom: 1rem; } }
+        .footer_main .contact .text {
+          padding-bottom: 1.5rem; } }
     .footer_main .contact .logo a {
+      position: relative;
       color: #fff; }
       .footer_main .contact .logo a:hover {
         color: #1AC8ED; }
     .footer_main .contact .adress_field,
-    .footer_main .contact .phone_field {
+    .footer_main .contact .phone_field,
+    .footer_main .contact .text_field {
+      position: relative;
       color: #fff; }
   .footer_main .social-icons {
     text-align: right;
@@ -1481,9 +1497,9 @@ text layout for Pages Content block
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.07); }
 
 /**********************
- text-block
+contact_form_block
 ***********************/
-.text-block .text-header .preamble {
+.contact_form_block .text-header .preamble {
   padding: 1.5rem 0; }
 
 /*

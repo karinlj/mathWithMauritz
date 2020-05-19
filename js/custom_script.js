@@ -93,7 +93,7 @@ jQuery(document).ready(function ($) {
   }
 
   //execute every 6 seconds
-  setInterval(changeClassNext, 4000);
+  setInterval(changeClassNext, 6000);
 
   $('.btn_slider.next').click(function () {
     // alert('hej');

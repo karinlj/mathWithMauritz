@@ -9,20 +9,22 @@ if ($bg_image) {
 }
 ?>
 
-
-
 <footer class="footer_main <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_small"
   <?php echo $style; ?>>
 
   <div class="container">
     <div class="row">
       <div class="col-md-6">
+
         <div class="contact">
-          <h2 class="contact_phrase">Get in touch!</h2>
+          <?php if (function_exists('acf_add_options_page')) {?>
 
-          <?php if (function_exists('acf_add_options_page')) {
+          <div class="text">
+            <h2 class="contact_phrase"><?php the_field('contact_phrase', 'option')?></h2>
+            <p class="text_field"><?php the_field('text_field', 'option')?></p>
+          </div>
 
-    $site_url = get_field('site_url', 'option');
+          <?php $site_url = get_field('site_url', 'option');
     $site_name = get_field('site_name', 'option');?>
 
           <div class="logo">
@@ -62,6 +64,7 @@ while (have_rows('social_icons', 'option')) {
           </div>
           <?php
 }?>
+
         </div>
       </div>
 

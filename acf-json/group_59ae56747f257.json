@@ -3,6 +3,44 @@
     "title": "Footer fields",
     "fields": [
         {
+            "key": "field_5ec45128baff1",
+            "label": "Contact phrase",
+            "name": "contact_phrase",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ec4508f48ea0",
+            "label": "Text field",
+            "name": "text_field",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5ec00951eabe6",
             "label": "Site url",
             "name": "site_url",
@@ -186,5 +224,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1589892236
+    "modified": 1589925123
 }

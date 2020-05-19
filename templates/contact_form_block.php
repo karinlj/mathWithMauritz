@@ -1,13 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Karin
- */
+
+// contact_form_block
 
 $color = get_sub_field('color_theme');
 ?>
 
-<section class="text-block <?php echo $color; ?> section_spacing_top_medium">
+<section id="contact_form" class="contact_form_block <?php echo $color; ?> section_spacing_top_medium">
 
   <div class="container">
     <div class="row justify-content-center">

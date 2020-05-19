@@ -463,8 +463,8 @@
                 },
                 "5b2f95634aeb0": {
                     "key": "5b2f95634aeb0",
-                    "name": "text_block",
-                    "label": "Text block",
+                    "name": "contact_form_block",
+                    "label": "Contact form block",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -1825,5 +1825,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1589887470
+    "modified": 1589923360
 }
