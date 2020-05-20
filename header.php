@@ -55,8 +55,8 @@ if ($header_bgImage) {
     $overlay_color = get_field('overlay_color');
 }
 
-if (is_home() || is_singular('post') || is_archive()) {
-    $color = get_field('color_theme', get_option('page_for_posts')); //for blog
+if (is_home() || is_singular('post') || is_archive()) { //for blog
+    $color = get_field('color_theme', get_option('page_for_posts'));
     $header_bgImage = get_field('header_image', get_option('page_for_posts'));
 
     if ($header_bgImage) {
@@ -76,8 +76,6 @@ if (is_home() || is_singular('post') || is_archive()) {
     <div class="header_items_section">
       <div class="container">
         <div class="row">
-
-          <!-- column for pages-->
           <div class="<?php echo $col_class; ?>">
 
             <?php if (is_home() || is_archive()) { //for blog
@@ -99,39 +97,6 @@ if (is_home() || is_singular('post') || is_archive()) {
               <a class="btn button_link" href="<?php echo $button_link_url; ?>"><?php echo $button_link_text; ?></a>
             </div>
           </div>
-
-
-          <!-- column / columns for front pages-->
-          <?php
-if (is_front_page()) {
-
-// half column width
-    if (get_field('half_width') == 'small') {
-        $col_class = 'col-12 col-lg-7';
-    } else if (get_field('half_width') == 'large') {
-        $col_class = 'col-md-10 offset-md-1';
-    }?>
-
-          <div class="<?php echo $col_class; ?>">
-
-            <!-- heading, text, buttons -->
-            <?php //Loop flex content for layouts of header_items
-    if (have_rows('header_items')) {
-
-        while (have_rows('header_items')) {
-            the_row();
-
-            $layout = get_row_layout();
-            // load the layout from  templates folder
-            get_template_part('templates/' . $layout);
-        }
-    }?>
-          </div>
-
-          <?php
-}
-?>
-          <!-- row -->
         </div>
       </div>
     </div>

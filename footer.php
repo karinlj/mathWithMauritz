@@ -9,7 +9,7 @@ if ($bg_image) {
 }
 ?>
 
-<footer class="footer_main <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_small"
+<footer class="footer_main <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_medium"
   <?php echo $style; ?>>
 
   <div class="container">
@@ -25,13 +25,17 @@ if ($bg_image) {
           </div>
 
           <?php $site_url = get_field('site_url', 'option');
-    $site_name = get_field('site_name', 'option');?>
+    $site_name = get_field('site_name', 'option');
+
+    if ($site_url && $site_name) {?>
 
           <div class="logo">
             <h6>
               <a class="" href="<?php echo $site_url; ?>"><?php echo $site_name; ?></a>
             </h6>
           </div>
+          <?php }?>
+
           <p class="adress_field"><?php the_field('adress_field', 'option')?></p>
           <p class="phone_field"><?php the_field('phone_field', 'option')?></p>
 
