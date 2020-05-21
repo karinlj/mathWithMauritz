@@ -2,7 +2,7 @@
 
 ?>
 
-<section class="testimonials_section section_spacing_top_small">
+<section class="testimonials_section section_spacing_top_medium">
   <div class="container">
     <div class="row align-items-start">
       <div class="col text-center">

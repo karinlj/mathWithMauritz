@@ -192,7 +192,7 @@ p {
      front_container 
 *********************/
 .front_container {
-  // padding: 5rem 0px;
+  min-height: 500px;
 }
 
 /********************
@@ -2250,7 +2250,7 @@ text layout for Pages Content block
 ***********************/
 
 .two-columns-white {
-  min-height: 300px;
+  min-height: 500px;
 
   &:last-of-type {
     border-bottom: none;
@@ -2440,6 +2440,160 @@ input[type="submit"]:hover {
         z-index: -1;
         background: #fff;
         height: 100%;
+      }
+    }
+  }
+}
+
+/**********************************
+  boxes diff sizes - images & text
+***********************************/
+
+.blurb-columns {
+  >.container {
+    padding-top: 1.5rem;
+  }
+
+  >.container>.row>.col-md-6 {
+    @media all and (min-width: $xl-min) {
+      &:nth-of-type(odd) {
+        padding-right: 2.25rem;
+        padding-left: 0;
+      }
+
+      &:nth-of-type(even) {
+        padding-left: 2.25rem;
+        padding-right: 0;
+      }
+    }
+  }
+
+  .blurb {
+    margin-bottom: 1.5rem;
+
+    .featured-image {
+      //margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      @media all and (max-width: $xs-max) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    a {
+      color: $themecolor;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &.blurb-small,
+    &.blurb-large {
+      p.sub-title {
+        font-weight: 700;
+        color: #999;
+        font-size: 1rem;
+
+        @media all and (min-width: $xl-min) {
+          // font-size: 1.25rem;
+        }
+      }
+
+      .featured-image {
+        box-shadow: 0 7px 34px 0 rgba(0, 0, 0, .07), 0 11px 34px 0 rgba(0, 0, 0, .04);
+      }
+    }
+
+    &.blurb-large {
+      margin-bottom: 5rem;
+
+      @media all and (min-width: $lg-min) {
+        margin-bottom: 1.5rem;
+      }
+
+      .featured-image {
+        @media all and (min-width: $sm-min) {
+          margin-bottom: 1.5rem;
+        }
+
+        @media all and (min-width: $xl-min) {
+          margin-bottom: 2.25rem;
+        }
+      }
+
+      p:not(.sub-title) {
+        @media all and (min-width: $md-min) and (max-width: $lg-max) {
+          padding-right: 1.5rem;
+        }
+
+        @media all and (min-width: $xl-min) {
+          //font-size: 1.25rem;
+        }
+      }
+
+      p.sub-title {
+        @media all and (min-width: $sm-min) {
+          margin-bottom: 1.5rem;
+        }
+
+        @media all and (min-width: $md-min) and (max-width: $md-max) {
+          margin-bottom: 1rem;
+        }
+
+        @media all and (min-width: $lg-min) and (max-width: $lg-max) {
+          margin-bottom: 1rem;
+        }
+      }
+
+      h3 {
+        font-size: 1.75rem;
+
+        @media all and (min-width: $sm-min) and (max-width: $sm-max) {
+          //font-size: 3rem;
+          margin-bottom: 1.5rem;
+        }
+
+        @media all and (min-width: $xl-min) {
+          font-size: 2rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+
+    &.blurb-small {
+      p {
+        @media all and (min-width: $sm-min) {
+          font-size: .825rem;
+          margin-bottom: 1rem;
+
+          &.sub-title {
+            margin-bottom: .825rem;
+          }
+        }
+
+        @media all and (min-width: $xl-min) {
+          font-size: 1rem;
+        }
+      }
+
+      h3 {
+        font-size: 1.25rem;
+
+        @media all and (min-width: $sm-min) {
+          margin-bottom: .75rem;
+        }
+
+        @media all and (min-width: $sm-min) and (max-width: $sm-max) {
+          //font-size: 1.25rem;
+        }
+
+        @media all and (min-width: $xl-min) {
+          margin-bottom: 1.375rem;
+          font-size: 1.5rem;
+        }
       }
     }
   }

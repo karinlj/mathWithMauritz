@@ -78,6 +78,9 @@ p {
 /********************
      front_container 
 *********************/
+.front_container {
+  min-height: 500px; }
+
 /********************
      general
 *********************/
@@ -1404,7 +1407,7 @@ text layout for Pages Content block
   two columns white
 ***********************/
 .two-columns-white {
-  min-height: 300px; }
+  min-height: 500px; }
   .two-columns-white:last-of-type {
     border-bottom: none; }
   .two-columns-white .text-part:nth-of-type(even) {
@@ -1523,5 +1526,85 @@ input[type="submit"]:hover {
     z-index: -1;
     background: #fff;
     height: 100%; }
+
+/**********************************
+  boxes diff sizes - images & text
+***********************************/
+.blurb-columns > .container {
+  padding-top: 1.5rem; }
+@media all and (min-width: 1200px) {
+  .blurb-columns > .container > .row > .col-md-6:nth-of-type(odd) {
+    padding-right: 2.25rem;
+    padding-left: 0; }
+  .blurb-columns > .container > .row > .col-md-6:nth-of-type(even) {
+    padding-left: 2.25rem;
+    padding-right: 0; } }
+.blurb-columns .blurb {
+  margin-bottom: 1.5rem; }
+  .blurb-columns .blurb .featured-image {
+    margin-bottom: 1.5rem; }
+  @media all and (max-width: 480px) {
+    .blurb-columns .blurb h3 {
+      margin-bottom: 1rem; } }
+  .blurb-columns .blurb a {
+    color: #373c49; }
+    .blurb-columns .blurb a:hover {
+      opacity: 1; }
+  .blurb-columns .blurb.blurb-small p.sub-title, .blurb-columns .blurb.blurb-large p.sub-title {
+    font-weight: 700;
+    color: #999;
+    font-size: 1rem; }
+  .blurb-columns .blurb.blurb-small .featured-image, .blurb-columns .blurb.blurb-large .featured-image {
+    box-shadow: 0 7px 34px 0 rgba(0, 0, 0, 0.07), 0 11px 34px 0 rgba(0, 0, 0, 0.04); }
+  .blurb-columns .blurb.blurb-large {
+    margin-bottom: 5rem; }
+    @media all and (min-width: 992px) {
+      .blurb-columns .blurb.blurb-large {
+        margin-bottom: 1.5rem; } }
+    @media all and (min-width: 576px) {
+      .blurb-columns .blurb.blurb-large .featured-image {
+        margin-bottom: 1.5rem; } }
+    @media all and (min-width: 1200px) {
+      .blurb-columns .blurb.blurb-large .featured-image {
+        margin-bottom: 2.25rem; } }
+    @media all and (min-width: 768px) and (max-width: 1199.9px) {
+      .blurb-columns .blurb.blurb-large p:not(.sub-title) {
+        padding-right: 1.5rem; } }
+    @media all and (min-width: 576px) {
+      .blurb-columns .blurb.blurb-large p.sub-title {
+        margin-bottom: 1.5rem; } }
+    @media all and (min-width: 768px) and (max-width: 991.9px) {
+      .blurb-columns .blurb.blurb-large p.sub-title {
+        margin-bottom: 1rem; } }
+    @media all and (min-width: 992px) and (max-width: 1199.9px) {
+      .blurb-columns .blurb.blurb-large p.sub-title {
+        margin-bottom: 1rem; } }
+    .blurb-columns .blurb.blurb-large h3 {
+      font-size: 1.75rem; }
+      @media all and (min-width: 576px) and (max-width: 767.9px) {
+        .blurb-columns .blurb.blurb-large h3 {
+          margin-bottom: 1.5rem; } }
+      @media all and (min-width: 1200px) {
+        .blurb-columns .blurb.blurb-large h3 {
+          font-size: 2rem;
+          margin-bottom: 1.5rem; } }
+  @media all and (min-width: 576px) {
+    .blurb-columns .blurb.blurb-small p {
+      font-size: .825rem;
+      margin-bottom: 1rem; }
+      .blurb-columns .blurb.blurb-small p.sub-title {
+        margin-bottom: .825rem; } }
+  @media all and (min-width: 1200px) {
+    .blurb-columns .blurb.blurb-small p {
+      font-size: 1rem; } }
+  .blurb-columns .blurb.blurb-small h3 {
+    font-size: 1.25rem; }
+    @media all and (min-width: 576px) {
+      .blurb-columns .blurb.blurb-small h3 {
+        margin-bottom: .75rem; } }
+    @media all and (min-width: 1200px) {
+      .blurb-columns .blurb.blurb-small h3 {
+        margin-bottom: 1.375rem;
+        font-size: 1.5rem; } }
 
 /*# sourceMappingURL=custom.css.map */

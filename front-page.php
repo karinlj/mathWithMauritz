@@ -8,11 +8,8 @@
 
 <section class="front_container">
 
-  <!-- <div class="container">
-    <div class="row">
-      <div class="col-lg-12"> -->
   <?php
-//Loopa ACF Front Page Blocks -flexible content
+//Loopa ACF Content Blocks -flexible content
 if (function_exists('have_rows')) {?>
 
   <?php
@@ -30,9 +27,6 @@ if (have_rows('content')) {?>
   <?php }
 }
 }?>
-  <!-- </div>
-    </div>
-  </div> -->
 </section>
 
 <?php get_footer();?>

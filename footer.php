@@ -77,7 +77,6 @@ while (have_rows('social_icons', 'option')) {
           </div>
           <?php
 }?>
-
         </div>
       </div>
 
