@@ -235,7 +235,7 @@
                 "59ba86241e3bb": {
                     "key": "59ba86241e3bb",
                     "name": "two_columns_block",
-                    "label": "Text (and\/ or image) - two columns",
+                    "label": "Text (and\/ or image) - two columns with background color",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -243,7 +243,7 @@
                             "label": "Two columns",
                             "name": "column_content",
                             "type": "flexible_content",
-                            "instructions": "",
+                            "instructions": "A little text with background of choice. An image to fill full height of field.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1042,7 +1042,7 @@
                 "5bacbdcb3201c": {
                     "key": "5bacbdcb3201c",
                     "name": "two_columns_white",
-                    "label": "Two columns white",
+                    "label": "Two columns. Text and small image",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -1074,7 +1074,7 @@
                             "label": "Two columns white",
                             "name": "two_columns_white",
                             "type": "flexible_content",
-                            "instructions": "",
+                            "instructions": "Two columns white or lightgrey with text and small image.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1112,6 +1112,47 @@
                                             "max_height": "",
                                             "max_size": "",
                                             "mime_types": ""
+                                        },
+                                        {
+                                            "key": "field_5ec6ed0c93317",
+                                            "label": "Round image?",
+                                            "name": "round_image",
+                                            "type": "radio",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "choices": {
+                                                "round": "Round",
+                                                "square": "Square"
+                                            },
+                                            "allow_null": 0,
+                                            "other_choice": 0,
+                                            "default_value": "",
+                                            "layout": "vertical",
+                                            "return_format": "value",
+                                            "save_other_choice": 0
+                                        },
+                                        {
+                                            "key": "field_5ec6efa2d7468",
+                                            "label": "Message",
+                                            "name": "",
+                                            "type": "message",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "message": "For a round image you need aspect ratio 1:1 Ex: 300x300px",
+                                            "new_lines": "wpautop",
+                                            "esc_html": 0
                                         }
                                     ],
                                     "min": "",
@@ -1166,7 +1207,7 @@
                                     "max": ""
                                 }
                             },
-                            "button_label": "Add Row",
+                            "button_label": "Add column",
                             "min": "",
                             "max": ""
                         }
@@ -1825,5 +1866,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1589923360
+    "modified": 1590095923
 }
