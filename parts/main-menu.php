@@ -1,5 +1,4 @@
-<div id="nav-wrap" class="">
-
+<div id="nav-wrap">
   <div class="container">
     <div class="row">
       <div class="col">
@@ -37,14 +36,14 @@ wp_nav_menu(array(
     'theme_location' => 'primary',
 ));
 ?>
-    <div class="signup">
-      <ul>
-        <li>
-          <a class="btn signup_btn" href="http://localhost/mathWithMauritz">
-            Free Trial Lesson
+    <ul class="sign_up">
+      <li>
+        <div class="btn_wrapper">
+          <a class="btn button_link mobile" href="<?php echo get_theme_mod('mobile-header-button-url'); ?>">
+            <?php echo get_theme_mod('mobile-header-button-text'); ?>
           </a>
-        </li>
-      </ul>
-    </div>
+
+      </li>
+    </ul>
   </div>
 </div>

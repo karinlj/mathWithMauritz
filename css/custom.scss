@@ -434,7 +434,6 @@ a {
 	}*/
   &:hover {
     color: $linkcolor;
-    opacity: 0.6;
     text-decoration: none;
   }
 }
@@ -717,21 +716,13 @@ nav {
         transition: all .5s ease;
         padding: 0.5rem 0.2rem;
         border-bottom: 1px solid transparent;
-        font-size: 0.85em;
+        font-size: 0.9rem;
         letter-spacing: 0.5px;
         display: block;
         color: $navcolor;
         text-decoration: none;
         font-weight: 600;
         cursor: pointer;
-
-        @media all and (min-width: $lg-min) {
-          font-size: 0.7em;
-        }
-
-        @media all and (min-width: $xl-min) {
-          font-size: 0.85em;
-        }
 
         &:hover {
           color: $navcolor;
@@ -777,7 +768,6 @@ nav {
         &::after {
           content: "\f107";
           font-family: 'Font Awesome 5 Free';
-          //
           font-weight: 600;
           margin-left: 5px;
           color: $navcolor;
@@ -856,57 +846,6 @@ nav {
   }
 }
 
-.signup {
-  display: flex;
-  justify-content: flex-start;
-
-  @media all and (min-width: $lg-min) {
-    justify-content: flex-end;
-  }
-
-  ul {
-    li {
-      &:last-of-type {
-        @media all and (min-width: $lg-min) {
-          border-left: 1px solid #fff;
-        }
-
-        a {
-          color: #333;
-          background-color: #fff;
-          border: 1px solid #fff;
-          margin: 0 0 0 1.2rem;
-          border-radius: $themeBorder_radius;
-          padding: 10px 20px;
-          cursor: pointer;
-          line-height: 1.2;
-          font-weight: 600;
-          transition: all .5s ease;
-          text-transform: uppercase;
-          font-size: 0.85em;
-          letter-spacing: 0.5px;
-          box-shadow: $themeBox_shadow;
-
-          @media all and (min-width: $lg-min) {
-            font-size: 0.7em;
-          }
-
-          @media all and (min-width: $xl-min) {
-            font-size: 0.85em;
-          }
-
-          &:hover {
-            background: transparent !important;
-            color: #fff !important;
-            border: 1px solid #fff !important;
-            opacity: 1;
-          }
-        }
-      }
-    }
-  }
-}
-
 /*Mobile view*/
 
 .nav-mobile {
@@ -944,6 +883,10 @@ nav {
         font-weight: 500;
         cursor: pointer;
         padding: 10px;
+
+        &:hover {
+          color: $linkcolor
+        }
       }
     }
 
@@ -990,32 +933,30 @@ nav {
           text-align: left;
           margin-top: 0;
           margin-left: 10px;
+
+          &:hover {
+            color: $linkcolor
+          }
         }
       }
     }
   }
 
-  .signup {
-    ul {
-      width: 100%;
+  ul.sign_up {
+    width: 100%;
+    padding-top: 2rem;
 
-      li {
+    li {
 
-        .signup_btn {
-          margin: 1rem 0.5rem;
-          background: $themecolorBlueLightBg;
-          color: #fff !important;
-          border: 1px solid $themecolorBlueLight;
-          width: 100%;
+      .btn_wrapper {
+        width: 100%;
 
-          &:hover {
-            background: transparent;
-            color: $themecolorBlueLight;
-          }
+        .button_link {
+          font-size: 1rem;
+        }
 
-          @media all and (min-width: $sm-min) {
-            width: 12rem;
-          }
+        @media all and (min-width: $sm-min) {
+          width: 12rem;
         }
       }
     }
@@ -1031,13 +972,13 @@ nav {
     color: #fff;
     cursor: pointer;
   }
-}
 
-/*toggle class with jquery*/
+  /*toggle class with jquery*/
 
-.nav-mobile-open {
-  overflow-x: auto;
-  transform: translateX(0);
+  &.open {
+    overflow-x: auto;
+    transform: translateX(0);
+  }
 }
 
 /************************
@@ -1085,140 +1026,79 @@ nav {
           width: auto;
         }
       }
-
-      //default: lightblue
-      .signup_btn {
-        background: #fff;
-        color: $themecolorBlueLight;
-        border: 1px solid #fff;
-
-        &:hover {
-          background: transparent;
-          color: #fff;
-        }
-      }
-
-      .demo_btn {
-        background: transparent;
-        border: 1px solid #fff;
-        color: #fff;
-
-        &:hover {
-          background: #fff;
-          color: $themecolorBlueLight;
-        }
-      }
-    }
-
-  }
-
-  &.lightblue {
-    .signup ul li:last-of-type a {
-      color: $themecolorBlueLight;
     }
   }
+}
 
-  &.blue {
-    .signup_btn {
-      color: $themecolorBlue;
-    }
+.header_items_section {
+  padding: 0 calc(1.5rem - 15px) 4rem calc(1.5rem - 15px);
 
-    .demo_btn {
-      &:hover {
-        color: $themecolorBlue;
-      }
-    }
-
-    .signup ul li:last-of-type a {
-      color: $themecolorBlue;
-    }
+  @media all and (min-width: $sm-min) {
+    padding: 0 calc(2.25rem - 15px) 4rem calc(2.25rem - 15px);
   }
 
-  &.green {
-    .signup_btn {
-      color: $themecolorGreenNew;
-    }
-
-    .demo_btn {
-      &:hover {
-        color: $themecolorGreenNew;
-      }
-    }
-
-    .signup ul li:last-of-type a {
-      color: $themecolorGreenNew;
-    }
+  @media all and (min-width: $md-min) {
+    padding: 0 calc(3rem - 15px) 4rem calc(3rem - 15px);
   }
 
-  .header_items_section {
-    padding: 0 calc(1.5rem - 15px) 4rem calc(1.5rem - 15px);
+  @media all and (min-width: $xl-min) {
+    padding: 0 calc(3.75rem - 15px) 4rem calc(3.75rem - 15px);
+  }
 
-    @media all and (min-width: $sm-min) {
-      padding: 0 calc(2.25rem - 15px) 4rem calc(2.25rem - 15px);
-    }
+  .header_heading {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-align: center;
 
-    @media all and (min-width: $md-min) {
-      padding: 0 calc(3rem - 15px) 4rem calc(3rem - 15px);
-    }
-
-    @media all and (min-width: $xl-min) {
-      padding: 0 calc(3.75rem - 15px) 4rem calc(3.75rem - 15px);
-    }
-
-    .header_heading {
-      color: #fff;
-      margin-bottom: 1.5rem;
+    @media all and (max-width: $xs-max) {
       text-align: center;
-
-      @media all and (max-width: $xs-max) {
-        text-align: center;
-      }
-
-      &.front {
-        text-align: center;
-
-        @media all and (min-width: $sm-min) {
-          text-align: left;
-        }
-      }
     }
 
-    .header_text {
-      font-size: 1.3rem;
-      color: #fff;
-      margin-bottom: 1.5rem;
+    &.front {
       text-align: center;
 
       @media all and (min-width: $sm-min) {
-        font-size: 1.5em;
-      }
-
-      &.front {
-        text-align: center;
-
-        @media all and (min-width: $sm-min) {
-          text-align: left;
-        }
+        text-align: left;
       }
     }
+  }
 
-    .btn_wrapper {
+  .header_text {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+
+    @media all and (min-width: $sm-min) {
+      font-size: 1.5em;
+    }
+
+    &.front {
       text-align: center;
 
-      a.button_link {
-        background: #1AC8ED; // #0fd74e;
-        // #1B5299;blue  // //#8AC4FF; //#49392C; //#1AC8ED; //#49C6E5; // #32E875; // #357DED; // #3dc9db; // $themecolorBlue; 
-
-        transition: 1s all ease-in-out;
-        color: #fff;
-        border: 1px solid #1AC8ED;
-
-        &:hover {
-          background: #fff;
-          border: 1px solid #fff;
-          color: #1AC8ED;
-        }
+      @media all and (min-width: $sm-min) {
+        text-align: left;
       }
+    }
+  }
+}
+
+
+.btn_wrapper {
+  text-align: center;
+
+  a.button_link {
+    background: #1AC8ED; // #0fd74e;
+    // #1B5299;blue  // //#8AC4FF; //#49392C; //#1AC8ED; //#49C6E5; // #32E875; // #357DED; // #3dc9db; // $themecolorBlue; 
+
+    transition: 1s all ease-in-out;
+    color: #fff;
+    border: 1px solid #1AC8ED;
+
+    &:hover {
+      background: #fff;
+      border: 1px solid #fff;
+      color: #1AC8ED;
     }
   }
 }

@@ -93,6 +93,9 @@ function mathWithMauritz_register_menus()
 }
 add_action('after_setup_theme', 'mathWithMauritz_register_menus');
 
+//New file for customizing
+require get_template_directory() . '/inc/customizer.php';
+
 //Widget locations
 function wpb_init_widgets($id)
 {

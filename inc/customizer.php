@@ -3,32 +3,32 @@ function bn_customize_register($wp_customize)
 {
 
     //Custom Link Section
-    $wp_customize->add_section('custom-link', array(
+    $wp_customize->add_section('mobile-header-button', array(
 
-        'title' => __('Custom Link', 'boozang-fifth'),
-        'description' => sprintf(__('Options for Custom  Link', 'boozang-fifth')),
+        'title' => __('Mobile header button', 'math-with-mauritz'),
+        'description' => sprintf(__('Options for Mobile header button', 'math-with-mauritz')),
     ));
 
     //Custom Link Section: Link Url: settings and control
-    $wp_customize->add_setting('custom-link-url', array(
-        'default' => _x('http://test.com', 'boozang-fifth'),
+    $wp_customize->add_setting('mobile-header-button-url', array(
+        'default' => _x('http://test.com', 'math-with-mauritz'),
         'type' => 'theme_mod',
     ));
-    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'custom-link-control', array(
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'mobile-header-button-control', array(
         'label' => __('Link URL'),
-        'section' => 'custom-link',
-        'settings' => 'custom-link-url',
+        'section' => 'mobile-header-button',
+        'settings' => 'mobile-header-button-url',
     )));
 
     //Custom Link Section: Link Text: settings and control
-    $wp_customize->add_setting('custom-link-text', array(
-        'default' => _x('Example Button Text', 'boozang-fifth'),
+    $wp_customize->add_setting('mobile-header-button-text', array(
+        'default' => _x('Example Button Text', 'math-with-mauritz'),
         'type' => 'theme_mod',
     ));
-    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'custom-link-text-control', array(
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'mobile-header-button-text-control', array(
         'label' => __('Link Text'),
-        'section' => 'custom-link',
-        'settings' => 'custom-link-text',
+        'section' => 'mobile-header-button',
+        'settings' => 'mobile-header-button-text',
         'type' => 'textarea',
     )));
 }

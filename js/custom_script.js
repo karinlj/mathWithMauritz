@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
 
     if (path.indexOf("blog") >= 0) {
       //if path contains
-      // alert('hej hej' + path);
+      // alert('hej' + path);
 
       $(".most-recent").addClass("current-misse");
     }
@@ -18,7 +18,11 @@ jQuery(document).ready(function ($) {
 
   /*when click on veggoburger...add or remove class */
   $(".toggle").click(function () {
-    $(".nav-mobile").toggleClass("nav-mobile-open");
+    $(".nav-mobile").toggleClass("open");
+  });
+  /*when click on button...add or remove class */
+  $(".button_link.mobile").click(function () {
+    $(".nav-mobile").toggleClass("open");
   });
 
   /*Desktop*/
