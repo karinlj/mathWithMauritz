@@ -6,17 +6,11 @@
         <nav class="">
 
           <h3 class="site-title">
-
             <a class="logo" href="<?php echo esc_url(home_url('/')); ?>">
-              Math with Mauritz
+              <?php bloginfo('name');?>
             </a>
-            </h2>
-
-
-            <!-- <a class="logo" href="http://localhost/mathWithMauritz/">
-              Math with Mauritz
-            </a> -->
           </h3>
+
           <div class="nav-links">
             <?php
 wp_nav_menu(array(

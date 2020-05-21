@@ -1873,7 +1873,7 @@ text layout for Pages Content block
 
   .contact {
     position: relative;
-    padding: 2em;
+    padding: 2em 2em 2em 0;
 
     &:before {
       position: absolute;
@@ -1885,11 +1885,6 @@ text layout for Pages Content block
       content: '';
       display: block;
     }
-
-    text-align: right;
-    padding-right: 4rem;
-    border-right: 1px solid $themecolor;
-    border-right: 1px solid #fff;
 
     .text {
       padding-bottom: 2rem;
@@ -1905,7 +1900,6 @@ text layout for Pages Content block
         padding-bottom: 1.5rem;
       }
     }
-
 
     .logo a {
       position: relative;
@@ -1924,65 +1918,66 @@ text layout for Pages Content block
       color: #fff;
       //color: $themecolor;
     }
-  }
 
-  .social-icons {
-    text-align: right;
-    padding-top: 1rem;
+    .social-icons {
+      padding-top: 1rem;
 
-    ul.social {
-      width: 100%;
-      list-style: none;
-      margin: 0px;
-      padding: 0px;
+      ul.social {
+        width: 100%;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
 
-      li.social-item {
-        // padding-right: 2rem;
-        padding-bottom: 0.5rem;
+        li.social-item {
+          padding-bottom: 0.5rem;
 
-        a {
-          display: inline-block;
-          position: relative;
-
-          &:before {
-            opacity: 0;
-            position: absolute;
-            bottom: 0;
-            left: 1px;
-            content: '';
-            // width: 100%;
-            width: 0;
-            height: 2px;
-            background: $linkcolor;
-            -webkit-transition: width .2s ease-in;
-            transition: width .2s ease-in;
-          }
-
-          &:hover {
-            opacity: 1;
+          a {
+            display: inline-block;
+            position: relative;
 
             &:before {
-              width: 100%;
-              opacity: .7;
+              opacity: 0;
+              position: absolute;
+              bottom: 0;
+              left: 1px;
+              content: '';
+              // width: 100%;
+              width: 0;
+              height: 2px;
+              background: $linkcolor;
+              -webkit-transition: width .2s ease-in;
+              transition: width .2s ease-in;
             }
-          }
 
-          .fab,
-          .fas {
-            font-size: 14px;
-            padding-right: 2px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 50%;
-            transition: 1s;
-            color: $linkcolor;
+            &:hover {
+              opacity: 1;
+
+              &:before {
+                width: 100%;
+                opacity: .7;
+              }
+            }
+
+            .fab,
+            .fas {
+              font-size: 14px;
+              padding-right: 2px;
+              text-align: center;
+              text-decoration: none;
+              border-radius: 50%;
+              transition: 1s;
+              color: $linkcolor;
+            }
           }
         }
       }
+    }
 
-      @media all and (min-width: $md-min) {
-        //display: flex;
-      }
+    @media all and (min-width: $md-min) {
+      text-align: right;
+      padding: 2em;
+      padding-right: 4rem;
+      border-right: 1px solid #fff;
     }
   }
 
@@ -1990,14 +1985,14 @@ text layout for Pages Content block
     width: 100%;
 
     ul.footer-links {
-      display: flex;
       list-style: none;
       padding: 0;
       margin: 0;
-      padding-bottom: 2rem;
+      padding-bottom: 0.3rem;
 
       li {
         padding-right: 2rem;
+        padding-bottom: 1rem;
 
         a {
           display: inline-block;
@@ -2010,7 +2005,6 @@ text layout for Pages Content block
             left: 1px;
             content: '';
             width: 100%;
-            // width: 0;
             height: 2px;
             background: $linkcolor;
             -webkit-transition: width .2s ease-in;
@@ -2026,27 +2020,10 @@ text layout for Pages Content block
             }
           }
         }
-
-        &:first-of-type {
-          padding-left: 0;
-        }
-
-        @media all and (min-width: $md-min) {
-          padding-left: 2rem;
-          padding-right: 0;
-        }
-
-        @media all and (max-width: $xs-max) {
-          padding-bottom: 1rem;
-        }
       }
 
-      @media all and (min-width: $md-min) {
-        //justify-content: flex-end;
-      }
-
-      @media all and (max-width: $xs-max) {
-        display: block;
+      @media all and (min-width: $lg-min) {
+        display: flex;
       }
     }
   }
@@ -2060,22 +2037,31 @@ text layout for Pages Content block
         color: #fff;
         font-size: 70%;
         margin-bottom: 0;
+
+        @media all and (min-width: $md-min) {
+          margin-top: 1rem;
+        }
       }
     }
   }
 
   .to_top {
-    position: absolute;
-    right: 70px;
-    bottom: 50px;
-    transition: 1s all ease-in-out;
-    color: #fff;
-    border: 1px solid #fff;
+    margin-top: 2rem;
 
-    &:hover {
-      background: #fff;
-      border: 1px solid transparent;
-      color: $themecolor;
+    .to_top_btn {
+      transition: 1s all ease-in-out;
+      color: #fff;
+      border: 1px solid #fff;
+
+      &:hover {
+        background: #fff;
+        border: 1px solid transparent;
+        color: $themecolor;
+      }
+    }
+
+    @media all and (min-width: $md-min) {
+      float: right;
     }
   }
 }

@@ -19,35 +19,45 @@ if ($bg_image) {
         <div class="contact">
           <?php if (function_exists('acf_add_options_page')) {?>
 
+          <?php $contact_phrase = get_field('contact_phrase', 'option');
+    $text_field = get_field('text_field', 'option');
+    $adress_field = get_field('adress_field', 'option');
+    $phone_field = get_field('phone_field', 'option');
+    $link = get_field('mail_link', 'option');
+    ?>
           <div class="text">
-            <h2 class="contact_phrase"><?php the_field('contact_phrase', 'option')?></h2>
-            <p class="text_field"><?php the_field('text_field', 'option')?></p>
+            <?php if ($contact_phrase) {?>
+            <h2 class="contact_phrase"><?php echo $contact_phrase ?></h2>
+            <?php }?>
+
+            <?php if ($text_field) {?>
+            <p class="text_field"><?php echo $text_field ?></p>
+            <?php }?>
           </div>
 
-          <?php $site_url = get_field('site_url', 'option');
-    $site_name = get_field('site_name', 'option');
+          <h6 class="logo">
+            <a class="" href="<?php echo esc_url(home_url('/')); ?>">
+              <?php bloginfo('name');?>
+            </a>
+          </h6>
 
-    if ($site_url && $site_name) {?>
-
-          <div class="logo">
-            <h6>
-              <a class="" href="<?php echo $site_url; ?>"><?php echo $site_name; ?></a>
-            </h6>
-          </div>
+          <?php if ($adress_field) {?>
+          <p class="adress_field"><?php echo $adress_field ?></p>
           <?php }?>
 
-          <p class="adress_field"><?php the_field('adress_field', 'option')?></p>
-          <p class="phone_field"><?php the_field('phone_field', 'option')?></p>
+          <?php if ($phone_field) {?>
+          <p class="phone_field"><?php echo $phone_field ?></p>
+          <?php }?>
 
           <div class="social-icons">
             <ul class="social">
 
-              <?php $link = get_field('mail_link', 'option');?>
-
+              <?php if ($link) {?>
               <li class="social-item">
                 <a href="mailto:<?php echo $link; ?>" target="_top"><i class="fas fa-envelope" aria-hidden="true"></i>
                   <?php echo $link; ?></a>
               </li>
+              <?php }?>
 
               <?php if (have_rows('social_icons', 'option')) { //repeater field ?>
               <?php
@@ -61,7 +71,6 @@ while (have_rows('social_icons', 'option')) {
                 <a href="<?php echo $social_url; ?>"><i class="fab fa-<?php echo $social_site; ?>"></i>
                   <?php echo $social_site; ?></a>
               </li>
-
               <?php
 }
     }?>
@@ -82,16 +91,9 @@ if (function_exists('acf_add_options_page')) {
         while (have_rows('footer_links', 'option')) { // loop through the rows of data
             the_row();
 
-            if (have_rows('links')) { // check if repeater field has rows
-                ?>
+            $link = get_sub_field('link');?>
+
           <ul class="footer-links">
-            <?php
-while (have_rows('links')) { // loop through the rows of data
-                    the_row();?>
-
-            <?php
-$link = get_sub_field('link');?>
-
             <li class="link-item">
               <a href="<?php echo $link['url']; ?>"
                 target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
@@ -99,14 +101,19 @@ $link = get_sub_field('link');?>
 
             <?php
 }?>
-
           </ul>
           <?php
 }
-        }
-    }
 }
 ?>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="to_top">
+          <a href="#header" class="btn to_top_btn">Back to top </a>
         </div>
       </div>
     </div>
@@ -116,15 +123,12 @@ $link = get_sub_field('link');?>
         <div class="footer-copy">
 
           <div class="copy">
-            <p>© 2020 - Math With Mauritz INC. ALL RIGHTS RESERVED. Theme by <a href="http://karinljunggren.com/"
-                target="_blank">Karin</a>
+            <p>&copy; <?php echo Date('Y'); ?> - <?php bloginfo('name');?> INC. ALL RIGHTS RESERVED. Theme by <a
+                href="http://karinljunggren.com/" target="_blank">Karin</a>
             </p>
           </div>
         </div>
       </div>
-
-      <a href="#header" class="btn to_top">Back to top </a>
-
     </div>
   </div>
 

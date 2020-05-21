@@ -41,41 +41,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_5ec00951eabe6",
-            "label": "Site url",
-            "name": "site_url",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_5ec00077180d8",
-            "label": "Site name",
-            "name": "site_name",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_5ebfffd4180d7",
             "label": "Adress field",
             "name": "adress_field",
@@ -129,14 +94,14 @@
             "collapsed": "",
             "min": 0,
             "max": 0,
-            "layout": "block",
-            "button_label": "Add Column",
+            "layout": "row",
+            "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_5b47a57ae6fff",
-                    "label": "Heading",
-                    "name": "heading",
-                    "type": "text",
+                    "key": "field_5b47a58ee7001",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -145,64 +110,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5b47a583e7000",
-                    "label": "Links",
-                    "name": "links",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "collapsed": "",
-                    "min": 0,
-                    "max": 0,
-                    "layout": "table",
-                    "button_label": "Add Link",
-                    "sub_fields": [
-                        {
-                            "key": "field_5b47a58ee7001",
-                            "label": "Link",
-                            "name": "link",
-                            "type": "link",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array"
-                        }
-                    ]
-                },
-                {
-                    "key": "field_5b47a7ead46cf",
-                    "label": "End column",
-                    "name": "",
-                    "type": "message",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "message": "",
-                    "new_lines": "wpautop",
-                    "esc_html": 0
+                    "return_format": "array"
                 }
             ]
         }
@@ -224,5 +132,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1589925123
+    "modified": 1590051571
 }

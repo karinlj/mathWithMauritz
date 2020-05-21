@@ -30,9 +30,13 @@ $header_heading_pages = get_field('header_heading_pages');
 $header_text_pages = get_field('header_text_pages');
 $button_link_url = get_field('button_link_url');
 $button_link_text = get_field('button_link_text');
-?>
 
-  <?php if (is_singular('post')) {
+if (is_home() || is_archive()) { //for blog
+    $header_heading_pages = get_field('header_heading_pages', get_option('page_for_posts'));
+    $header_text_pages = get_field('header_text_pages', get_option('page_for_posts'));
+}
+
+if (is_singular('post')) {
     $col_class = 'col-md-10 offset-md-1';
 }
 
@@ -78,24 +82,26 @@ if (is_home() || is_singular('post') || is_archive()) { //for blog
         <div class="row">
           <div class="<?php echo $col_class; ?>">
 
-            <?php if (is_home() || is_archive()) { //for blog
-    $header_heading_pages = get_field('header_heading_pages', get_option('page_for_posts'));
-    $header_text_pages = get_field('header_text_pages', get_option('page_for_posts'));
-}?>
+            <?php if ($header_heading_pages) {?>
             <h1 class="header_heading">
               <?php echo $header_heading_pages; ?>
-
               <!-- title in header for single post -->
               <?php if (is_singular('post')): the_title();endif;?>
             </h1>
+            <?php }?>
 
+            <?php if ($header_text_pages) {?>
             <p class="header_text">
               <?php echo $header_text_pages; ?>
             </p>
+            <?php }?>
 
+            <?php if ($button_link_url && $button_link_text) {?>
             <div class="btn_wrapper">
               <a class="btn button_link" href="<?php echo $button_link_url; ?>"><?php echo $button_link_text; ?></a>
             </div>
+            <?php }?>
+
           </div>
         </div>
       </div>
