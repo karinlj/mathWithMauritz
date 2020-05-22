@@ -36,10 +36,13 @@ wp_nav_menu(array(
     'theme_location' => 'primary',
 ));
 ?>
+
+    <?php $button_color = get_field('button_color');?>
     <ul class="sign_up">
       <li>
         <div class="btn_wrapper">
-          <a class="btn button_link mobile" href="<?php echo get_theme_mod('mobile-header-button-url'); ?>">
+          <a class="btn button_link mobile <?php echo $button_color; ?>"
+            href="<?php echo get_theme_mod('mobile-header-button-url'); ?>">
             <?php echo get_theme_mod('mobile-header-button-text'); ?>
           </a>
 

@@ -18,7 +18,6 @@ if (have_rows('content')) {?>
   <?php while (have_rows('content')) {?>
   <?php the_row();?>
 
-
   <?php $layout = get_row_layout();?>
 
   <?php // load the layout from the templates folder

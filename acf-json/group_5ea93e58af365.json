@@ -1,10 +1,10 @@
 {
     "key": "group_5ea93e58af365",
-    "title": "Header items Pages",
+    "title": "Header items",
     "fields": [
         {
             "key": "field_5ea93e627bfcc",
-            "label": "Header heading pages",
+            "label": "Header heading",
             "name": "header_heading_pages",
             "type": "text",
             "instructions": "",
@@ -23,7 +23,7 @@
         },
         {
             "key": "field_5ea93ea47bfcd",
-            "label": "Header text pages",
+            "label": "Header text",
             "name": "header_text_pages",
             "type": "textarea",
             "instructions": "",
@@ -74,6 +74,30 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5ec8486f43c0b",
+            "label": "Button color",
+            "name": "button_color",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "skyblue": "Skyblue",
+                "lightgreen": "Lightgreen"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -100,5 +124,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1589837952
+    "modified": 1590184071
 }

@@ -1,5 +1,6 @@
 <?php
-// two columns white or lightgrey with text and round image
+// two columns white or lightgrey with text and round image: layout for Content block
+
 $color = get_sub_field('color_theme');
 ?>
 

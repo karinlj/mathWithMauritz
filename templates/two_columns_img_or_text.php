@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by Karin.
- * Layout 'two_columns_img_or_text' in flex content 'Pages Content block'
+ * Layout 'two_columns_img_or_text white bg' in flex content 'Content block'
  */
 
 $color = get_sub_field('color_theme');

@@ -30,6 +30,7 @@ $header_heading_pages = get_field('header_heading_pages');
 $header_text_pages = get_field('header_text_pages');
 $button_link_url = get_field('button_link_url');
 $button_link_text = get_field('button_link_text');
+$button_color = get_field('button_color');
 
 if (is_home() || is_archive()) { //for blog
     $header_heading_pages = get_field('header_heading_pages', get_option('page_for_posts'));
@@ -97,8 +98,10 @@ if (is_home() || is_singular('post') || is_archive()) { //for blog
             <?php }?>
 
             <?php if ($button_link_url && $button_link_text) {?>
+
             <div class="btn_wrapper">
-              <a class="btn button_link" href="<?php echo $button_link_url; ?>"><?php echo $button_link_text; ?></a>
+              <a class="btn button_link <?php echo $button_color; ?>"
+                href="<?php echo $button_link_url; ?>"><?php echo $button_link_text; ?></a>
             </div>
             <?php }?>
 

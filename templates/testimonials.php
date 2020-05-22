@@ -1,13 +1,20 @@
 <?php
-
+//testimonials layout for Content block
 ?>
 
 <section class="testimonials_section section_spacing_top_medium">
   <div class="container">
     <div class="row align-items-start">
       <div class="col text-center">
+
+        <?php if (get_sub_field('heading_upper')) {?>
         <h5 class="heading_upper"><?php the_sub_field('heading_upper');?></h5>
+        <?php
+}?>
+        <?php if (get_sub_field('heading_lower')) {?>
         <h2 class="heading_lower"><?php the_sub_field('heading_lower');?></h2>
+        <?php
+}?>
 
         <p class="banner_icon">
           <i class="fa fa-quote-left"></i>

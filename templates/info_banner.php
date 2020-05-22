@@ -1,5 +1,5 @@
 <?php
-// get started layout for  Pages Content block
+//info_banner layout for Content block
 if (get_row_layout() == 'info_banner') {?>
 
 <?php
@@ -19,8 +19,15 @@ $style = '';
   <div class="container">
     <div class="row justify-content-center align-items-center">
       <div class="col-lg-8">
-        <h2 class=""><?php the_sub_field('heading');?></h2>
-        <p class=""><?php the_sub_field('text');?></p>
+
+        <?php if (get_sub_field('heading')) {?>
+        <h2><?php the_sub_field('heading');?></h2>
+        <?php
+}?>
+        <?php if (get_sub_field('text')) {?>
+        <p><?php the_sub_field('text');?></p>
+        <?php
+}?>
 
         <!-- loopa flex content -->
         <?php if (have_rows('banner_links')) {
@@ -47,16 +54,6 @@ $style = '';
 
         <div class="link_wrapper">
           <a class="banner_link" href="<?php echo $link_url; ?>"><?php echo $link_text; ?></a>
-        </div>
-        <?php
-}
-            if (get_row_layout() == 'button_link') {
-
-                $button_link_url = get_sub_field('button_link_url');
-                $button_link_text = get_sub_field('button_link_text');?>
-
-        <div class="btn_wrapper">
-          <a class="btn link" href="<?php echo $button_link_url; ?>"><?php echo $button_link_text; ?></a>
         </div>
         <?php
 }
