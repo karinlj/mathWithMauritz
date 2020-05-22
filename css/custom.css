@@ -265,13 +265,11 @@ a {
     text-decoration: none; }
 
 /* links with underscore on some sections with Wysiyg */
-.faq_list_section a,
 .two_columns_section a,
 .text_section_pages a,
 .post_text a {
   display: inline-block;
   position: relative; }
-  .faq_list_section a:before,
   .two_columns_section a:before,
   .text_section_pages a:before,
   .post_text a:before {
@@ -285,18 +283,15 @@ a {
     background: #1AC8ED;
     -webkit-transition: width .2s ease-in;
     transition: width .2s ease-in; }
-  .faq_list_section a:hover,
   .two_columns_section a:hover,
   .text_section_pages a:hover,
   .post_text a:hover {
     opacity: 1; }
-    .faq_list_section a:hover:before,
     .two_columns_section a:hover:before,
     .text_section_pages a:hover:before,
     .post_text a:hover:before {
       width: 100%;
       opacity: .7; }
-  .faq_list_section a.arrow_link:after,
   .two_columns_section a.arrow_link:after,
   .text_section_pages a.arrow_link:after,
   .post_text a.arrow_link:after {
@@ -1069,12 +1064,6 @@ nav {
           .blog_flow .post_card.single .post_content .blog_post_meta p {
             font-size: 0.9rem;
             color: #8c8c8c; }
-  .blog_flow .wpcf7 {
-    max-width: 100%; }
-    .blog_flow .wpcf7 label {
-      max-width: 100%; }
-      .blog_flow .wpcf7 label input {
-        max-width: 100%; }
 
 /**********************************
 text layout for Pages Content block
@@ -1192,7 +1181,8 @@ text layout for Pages Content block
         padding-bottom: 1rem; }
         .footer_main .links ul.footer-links li a {
           display: inline-block;
-          position: relative; }
+          position: relative;
+          color: #fff; }
           .footer_main .links ul.footer-links li a:before {
             opacity: .4;
             position: absolute;
@@ -1201,12 +1191,14 @@ text layout for Pages Content block
             content: '';
             width: 100%;
             height: 2px;
-            background: #1AC8ED;
+            background: #fff;
             -webkit-transition: width .2s ease-in;
             transition: width .2s ease-in; }
           .footer_main .links ul.footer-links li a:hover {
-            opacity: 1; }
+            opacity: 1;
+            color: #1AC8ED; }
             .footer_main .links ul.footer-links li a:hover:before {
+              background: #1AC8ED;
               width: 100%;
               opacity: .7; }
       @media all and (min-width: 992px) {
@@ -1241,10 +1233,10 @@ text layout for Pages Content block
 .cookie-notice-container span {
   color: #999; }
 
-/**********************
-  Two columns
-***********************/
-.two-columns {
+/***********************************************************************
+  Two columns - Text (and/ or image) - two columns with background color
+*******************************************************************'***/
+.two_columns_blocks {
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
@@ -1255,16 +1247,16 @@ text layout for Pages Content block
   -ms-flex-direction: column !important;
   flex-direction: column !important; }
   @media all and (min-width: 768px) {
-    .two-columns {
+    .two_columns_blocks {
       flex-direction: row !important; } }
-  .two-columns .aspect-wrapper {
+  .two_columns_blocks .aspect-wrapper {
     width: 100%; }
     @media all and (min-width: 768px) {
-      .two-columns .aspect-wrapper {
+      .two_columns_blocks .aspect-wrapper {
         width: 50%; } }
-    .two-columns .aspect-wrapper .box.image {
+    .two_columns_blocks .aspect-wrapper .box.image {
       position: relative; }
-      .two-columns .aspect-wrapper .box.image:before {
+      .two_columns_blocks .aspect-wrapper .box.image:before {
         position: absolute;
         top: 0;
         right: 0;
@@ -1273,50 +1265,50 @@ text layout for Pages Content block
         background: rgba(0, 0, 0, 0.3);
         content: '';
         display: block; }
-    .two-columns .aspect-wrapper .box.text {
+    .two_columns_blocks .aspect-wrapper .box.text {
       min-height: 400px; }
       @media all and (min-width: 576px) {
-        .two-columns .aspect-wrapper .box.text {
+        .two_columns_blocks .aspect-wrapper .box.text {
           min-height: auto; } }
-    .two-columns .aspect-wrapper:nth-of-type(odd) .box.text .text-part {
+    .two_columns_blocks .aspect-wrapper:nth-of-type(odd) .box.text .text-part {
       padding: 0 1.5rem; }
       @media all and (min-width: 576px) {
-        .two-columns .aspect-wrapper:nth-of-type(odd) .box.text .text-part {
+        .two_columns_blocks .aspect-wrapper:nth-of-type(odd) .box.text .text-part {
           padding-left: 2.25rem; } }
       @media all and (min-width: 768px) {
-        .two-columns .aspect-wrapper:nth-of-type(odd) .box.text .text-part {
+        .two_columns_blocks .aspect-wrapper:nth-of-type(odd) .box.text .text-part {
           padding-left: 3rem; } }
       @media all and (min-width: 992px) {
-        .two-columns .aspect-wrapper:nth-of-type(odd) .box.text .text-part {
+        .two_columns_blocks .aspect-wrapper:nth-of-type(odd) .box.text .text-part {
           padding-left: calc(3.75rem);
           padding-right: 5rem;
           right: 0;
           left: auto; } }
-    .two-columns .aspect-wrapper:nth-of-type(even) .box.text .text-part {
+    .two_columns_blocks .aspect-wrapper:nth-of-type(even) .box.text .text-part {
       padding: 0 1.5rem; }
       @media all and (min-width: 576px) {
-        .two-columns .aspect-wrapper:nth-of-type(even) .box.text .text-part {
+        .two_columns_blocks .aspect-wrapper:nth-of-type(even) .box.text .text-part {
           padding-right: 2.25rem; } }
       @media all and (min-width: 768px) {
-        .two-columns .aspect-wrapper:nth-of-type(even) .box.text .text-part {
+        .two_columns_blocks .aspect-wrapper:nth-of-type(even) .box.text .text-part {
           padding-right: 3rem; } }
       @media all and (min-width: 992px) {
-        .two-columns .aspect-wrapper:nth-of-type(even) .box.text .text-part {
+        .two_columns_blocks .aspect-wrapper:nth-of-type(even) .box.text .text-part {
           padding-right: calc(2.25rem + 15px);
           padding-left: 5rem;
           left: 0;
           right: auto; } }
-  .two-columns .box.text {
+  .two_columns_blocks .box.text {
     width: 100%;
     position: relative;
     padding-bottom: 60%; }
     @media all and (min-width: 576px) {
-      .two-columns .box.text {
+      .two_columns_blocks .box.text {
         padding-bottom: 43%; } }
     @media all and (min-width: 768px) {
-      .two-columns .box.text {
+      .two_columns_blocks .box.text {
         padding-bottom: 66.67%; } }
-    .two-columns .box.text .text-part {
+    .two_columns_blocks .box.text .text-part {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -1327,10 +1319,10 @@ text layout for Pages Content block
       display: -ms-flexbox !important;
       display: flex !important;
       align-items: center; }
-      .two-columns .box.text .text-part a {
+      .two_columns_blocks .box.text .text-part a {
         text-decoration: none !important; }
       @media all and (min-width: 1200px) {
-        .two-columns .box.text .text-part {
+        .two_columns_blocks .box.text .text-part {
           max-width: calc((1380px /2) + 2.25rem); } }
 
 /**********************
@@ -1469,7 +1461,7 @@ input[type="submit"]:hover {
       height: 100%; }
 
 /**********************************
-  boxes diff sizes - images & text
+  boxes in columns diff sizes - images & text
 ***********************************/
 .blurb-columns > .container {
   padding-top: 1.5rem; }

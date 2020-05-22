@@ -441,7 +441,6 @@ a {
 }
 
 /* links with underscore on some sections with Wysiyg */
-.faq_list_section,
 .two_columns_section,
 .text_section_pages,
 .post_text {
@@ -1333,21 +1332,16 @@ nav {
           }
 
           @media all and (min-width: $sm-min) {
-            //margin: 0 1rem -2px 1rem;
-            //border-bottom: 2px solid transparent;
             margin: 0 0.2rem;
             border: none;
             font-size: 0.7em;
             padding: 0.5rem 1rem;
             font-weight: 500;
-            //border-radius: 5px;
             border-radius: $themeBorder_radius;
 
             &:hover {
               opacity: 1;
               background: #f2f2f2;
-              // border-bottom: 2px solid $themecolorGreen;
-              //background: #fff;
             }
           }
 
@@ -1372,11 +1366,6 @@ nav {
         a {
           background: #f2f2f2;
           border-bottom: none;
-
-          @media all and (min-width: $md-min) {
-            // background: #fff;
-            // border-bottom: 2px solid $themecolorGreen;
-          }
         }
       }
 
@@ -1384,11 +1373,6 @@ nav {
         a {
           background: #f2f2f2;
           border-bottom: none;
-
-          @media all and (min-width: $sm-min) {
-            // background: #fff;
-            // border-bottom: 2px solid $themecolorGreen;
-          }
         }
       }
     }
@@ -1587,19 +1571,6 @@ nav {
       }
     }
   }
-
-  //wpcf7 form
-  .wpcf7 {
-    max-width: 100%;
-
-    label {
-      max-width: 100%;
-
-      input {
-        max-width: 100%;
-      }
-    }
-  }
 }
 
 /**********************************
@@ -1641,10 +1612,6 @@ text layout for Pages Content block
   padding-bottom: 1rem;
   width: 100%;
   color: #fff;
-  // background-image: linear-gradient(40deg, rgb(17, 17, 17) 33%, rgb(51, 51, 51));
-
-  // background: #fff;
-  // background: #463730; //brown
   min-height: 400px;
 
   @media all and (max-width: $xs-max) {
@@ -1672,7 +1639,6 @@ text layout for Pages Content block
       .contact_phrase {
         position: relative;
         color: #fff;
-        // color: $themeHeadingcolor;
         font-size: 2.1rem;
       }
 
@@ -1684,7 +1650,6 @@ text layout for Pages Content block
     .logo a {
       position: relative;
       color: #fff;
-      //color: $themecolor;
 
       &:hover {
         color: $linkcolor;
@@ -1696,7 +1661,6 @@ text layout for Pages Content block
     .text_field {
       position: relative;
       color: #fff;
-      //color: $themecolor;
     }
 
     .social-icons {
@@ -1777,6 +1741,7 @@ text layout for Pages Content block
         a {
           display: inline-block;
           position: relative;
+          color: #fff;
 
           &:before {
             opacity: .4;
@@ -1786,15 +1751,17 @@ text layout for Pages Content block
             content: '';
             width: 100%;
             height: 2px;
-            background: $linkcolor;
+            background: #fff;
             -webkit-transition: width .2s ease-in;
             transition: width .2s ease-in;
           }
 
           &:hover {
             opacity: 1;
+            color: $linkcolor;
 
             &:before {
+              background: $linkcolor;
               width: 100%;
               opacity: .7;
             }
@@ -1856,12 +1823,10 @@ text layout for Pages Content block
 }
 
 
-/**********************
-  Two columns
-***********************/
-
-
-.two-columns {
+/***********************************************************************
+  Two columns - Text (and/ or image) - two columns with background color
+*******************************************************************'***/
+.two_columns_blocks {
   @include d-flex;
   @include flex-column;
 
@@ -1901,8 +1866,6 @@ text layout for Pages Content block
       }
     }
 
-
-
     &:nth-of-type(odd) {
       //first half
 
@@ -1924,7 +1887,6 @@ text layout for Pages Content block
           right: 0;
           left: auto;
         }
-
       }
     }
 
@@ -1951,10 +1913,7 @@ text layout for Pages Content block
         }
       }
     }
-
   }
-
-
 
   .box.text {
     //for aspect ratio div
@@ -1993,157 +1952,6 @@ text layout for Pages Content block
     }
   }
 }
-
-
-
-// /**********************
-//   Two columns
-// ***********************/
-// .two-columns {
-//   @include d-flex;
-//   @include flex-column;
-
-//   @media all and (min-width: $md-min) {
-//     flex-direction: row !important;
-//   }
-
-//   .aspect-wrapper {
-//     width: 100%;
-
-//     @media all and (min-width: $md-min) {
-//       width: 50%;
-//     }
-
-//     .box {
-//       &.image {
-//         // position: relative;
-
-//         // .heading_part {
-//         //   display: flex;
-//         //   align-items: center;
-//         //   position: absolute;
-//         //   top: 0px;
-//         //   bottom: 0px;
-//         //   left: 0px;
-//         //   right: 0px;
-//         //   transition: all 0.7s ease 0s;
-
-//         //   .heading {
-//         //     color: #fff;
-//         //   }
-//         // }
-
-//         // &:before {
-//         //   position: absolute;
-//         //   top: 0;
-//         //   right: 0;
-//         //   bottom: 0;
-//         //   left: 0;
-//         //   background: rgba(0, 0, 0, 0.5);
-//         //   content: '';
-//         //   display: block;
-//         // }
-//       }
-
-//       &.text {
-//         min-height: 400px;
-
-//         @media all and (min-width: $sm-min) {
-//           min-height: auto;
-//         }
-//       }
-//     }
-
-//     &:nth-of-type(odd) {
-//       //first half
-
-//       .box.text {
-
-//         .text-part {
-//           //padding for the left .text-part
-//           padding: 0 1.5rem;
-
-//           @media all and (min-width: $sm-min) {
-//             padding-left: 2.25rem;
-//           }
-
-//           @media all and (min-width: $md-min) {
-//             padding-left: 3rem;
-//           }
-
-//           @media all and (min-width: $lg-min) {
-//             padding-left: calc(3.75rem);
-//             padding-right: 5rem;
-//             right: 0;
-//             left: auto;
-//           }
-//         }
-//       }
-//     }
-
-//     &:nth-of-type(even) {
-//       //second half
-
-//       .box.text {
-
-//         .text-part {
-//           //padding for the right .text-part
-//           padding: 0 1.5rem;
-
-//           @media all and (min-width: $sm-min) {
-//             padding-right: 2.25rem;
-//           }
-
-//           @media all and (min-width: $md-min) {
-//             padding-right: 3rem;
-//           }
-
-//           @media all and (min-width: $lg-min) {
-//             padding-right: calc(2.25rem + 15px);
-//             padding-left: 5rem;
-//             left: 0;
-//             right: auto;
-//           }
-//         }
-//       }
-//     }
-
-//     .box.text {
-//       //for aspect ratio div
-//       width: 100%;
-//       position: relative;
-//       padding-bottom: 60%;
-
-//       @media all and (min-width: $sm-min) {
-//         padding-bottom: 43%;
-//       }
-
-//       @media all and (min-width: $md-min) {
-//         padding-bottom: 66.67%;
-//       }
-
-//       .text-part {
-//         //for aspect ratio div
-//         position: absolute;
-//         top: 0;
-//         bottom: 0;
-//         left: 0;
-//         right: 0;
-//         @include d-flex;
-//         align-items: center;
-
-//         a {
-//           text-decoration: none !important;
-//         }
-
-//         @media all and (min-width: $xl-min) {
-//           //max-width half of container
-//           max-width: calc((1380px /2) + 2.25rem);
-//         }
-//       }
-//     }
-//   }
-// }
 
 /**********************
   two columns white
@@ -2197,6 +2005,17 @@ contact_form_block
 * Contact Form layout
 */
 div.wpcf7 {
+  // .wpcf7 {
+  //   max-width: 100%;
+
+  //   label {
+  //     max-width: 100%;
+
+  //     input {
+  //       max-width: 100%;
+  //     }
+  //   }
+  // }
   //padding-top: 2em;
 }
 
@@ -2347,7 +2166,7 @@ input[type="submit"]:hover {
 }
 
 /**********************************
-  boxes diff sizes - images & text
+  boxes in columns diff sizes - images & text
 ***********************************/
 
 .blurb-columns {

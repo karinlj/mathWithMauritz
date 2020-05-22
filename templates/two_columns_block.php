@@ -7,7 +7,7 @@
  */
 
 ?>
-<section class="two-columns">
+<section class="two_columns_blocks">
   <?php
 //Loopa kolumner
 if (have_rows('column_content')) {
@@ -23,11 +23,6 @@ if (have_rows('column_content')) {
             $link = get_sub_field('url'); //linking image ?>
 
     <div class="box image">
-      <!-- <div class="heading_part">
-        <div class="heading_part_inner">
-          <h2 class="heading"><?php the_sub_field('heading');?></h2>
-        </div>
-      </div> -->
 
       <?php
 if ($link) {?>
