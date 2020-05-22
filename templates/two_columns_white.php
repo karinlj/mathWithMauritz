@@ -20,7 +20,6 @@ if (have_rows('two_columns_white')) {
 
           <?php $round_image = get_sub_field('round_image');?>
 
-          <!-- <div class="col-6 offset-3 col-sm-5 offset-sm-0 col-lg-3 part text-center"> -->
           <div class="col-12 col-sm-5 col-lg-3 part text-center">
 
             <div class="image <?php echo $round_image; ?>">

@@ -55,8 +55,10 @@ $themecolorBlueLightOverlay: linear-gradient(to right bottom,
 $themecolorGreenNewBg: #9EE37D;
 $themecolorGreenNew: #9EE37D;
 
+//funkar med svart text
 $themecolorLightgreen: #9EE37D;
-$themecolorLightgreenBg: linear-gradient(to right bottom, #4ea824, #5bb532, #68c13e, #74ce4b, #81db57);
+$themecolorLightgreenBg:linear-gradient(to right bottom, #9ee37d, #a3e583, #a7e68a, #ace890, #b0e996);
+
 // linear-gradient(to right bottom, #9ee37d, #a3e583, #a7e68a, #ace890, #b0e996);
 // $themecolorLightgreenOverlay: linear-gradient(to right bottom,
 //   rgba(158, 227, 125, 0.85),
@@ -1242,108 +1244,6 @@ nav {
   }
 }
 
-
-/**********************
-  testimonials new
-***********************/
-
-.testimonials-section-new {
-  height: auto;
-  overflow: hidden;
-  @include d-flex;
-  justify-content: center;
-  align-items: center;
-
-  @media all and (min-width: $xl-min) {
-    height: 700px;
-  }
-
-  .col-xl-2.heading-section {
-    order: -1;
-    margin-bottom: 3rem;
-    text-align: center;
-
-    @media all and (min-width: $xl-min) {
-      order: 10;
-      margin-bottom: 0;
-      text-align: left;
-    }
-  }
-
-  .tesimonials-heading {
-
-    @media all and (min-width: $xl-min) {
-      margin-top: 4rem;
-    }
-  }
-
-  .testimonials-container {
-    @include d-flex;
-    flex-direction: column;
-
-    @media all and (min-width: $lg-min) {
-      flex-direction: row;
-    }
-
-    .testimonials-item {
-      flex: 1 1 28%;
-      border-radius: $themeBorder_radius;
-      margin: 0 1rem 2rem 0;
-      padding: 1.5rem;
-      height: auto;
-      box-shadow: $themeBox_shadow;
-
-      @media all and (min-width: $lg-min) {
-        margin-bottom: 0;
-        min-height: 340px;
-      }
-
-      .signature {
-        font-weight: 400;
-
-        @media all and (min-width: $lg-min) and (max-width: $lg-max) {
-          font-size: 1.2rem;
-        }
-      }
-
-      .icon {
-        margin-bottom: 1rem;
-
-        i.fas {
-          color: $themecolor;
-          font-size: 1.5em;
-        }
-      }
-    }
-
-    .testimonials-item {
-      &.blue {
-        border-left: 5px solid $themecolorBlue;
-
-        .signature {
-          color: $themecolorBlue;
-        }
-      }
-
-      &.green {
-        border-left: 5px solid $themecolorGreenNew;
-
-        .signature {
-          color: $themecolorGreenNew;
-        }
-      }
-
-      &.lightblue {
-        border-left: 5px solid $themecolorBlueLight;
-
-        .signature {
-          color: $themecolorBlueLight;
-        }
-      }
-    }
-  }
-}
-
 /*********************
         Blog 
  *********************/
@@ -2366,7 +2266,7 @@ input[type="submit"]:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 4 00px;
+  min-height: 400px;
 
   .heading_upper {
     text-transform: uppercase;
@@ -2406,13 +2306,11 @@ input[type="submit"]:hover {
 
     .slides {
       position: relative;
-      //height: 300px;
       min-height: 200px;
       padding: 20px;
       width: 100%;
 
       @media all and (min-width: $md-min) {
-        //height: 250px;
         min-height: 150px;
       }
 
