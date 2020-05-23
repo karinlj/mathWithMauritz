@@ -28,9 +28,8 @@ if (have_rows('columns')) {
 
                 if (get_sub_field('size') == 'large') {
                     $col_class = 'blurb blurb-large col-12';
-                }
+                }?>
 
-                ?>
           <div class="<?php echo $col_class; ?>">
 
             <?php
@@ -38,7 +37,6 @@ if ($text_link) {?>
             <a href="<?php echo $text_link; ?>">
               <?php
 }?>
-
               <div class="featured-image">
                 <?php echo wp_get_attachment_image(get_sub_field('img'), 'full'); ?>
               </div>

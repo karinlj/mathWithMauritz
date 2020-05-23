@@ -38,7 +38,7 @@ if (have_rows('two_columns_white')) {
           <?php $text = get_sub_field('text');?>
 
           <div class="col-12 col-sm-6 col-lg-8 text-part">
-            <h3><?php echo $heading; ?></h3>
+            <h2><?php echo $heading; ?></h2>
             <p><?php echo $text; ?></p>
           </div>
 

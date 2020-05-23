@@ -305,6 +305,7 @@ h6 {
 
 section {
 
+  h2,
   h3,
   h4 {
     margin-bottom: 1.2rem;
@@ -334,19 +335,19 @@ h1 {
 }
 
 h2 {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 600;
 
   @media all and (min-width: $md-min) {
+    font-size: 1.7rem;
+  }
+
+  @media all and (min-width: $lg-min) {
     font-size: 1.8rem;
   }
 
-  @media all and (min-width: $lg-min) {
+  @media all and (min-width: $xl-min) {
     font-size: 1.9rem;
-  }
-
-  @media all and (min-width: $lg-min) {
-    font-size: 2rem;
   }
 }
 
@@ -364,7 +365,7 @@ h3 {
     font-size: 1.4rem;
   }
 
-  @media all and (min-width: $lg-min) {
+  @media all and (min-width: $xl-min) {
     font-size: 1.4rem;
   }
 }
@@ -1020,8 +1021,12 @@ nav {
     margin-bottom: 1.5rem;
     text-align: center;
 
-    @media all and (min-width: $sm-min) {
-      font-size: 1.5em;
+    @media all and (min-width: $md-min) {
+      font-size: 1.4rem;
+    }
+
+    @media all and (min-width: $xl-min) {
+      font-size: 1.5rem;
     }
 
     &.front {
@@ -1062,9 +1067,6 @@ nav {
         background: #fff;
         border: 1px solid #fff;
       }
-
-      // #0fd74e;
-      // #1B5299;blue  // //#8AC4FF; //#49392C; //#1AC8ED; //#49C6E5; // #32E875; // #357DED; // #3dc9db; // $themecolorBlue; 
     }
   }
 }
@@ -1118,7 +1120,6 @@ nav {
     padding-top: 1rem;
   }
 }
-
 
 /********************************************
   two columns img or text on white background
@@ -1656,15 +1657,23 @@ contact_form_block
       }
 
       h3 {
-        font-size: 1.75rem;
+
+        font-size: 1.6rem;
 
         @media all and (min-width: $sm-min) and (max-width: $sm-max) {
-          //font-size: 3rem;
           margin-bottom: 1.5rem;
         }
 
+        @media all and (min-width: $md-min) {
+          font-size: 1.7rem;
+        }
+
+        @media all and (min-width: $lg-min) {
+          font-size: 1.8rem;
+        }
+
         @media all and (min-width: $xl-min) {
-          font-size: 2rem;
+          font-size: 1.9rem;
           margin-bottom: 1.5rem;
         }
       }
@@ -1687,19 +1696,22 @@ contact_form_block
       }
 
       h3 {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
 
         @media all and (min-width: $sm-min) {
           margin-bottom: .75rem;
         }
 
-        @media all and (min-width: $sm-min) and (max-width: $sm-max) {
-          //font-size: 1.25rem;
+        @media all and (min-width: $md-min) {
+          font-size: 1.3rem;
+        }
+
+        @media all and (min-width: $lg-min) {
+          font-size: 1.4rem;
         }
 
         @media all and (min-width: $xl-min) {
-          margin-bottom: 1.375rem;
-          font-size: 1.5rem;
+          font-size: 1.4rem;
         }
       }
     }
@@ -1757,7 +1769,7 @@ contact_form_block
   border: 1px solid $themeBorderColor;
   padding: 3rem;
   min-height: 300px;
-  margin-top: -170px;
+  margin-top: -90px;
 
   .nopage-heading {
     margin-bottom: 2rem;
@@ -1800,7 +1812,6 @@ contact_form_block
       .contact_phrase {
         position: relative;
         color: #fff;
-        font-size: 2.1rem;
       }
 
       @media all and (min-width: $md-min) {
@@ -1943,6 +1954,12 @@ contact_form_block
 
         @media all and (min-width: $md-min) {
           margin-top: 1rem;
+        }
+
+        a {
+          &::before {
+            background: transparent;
+          }
         }
       }
     }
