@@ -16,9 +16,7 @@
                 "id": ""
             },
             "choices": {
-                "blue": "Blue",
-                "green": "Green",
-                "lightblue": "Lightblue"
+                "darkgrey": "Darkgrey"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -65,9 +63,6 @@
                 "id": ""
             },
             "choices": {
-                "overlay-blue": "Overlay blue",
-                "overlay-green": "Overlay green",
-                "overlay-lightblue": "Overlay lightblue",
                 "overlay-dark": "Overlay dark"
             },
             "allow_null": 0,
@@ -104,5 +99,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1589892343
+    "modified": 1590239763
 }

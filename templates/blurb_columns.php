@@ -1,7 +1,7 @@
 <?php
 $color = get_sub_field('color_theme');?>
 
-<section class="blurb-columns <?php echo $color; ?> section_spacing_top_medium">
+<section class="blurb_columns <?php echo $color; ?> section_spacing_top_medium">
 
   <h2 class="section-heading text-center"><?php the_sub_field('heading');?></h2>
 

@@ -5,7 +5,7 @@
  */
 ?>
 <?php get_header();?>
-<section class="front_container">
+<section class="block_container">
 
   <?php
 //Loopa ACF Content Blocks -flexible content

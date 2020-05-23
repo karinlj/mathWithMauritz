@@ -112,7 +112,7 @@ if (function_exists('acf_add_options_page')) {
     <div class="row">
       <div class="col">
         <div class="to_top">
-          <a href="#header" class="btn to_top_btn">Back to top </a>
+          <a href="#header" class="to_top_btn">Back to top </a>
         </div>
       </div>
     </div>

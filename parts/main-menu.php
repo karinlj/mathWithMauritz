@@ -4,7 +4,7 @@
       <div class="col">
         <nav class="">
 
-          <h3 class="site-title">
+          <h3 class="site_title">
             <a class="logo" href="<?php echo esc_url(home_url('/')); ?>">
               <?php bloginfo('name');?>
             </a>

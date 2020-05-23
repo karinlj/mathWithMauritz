@@ -1,23 +1,21 @@
 <?php
-
+//layout centered_text_content
 if (get_row_layout() == 'centered_text_content') {?>
 
 <?php
 $text = get_sub_field('text');?>
 
-<section class="text-section section_spacing_top_small">
+<section class="text_section section_spacing_top_medium">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-10">
-        <div class="preamble text-center">
+        <div class="text_content">
 
-          <h3>
-            <?php echo $text; ?>
-          </h3>
+          <?php echo $text; ?>
         </div>
       </div>
     </div>
-  </div><!-- /.container -->
+  </div>
 </section>
 <?php
 }

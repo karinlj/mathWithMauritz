@@ -1,10 +1,10 @@
 <?php
-// two columns white or lightgrey with text and round image: layout for Content block
+// layout: two columns white or lightgrey with text and round image
 
 $color = get_sub_field('color_theme');
 ?>
 
-<section class="two_columns_white <?php echo $color; ?> section_spacing_top_big">
+<section class="two_columns_round_image <?php echo $color; ?> section_spacing_top_big">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-10">

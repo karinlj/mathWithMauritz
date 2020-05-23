@@ -1,9 +1,6 @@
 <?php
-/**
- * Created by Karin.
- * Layout 'two_columns_img_or_text white bg' in flex content 'Content block'
- */
 
+//layout: two_columns_img_or_text white bg
 $color = get_sub_field('color_theme');
 ?>
 
@@ -35,8 +32,6 @@ if (have_rows('two_columns_row')) {
         <?php $alt_text = get_post_meta($img_id, '_wp_attachment_image_alt', true);?>
 
         <img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
-        <span class="alt_caption"><?php echo $alt_text; ?></span>
-
       </div>
       <?php
 }?>

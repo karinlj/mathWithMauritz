@@ -16,8 +16,7 @@
                 "id": ""
             },
             "choices": {
-                "blue": "Blue",
-                "lightblue": "Lightblue"
+                "darkgrey": "Darkgrey"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -44,5 +43,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1587581035
+    "modified": 1590239722
 }

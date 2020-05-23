@@ -1,6 +1,6 @@
  <?php
 /*
- * The template for displaying 404 pages (Not Found)
+ * Template for displaying 404 pages (Not Found)
  */
 
 get_header();?>
@@ -8,7 +8,7 @@ get_header();?>
  <?php
 if (function_exists('acf_add_options_page')) {?>
 
- <div class="content_container_page">
+ <div class="block_container">
    <div class="container">
      <div class="row">
        <div class="col-md-8">

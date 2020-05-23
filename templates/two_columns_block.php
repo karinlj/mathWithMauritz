@@ -1,5 +1,5 @@
 <?php
-//Text(and/ or image blocks with background color layout for Content block
+// layout : Text(and/ or image blocks with background color
 ?>
 <section class="two_columns_blocks">
   <?php
