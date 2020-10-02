@@ -1616,11 +1616,7 @@ contact_form_block
     }
 
     &.blurb-large {
-      margin-bottom: 5rem;
-
-      @media all and (min-width: $lg-min) {
-        margin-bottom: 1.5rem;
-      }
+      margin-bottom: 1.5rem;
 
       .featured-image {
         @media all and (min-width: $sm-min) {
