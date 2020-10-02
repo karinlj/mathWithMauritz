@@ -15,4 +15,4 @@ Custom WordPress theme: math-with-mauritz 2020#
 
 ## Author
 
-- **Karin Ljunggren** - [karinlj]
+- **Karin Ljunggren** - [karinlj](https://github.com/karinlj)
