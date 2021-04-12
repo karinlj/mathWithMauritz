@@ -16,18 +16,21 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  /*Mobile menu*/
   /*when click on veggoburger...add or remove class */
-  $(".toggle").click(function () {
+  $(".toggle_btn").click(function () {
     $(".nav-mobile").toggleClass("open");
+    $(".toggle_btn").toggleClass("clicked");
+    $("body").toggleClass("no_scroll");
   });
-  /*when click on button...add or remove class */
-  $(".button_link.mobile").click(function () {
-    $(".nav-mobile").toggleClass("open");
+
+  $(".nav-mobile ul li.menu-item-has-children").click(function (event) {
+    event.stopPropagation();
+    $(this).children("ul").toggleClass("open");
   });
 
   /*Desktop*/
   /*when click on menu-item with sub-menu...add or remove class*/
-
   $("nav ul li.menu-item-has-children").click(function (event) {
     event.stopPropagation(); /* to stop the 'document handler' from activating at the same time as the click event on class */
     $(this).children("ul").toggleClass("sub-menu-open");
@@ -36,7 +39,9 @@ jQuery(document).ready(function ($) {
 
   /*remove class clicking anywhere on page*/
   $(document).click(function (event) {
-    if (!$(event.target).closest("nav ul li.menu-item-has-children ul").length) {
+    if (
+      !$(event.target).closest("nav ul li.menu-item-has-children ul").length
+    ) {
       $("nav ul li.menu-item-has-children ul").removeClass("sub-menu-open");
     }
   });
@@ -51,102 +56,125 @@ jQuery(document).ready(function ($) {
 
   /*remove class clicking anywhere on page*/
   $(document).click(function (event) {
-    if (!$(event.target).closest(".nav-mobile ul li.menu-item-has-children ul").length) {
-      $(".nav-mobile ul li.menu-item-has-children ul").removeClass("sub-menu-open");
+    if (
+      !$(event.target).closest(".nav-mobile ul li.menu-item-has-children ul")
+        .length
+    ) {
+      $(".nav-mobile ul li.menu-item-has-children ul").removeClass(
+        "sub-menu-open"
+      );
     }
   });
 
   /*Sliding Testimonials*/
 
   //ger första bilden class="top"
-  $('.slides .slide:first').addClass('top');
-
+  $(".slides .slide:first").addClass("top");
 
   //Function for Next button - change class top
   var changeClassNext = function () {
     //alert('hej');
 
-    var current = $('.slides .slide.top');
+    var current = $(".slides .slide.top");
     var next = current.next(); //pick up the next element
 
+    if (!next.length) {
+      //if there is NOT a next element
+      next = $(".slides .slide:first");
 
-    if (!next.length) { //if there is NOT a next element
-      next = $('.slides .slide:first');
+      next.addClass("top"); //add class 'top'
 
-      next.addClass('top'); //add class 'top'
-
-      current.animate({
-        opacity: 0.0
-      }, 1000, function () { //make current disappear
-        current.removeClass('top'); //remove class 'top'
-        current.css({
-          opacity: 1.0
-        }); //visible again
-      });
-    } else { //if there is a next element
-      next.css({
-          opacity: 0.0
+      current.animate(
+        {
+          opacity: 0.0,
+        },
+        1000,
+        function () {
+          //make current disappear
+          current.removeClass("top"); //remove class 'top'
+          current.css({
+            opacity: 1.0,
+          }); //visible again
+        }
+      );
+    } else {
+      //if there is a next element
+      next
+        .css({
+          opacity: 0.0,
         }) //make next disappear
-        .addClass('top') //add class top to next
-        .animate({
-          opacity: 1.0
-        }, 1000, function () { //make next appear again
-          current.removeClass('top'); //take away the class on current
-        });
+        .addClass("top") //add class top to next
+        .animate(
+          {
+            opacity: 1.0,
+          },
+          1000,
+          function () {
+            //make next appear again
+            current.removeClass("top"); //take away the class on current
+          }
+        );
     }
-  }
+  };
 
   //execute every 6 seconds
   setInterval(changeClassNext, 6000);
 
-  $('.btn_slider.next').click(function () {
+  $(".btn_slider.next").click(function () {
     // alert('hej');
     changeClassNext();
   });
 
-
   //Function for Prev button - change class top
   var changeClassPrev = function () {
-
-    var current = $('.slides .slide.top');
+    var current = $(".slides .slide.top");
     var next = current.prev(); //pick up the previous element
 
+    if (!next.length) {
+      //if there is NOT a previous element = if it is the first
+      next = $(".slides .slide:last");
 
-    if (!next.length) { //if there is NOT a previous element = if it is the first
-      next = $('.slides .slide:last');
-
-      next.css({
-          opacity: 0.0
+      next
+        .css({
+          opacity: 0.0,
         }) //make prev disappear
-        .addClass('top') //add class top to prev
-        .animate({
-          opacity: 1.0
-        }, 2000, function () { //make next appear
-          current.removeClass('top'); //take away the class on current
+        .addClass("top") //add class top to prev
+        .animate(
+          {
+            opacity: 1.0,
+          },
+          2000,
+          function () {
+            //make next appear
+            current.removeClass("top"); //take away the class on current
+            current.css({
+              opacity: 1.0,
+            }); //current visible again
+          }
+        );
+    } else {
+      //if there is a previous element
+
+      next.addClass("top"); //add class 'top'
+
+      current.animate(
+        {
+          opacity: 0.0,
+        },
+        2000,
+        function () {
+          //make current disappear
+          current.removeClass("top"); //remove class 'top'
           current.css({
-            opacity: 1.0
+            opacity: 1.0,
           }); //current visible again
-        });
-    } else { //if there is a previous element
-
-      next.addClass('top'); //add class 'top'
-
-      current.animate({
-        opacity: 0.0
-      }, 2000, function () { //make current disappear
-        current.removeClass('top'); //remove class 'top'
-        current.css({
-          opacity: 1.0
-        }); //current visible again
-      });
-
+        }
+      );
     }
-  }
+  };
 
-  $('.btn_slider.prev').click(function () {
+  $(".btn_slider.prev").click(function () {
     // alert('hej');
     changeClassPrev();
   });
-
-
 }); //document.ready

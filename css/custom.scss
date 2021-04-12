@@ -2,7 +2,7 @@
 Theme Name: math-with-mauritz
 Author: Karin Ljunggren
 */
-@import '_mixins.scss';
+@import "_mixins.scss";
 
 //$xs-max: 575.9px;
 $xs-max: 480px;
@@ -21,13 +21,11 @@ $xl-max: 1309px;
 $max-page-width: 1380px;
 
 //other
-$themefont: 'Roboto',
-'Helvetica',
-sans-serif;
+$themefont: "Roboto", "Helvetica", sans-serif;
 $navfont: $themefont;
 $headingfont: $themefont;
 $themeBorder_radius: 3px;
-$themeBox_shadow: 0 2px 20px 1px rgba(0, 0, 0, .1);
+$themeBox_shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
 $linkhoverOpacity: 0.7;
 
 /*transparent nav*/
@@ -45,28 +43,55 @@ $mediumgrey: #f1f1f4;
 $linkhoverOpacity: 0.7;
 
 //skyblue
-$themeskyblue: #1AC8ED;
-$themeskyblueBg:linear-gradient(to right bottom, #afe8f0, #b9ebf2, #c2eef3, #cbf0f5, #d4f3f7); // #afe8f0; 
-$themeskyblueOverlay: linear-gradient(to right bottom,
+$themeskyblue: #1ac8ed;
+$themeskyblueBg: linear-gradient(
+  to right bottom,
+  #afe8f0,
+  #b9ebf2,
+  #c2eef3,
+  #cbf0f5,
+  #d4f3f7
+); // #afe8f0;
+$themeskyblueOverlay: linear-gradient(
+  to right bottom,
   rgba(175, 232, 240, 0.95),
-  rgba(212, 243, 247, 0.85));
+  rgba(212, 243, 247, 0.85)
+);
 
 //green
 $themecolorGreen: #7fe052; //#62d97b;
-$themecolorGreenBg: linear-gradient(to right bottom, #b0e996, #b8eba1, #c0eeab, #c8f0b6, #d0f2c0);
-$themecolorGreenOverlay: linear-gradient(to right bottom,
+$themecolorGreenBg: linear-gradient(
+  to right bottom,
+  #b0e996,
+  #b8eba1,
+  #c0eeab,
+  #c8f0b6,
+  #d0f2c0
+);
+$themecolorGreenOverlay: linear-gradient(
+  to right bottom,
   rgba(176, 233, 150, 0.85),
-  rgba(208, 242, 192, 0.95));
+  rgba(208, 242, 192, 0.95)
+);
 
 //darkgrey
 $themecolordarkgrey: linear-gradient(40deg, #111111 33%, #333333);
 
-$themecolorDarkGreyBg:linear-gradient(to right bottom, #111111, #1d1d1d, #282828, #343434, #404040);
+$themecolorDarkGreyBg: linear-gradient(
+  to right bottom,
+  #111111,
+  #1d1d1d,
+  #282828,
+  #343434,
+  #404040
+);
 // linear-gradient(to right bottom, #111111, #1a1a1a, #222222, #2a2a2a, #333333);
 
-$themecolorDarkGreyOverlay: linear-gradient(to right bottom,
+$themecolorDarkGreyOverlay: linear-gradient(
+  to right bottom,
   rgba(17, 17, 17, 0.5),
-  rgba(64, 64, 64, 0.5));
+  rgba(64, 64, 64, 0.5)
+);
 
 $linkcolor: $themeskyblue;
 
@@ -89,7 +114,7 @@ $linkcolor: $themeskyblue;
     bottom: 0;
     left: 0;
     background: $themecolorDarkGreyOverlay;
-    content: '';
+    content: "";
     display: block;
   }
 
@@ -100,7 +125,7 @@ $linkcolor: $themeskyblue;
     bottom: 0;
     left: 0;
     background-image: $themeskyblueOverlay;
-    content: '';
+    content: "";
     display: block;
   }
 
@@ -111,7 +136,7 @@ $linkcolor: $themeskyblue;
     bottom: 0;
     left: 0;
     background-image: $themecolorGreenOverlay;
-    content: '';
+    content: "";
     display: block;
   }
 }
@@ -137,7 +162,6 @@ $linkcolor: $themeskyblue;
 .white,
 .skyblue,
 .lightgreen {
-
   h1,
   h2,
   h3,
@@ -216,7 +240,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
 
 /********************
   padding/ margin sections
@@ -304,7 +327,6 @@ h6 {
 }
 
 section {
-
   h2,
   h3,
   h4 {
@@ -463,17 +485,17 @@ a {
 
     &:before {
       // opacity: .6;
-      opacity: .4;
+      opacity: 0.4;
       position: absolute;
       bottom: 0;
       left: 1px;
-      content: '';
+      content: "";
       width: 100%;
       // width: 0;
       height: 2px;
       background: $linkcolor;
-      -webkit-transition: width .2s ease-in;
-      transition: width .2s ease-in;
+      -webkit-transition: width 0.2s ease-in;
+      transition: width 0.2s ease-in;
     }
 
     &:hover {
@@ -481,7 +503,7 @@ a {
 
       &:before {
         width: 100%;
-        opacity: .7;
+        opacity: 0.7;
       }
     }
 
@@ -489,7 +511,7 @@ a {
     &.arrow_link {
       &:after {
         content: "\f061 ";
-        font-family: 'Font Awesome 5 Free';
+        font-family: "Font Awesome 5 Free";
         font-weight: 900;
         margin-left: 10px;
       }
@@ -497,24 +519,24 @@ a {
   }
 }
 
-//class for link with arrow 
+//class for link with arrow
 a.arrow_link {
   display: inline-block;
   position: relative;
 
   &:before {
     // opacity: .6;
-    opacity: .4;
+    opacity: 0.4;
     position: absolute;
     bottom: 0;
     left: 1px;
-    content: '';
+    content: "";
     width: 100%;
     // width: 0;
     height: 2px;
     background: $linkcolor;
-    -webkit-transition: width .2s ease-in;
-    transition: width .2s ease-in;
+    -webkit-transition: width 0.2s ease-in;
+    transition: width 0.2s ease-in;
   }
 
   &:hover {
@@ -522,14 +544,14 @@ a.arrow_link {
 
     &:before {
       width: 100%;
-      opacity: .7;
+      opacity: 0.7;
     }
   }
 
   //arrow right
   &:after {
     content: "\f061 ";
-    font-family: 'Font Awesome 5 Free';
+    font-family: "Font Awesome 5 Free";
     font-weight: 900;
     margin-left: 10px;
   }
@@ -544,21 +566,21 @@ a.banner_link {
   position: relative;
 
   &:before {
-    opacity: .4;
+    opacity: 0.4;
     position: absolute;
     bottom: 0;
     left: 1px;
-    content: '';
+    content: "";
     width: 100%;
     height: 2px;
     background: #fff;
-    -webkit-transition: width .2s ease-in;
-    transition: width .2s ease-in;
+    -webkit-transition: width 0.2s ease-in;
+    transition: width 0.2s ease-in;
   }
 
   &::after {
     content: "\f061 ";
-    font-family: 'Font Awesome 5 Free';
+    font-family: "Font Awesome 5 Free";
     font-weight: 900;
     margin-left: 10px;
   }
@@ -568,7 +590,7 @@ a.banner_link {
 
     &:before {
       width: 100%;
-      opacity: .7;
+      opacity: 0.7;
     }
   }
 }
@@ -610,48 +632,38 @@ a.banner_link {
   width: 100%;
   position: absolute;
   top: 0px;
-  z-index: 1000;
   height: 80px;
   background: $navBg_transp;
   padding: 0rem calc(1.5rem - 15px);
-
   @media all and (min-width: $sm-min) {
     padding: 0rem calc(2.25rem - 15px);
   }
-
   @media all and (min-width: $md-min) {
     padding: 0rem calc(3rem - 15px);
   }
-
   @media all and (min-width: $md-min) {
     padding: 1rem calc(3rem - 15px);
   }
-
   @media all and (min-width: $xl-min) {
     padding: 1rem calc(3.75rem - 15px);
   }
 }
-
 /*nav-wrap*/
-
 nav {
   background: $navBg_transp;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 80px;
-
   @media all and (min-width: $lg-min) {
     justify-content: flex-start;
   }
-
   a,
   a:visited,
   a:focus,
   a:hover {
     color: $navcolor;
   }
-
   ul {
     margin: 0;
     padding: 0;
@@ -664,13 +676,11 @@ nav {
       display: flex;
       align-items: center;
     }
-
     li {
       position: relative;
-
       a {
         margin: 0 1rem -1px 1rem;
-        transition: all .5s ease;
+        transition: all 0.5s ease;
         padding: 0.5rem 0.2rem;
         border-bottom: 1px solid transparent;
         font-size: 0.9rem;
@@ -696,41 +706,35 @@ nav {
         }
       }
     }
-
     /*Wp:s klasser*/
     a:not([href]):not([tabindex]) {
       color: $navcolor;
-
       &:hover {
         color: $navcolor;
         opacity: 1;
       }
     }
-
     li.current-menu-item {
-      >a {
+      > a {
         color: $navcolor;
         border-bottom: 1px solid #fff;
       }
     }
-
     li.menu-item-has-children {
-      >a {
+      > a {
         color: $navcolor;
 
         &:hover {
           color: $navcolor;
         }
-
         &::after {
           content: "\f107";
-          font-family: 'Font Awesome 5 Free';
+          font-family: "Font Awesome 5 Free";
           font-weight: 600;
           margin-left: 5px;
           color: $navcolor;
         }
       }
-
       ul {
         position: absolute;
         z-index: 10;
@@ -740,10 +744,8 @@ nav {
         padding: 1em 0;
         display: none;
         box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.175);
-
         li {
           width: 100%;
-
           a {
             padding: 0.3rem 1.5rem;
             margin: 0;
@@ -752,9 +754,8 @@ nav {
             border-radius: 0;
             color: #16181d;
             font-weight: 500;
-            font-size: 0.80rem;
+            font-size: 0.8rem;
           }
-
           &:hover {
             a {
               background: #f4f0f4;
@@ -763,35 +764,91 @@ nav {
           }
         }
       }
-
-      /*togglar med jquery*/
-      ul.sub-menu-open {
+      /*toggle open*/
+      &.open {
         display: flex;
         flex-direction: column;
       }
-
     }
   }
-
-  >.toggle {
-    font-size: 30px;
-    color: $navcolor;
-    cursor: pointer;
-
+  > .toggle_btn {
+    position: absolute;
+    top: 0.8rem;
+    right: 0;
+    z-index: 10000;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Hamburger Line */
+    > div {
+      position: relative;
+      flex: none;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s ease;
+      /* Hamburger Lines - Top & Bottom */
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        width: 100%;
+        height: 2px;
+        background: inherit;
+      }
+      /* Moves Line Down */
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        width: 100%;
+        height: 2px;
+        background: inherit;
+        top: 10px;
+      }
+    }
+    //hide veggoburger
     @media all and (min-width: $lg-min) {
       display: none;
+    }
+    //clicked veggoburger
+    &.clicked {
+      > div {
+        transform: rotate(135deg);
+        /* Turns Lines Into X */
+        &:before {
+          top: 0;
+          transform: rotate(90deg);
+        }
+        &:after {
+          top: 0;
+          transform: rotate(90deg);
+        }
+      }
+      &:hover {
+        > div {
+          transform: rotate(225deg);
+        }
+      }
     }
   }
 }
 
 /*nav-desktop*/
-
 .site_title {
   padding: 0;
   margin: 0;
   min-width: 14rem;
 }
-
 .nav-links {
   display: flex;
   flex-direction: column;
@@ -802,36 +859,37 @@ nav {
     flex-direction: row;
   }
 }
-
 /*Mobile view*/
-
 .nav-mobile {
   position: fixed;
   height: 100%;
   width: 100%;
-  z-index: 2000;
+  z-index: 500;
   top: 0;
   left: 0;
   background: $themecolorDarkGreyBg;
   opacity: 0.95;
   padding: 0 10%;
-  padding-top: 60px;
+  padding-top: 35px;
   text-align: left;
   transform: translateX(100%);
   transition: transform 0.6s ease;
-
+  @media all and (min-width: $md-min) {
+    padding-top: 55px;
+  }
   @media all and (min-width: $lg-min) {
     display: none;
   }
-
+  .nav-links {
+    margin-top: 2rem;
+  }
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
-
     li {
       a {
-        transition: all .5s ease;
+        transition: all 0.5s ease;
         font-size: 0.9em;
         letter-spacing: 0.5px;
         display: block;
@@ -839,48 +897,41 @@ nav {
         text-decoration: none;
         font-weight: 500;
         cursor: pointer;
-        padding: 10px;
-
+        padding: 10px 10px 10px 0;
         &:hover {
-          color: $linkcolor
+          color: $linkcolor;
         }
       }
     }
-
     /*Wp:s klasser*/
-
     li.menu-item-has-children {
       ul {
         position: static;
         z-index: 10;
-        display: none;
-      }
-
-      /*togglar med jquery*/
-
-      ul.sub-menu-open {
         display: flex;
         flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
       }
-
-      >a {
+      /*togglar med jquery*/
+      ul.sub-menu-open {
+        max-height: 200px;
+      }
+      > a {
         color: #fff;
-
         &:hover {
           color: #fff;
         }
-
         &::after {
           content: "\f107";
-          font-family: 'Font Awesome 5 Free';
+          font-family: "Font Awesome 5 Free";
           font-weight: 900;
           margin-left: 5px;
         }
       }
-
       li {
         width: 100%;
-
         a {
           padding: 8px 16px;
           background-color: $navBg_transp;
@@ -890,29 +941,23 @@ nav {
           text-align: left;
           margin-top: 0;
           margin-left: 10px;
-
           &:hover {
-            color: $linkcolor
+            color: $linkcolor;
           }
         }
       }
     }
   }
-
   ul.sign_up {
     width: 100%;
     padding-top: 2rem;
-
     li {
-
       .btn_wrapper {
         width: 100%;
-
         a.button_link.mobile {
           font-size: 1rem;
           transition: 1s all ease-in-out;
           color: #fff;
-
           &.skyblue {
             background: $themeskyblue;
             border: 1px solid $themeskyblue;
@@ -921,7 +966,6 @@ nav {
               color: $themeskyblue;
             }
           }
-
           &.lightgreen {
             background: $themecolorGreen;
             border: 1px solid $themecolorGreen;
@@ -930,33 +974,18 @@ nav {
               color: $themecolorGreen;
             }
           }
-
           &:hover {
             background: #fff;
             border: 1px solid #fff;
           }
         }
-
         @media all and (min-width: $sm-min) {
           width: 12rem;
         }
       }
     }
   }
-
-  /*close button*/
-
-  >span.toggle {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 46px;
-    color: #fff;
-    cursor: pointer;
-  }
-
-  /*toggle class with jquery*/
-
+  /*toggle open*/
   &.open {
     overflow-x: auto;
     transform: translateX(0);
@@ -1071,13 +1100,13 @@ nav {
   }
 }
 
-//header items 
+//header items
 .header_big {
   .header_items_section {
-    padding-top: calc(500px/3);
+    padding-top: calc(500px / 3);
 
     @media all and (min-width: $sm-min) {
-      padding-top: calc(600px/3);
+      padding-top: calc(600px / 3);
     }
   }
 }
@@ -1197,14 +1226,14 @@ centered text
   display: flex;
   @include flex-column;
 
-  @media all and (min-width:$lg-min) {
+  @media all and (min-width: $lg-min) {
     flex-direction: row !important;
   }
 
   .aspect_wrapper {
     width: 100%;
 
-    @media all and (min-width:$lg-min) {
+    @media all and (min-width: $lg-min) {
       width: 50%;
     }
 
@@ -1225,7 +1254,7 @@ centered text
           bottom: 0;
           left: 0;
           background: rgba(0, 0, 0, 0.3);
-          content: '';
+          content: "";
           display: block;
         }
       }
@@ -1246,15 +1275,15 @@ centered text
         //padding for the left .text-part
         padding: 1.5rem;
 
-        @media all and (min-width:$sm-min) {
+        @media all and (min-width: $sm-min) {
           padding-left: 2.25rem;
         }
 
-        @media all and (min-width:$md-min) {
+        @media all and (min-width: $md-min) {
           padding-left: 3rem;
         }
 
-        @media all and (min-width:$lg-min) {
+        @media all and (min-width: $lg-min) {
           padding-left: calc(3.75rem);
           padding-right: 5rem;
           right: 0;
@@ -1270,15 +1299,15 @@ centered text
         //padding for the right .text-part
         padding: 1.5rem;
 
-        @media all and (min-width:$sm-min) {
+        @media all and (min-width: $sm-min) {
           padding-right: 2.25rem;
         }
 
-        @media all and (min-width:$md-min) {
+        @media all and (min-width: $md-min) {
           padding-right: 3rem;
         }
 
-        @media all and (min-width:$lg-min) {
+        @media all and (min-width: $lg-min) {
           padding-right: calc(2.25rem + 15px);
           padding-left: 5rem;
           left: 0;
@@ -1294,12 +1323,12 @@ centered text
     position: relative;
     padding-bottom: 60%;
 
-    @media all and (min-width:$sm-min) {
-      padding-bottom: 43%
+    @media all and (min-width: $sm-min) {
+      padding-bottom: 43%;
     }
 
-    @media all and (min-width:$md-min) {
-      padding-bottom: 66.67%
+    @media all and (min-width: $md-min) {
+      padding-bottom: 66.67%;
     }
 
     .text_part {
@@ -1316,12 +1345,10 @@ centered text
         text-decoration: none !important;
       }
 
-      @media all and (min-width:$xl-min) {
+      @media all and (min-width: $xl-min) {
         //max-width half of container
-        max-width: calc((1380px /2) + 2.25rem);
+        max-width: calc((1380px / 2) + 2.25rem);
       }
-
-
     }
   }
 }
@@ -1350,7 +1377,8 @@ centered text
         max-width: 100% !important;
       }
 
-      @media all and (max-width: $xs-max) {}
+      @media all and (max-width: $xs-max) {
+      }
     }
 
     &.round {
@@ -1374,7 +1402,6 @@ contact_form_block
   }
 
   &.skyblue {
-
     button,
     html input[type="button"],
     input[type="reset"],
@@ -1389,7 +1416,6 @@ contact_form_block
   }
 
   &.lightgreen {
-
     button,
     html input[type="button"],
     input[type="reset"],
@@ -1477,18 +1503,17 @@ contact_form_block
   }
 
   .heading_upper {
-
     margin-bottom: 1rem;
   }
 
-  .heading_lower {}
+  .heading_lower {
+  }
 
   i.fas {
     font-size: 1.8em;
   }
 
   .testimonials_inner {
-
     .btn_slider_container {
       display: flex;
       justify-content: space-between;
@@ -1558,11 +1583,11 @@ contact_form_block
 ***********************************/
 
 .blurb_columns {
-  >.container {
+  > .container {
     padding-top: 1.5rem;
   }
 
-  >.container>.row>.col-md-6 {
+  > .container > .row > .col-md-6 {
     @media all and (min-width: $xl-min) {
       &:nth-of-type(odd) {
         padding-right: 2.25rem;
@@ -1611,7 +1636,8 @@ contact_form_block
       }
 
       .featured-image {
-        box-shadow: 0 7px 34px 0 rgba(0, 0, 0, .07), 0 11px 34px 0 rgba(0, 0, 0, .04);
+        box-shadow: 0 7px 34px 0 rgba(0, 0, 0, 0.07),
+          0 11px 34px 0 rgba(0, 0, 0, 0.04);
       }
     }
 
@@ -1653,7 +1679,6 @@ contact_form_block
       }
 
       h3 {
-
         font-size: 1.6rem;
 
         @media all and (min-width: $sm-min) and (max-width: $sm-max) {
@@ -1678,11 +1703,11 @@ contact_form_block
     &.blurb-small {
       p {
         @media all and (min-width: $sm-min) {
-          font-size: .825rem;
+          font-size: 0.825rem;
           margin-bottom: 1rem;
 
           &.sub-title {
-            margin-bottom: .825rem;
+            margin-bottom: 0.825rem;
           }
         }
 
@@ -1695,7 +1720,7 @@ contact_form_block
         font-size: 1.2rem;
 
         @media all and (min-width: $sm-min) {
-          margin-bottom: .75rem;
+          margin-bottom: 0.75rem;
         }
 
         @media all and (min-width: $md-min) {
@@ -1713,7 +1738,6 @@ contact_form_block
     }
   }
 }
-
 
 /*************************
     Hero background image
@@ -1772,7 +1796,6 @@ contact_form_block
   }
 }
 
-
 /*********************
    footer 
 *********************/
@@ -1797,8 +1820,8 @@ contact_form_block
       right: 0;
       bottom: 0;
       left: 0;
-      background: rgba(0, 0, 0, .3);
-      content: '';
+      background: rgba(0, 0, 0, 0.3);
+      content: "";
       display: block;
     }
 
@@ -1856,13 +1879,13 @@ contact_form_block
               position: absolute;
               bottom: 0;
               left: 1px;
-              content: '';
+              content: "";
               // width: 100%;
               width: 0;
               height: 2px;
               background: $linkcolor;
-              -webkit-transition: width .2s ease-in;
-              transition: width .2s ease-in;
+              -webkit-transition: width 0.2s ease-in;
+              transition: width 0.2s ease-in;
             }
 
             &:hover {
@@ -1870,7 +1893,7 @@ contact_form_block
 
               &:before {
                 width: 100%;
-                opacity: .7;
+                opacity: 0.7;
               }
             }
 
@@ -1926,7 +1949,7 @@ contact_form_block
             &:before {
               background: $linkcolor;
               width: 100%;
-              opacity: .7;
+              opacity: 0.7;
             }
           }
         }
@@ -1940,7 +1963,6 @@ contact_form_block
 
   .footer-copy {
     .copy {
-
       p {
         text-align: center;
         margin-top: 4rem;
@@ -1978,7 +2000,7 @@ contact_form_block
         &:before {
           background: $linkcolor;
           width: 100%;
-          opacity: .7;
+          opacity: 0.7;
         }
       }
     }
@@ -2056,7 +2078,7 @@ contact_form_block
         a {
           margin-left: -15px;
           margin-right: -15px;
-          transition: all .5s ease;
+          transition: all 0.5s ease;
           padding: 0.6rem 0.2rem;
           border: none;
           text-transform: uppercase;
@@ -2070,7 +2092,6 @@ contact_form_block
           border-bottom: 1px solid #ddd;
           color: $themecolor;
           text-decoration: none;
-
 
           &:hover {
             opacity: 1;
@@ -2130,7 +2151,7 @@ contact_form_block
   margin-top: 1.5rem;
 
   @media all and (min-width: $sm-min) {
-    margin: auto
+    margin: auto;
   }
 
   .container {
@@ -2158,19 +2179,19 @@ contact_form_block
   .post_card {
     position: relative;
     padding: 0.3rem;
-    box-shadow: 0 20px 40px rgba(91, 107, 174, .15);
+    box-shadow: 0 20px 40px rgba(91, 107, 174, 0.15);
     margin-bottom: 3rem;
     border-radius: $themeBorder_radius;
     border-radius: 16px;
-    transition: .25s ease-in-out;
+    transition: 0.25s ease-in-out;
     background: #fff;
 
     &:hover {
-      box-shadow: 0 16px 24px rgba(0, 0, 0, .16);
+      box-shadow: 0 16px 24px rgba(0, 0, 0, 0.16);
 
       .blog_post_title,
       p {
-        transition: .25s ease-in-out;
+        transition: 0.25s ease-in-out;
         color: $linkcolor;
       }
     }
@@ -2209,7 +2230,7 @@ contact_form_block
         z-index: 40;
         letter-spacing: 0.01rem;
         text-transform: uppercase;
-        font-size: .9rem;
+        font-size: 0.9rem;
 
         &:hover {
           text-decoration: underline;
@@ -2249,9 +2270,9 @@ contact_form_block
         margin: -80px 2rem 3rem 2rem;
 
         padding: 0.3rem;
-        box-shadow: 0 20px 40px rgba(91, 107, 174, .15);
+        box-shadow: 0 20px 40px rgba(91, 107, 174, 0.15);
         border-radius: 16px;
-        transition: .25s ease-in-out;
+        transition: 0.25s ease-in-out;
         background: #fff;
       }
 
@@ -2260,7 +2281,7 @@ contact_form_block
       }
 
       &:hover {
-        box-shadow: 0 20px 40px rgba(91, 107, 174, .15);
+        box-shadow: 0 20px 40px rgba(91, 107, 174, 0.15);
 
         .blog_post_title,
         p {
@@ -2313,7 +2334,6 @@ contact_form_block
             color: #8c8c8c;
           }
         }
-
       }
     }
   }
