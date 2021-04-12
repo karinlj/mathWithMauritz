@@ -17,8 +17,8 @@ jQuery(document).ready(function ($) {
   });
 
   /*Mobile menu*/
-  /*when click on veggoburger...add or remove class */
-  $(".toggle_btn").click(function () {
+  /*when click on veggoburger, or..add or remove class */
+  $(".toggle_btn, .nav-mobile .button_link").click(function () {
     $(".nav-mobile").toggleClass("open");
     $(".toggle_btn").toggleClass("clicked");
     $("body").toggleClass("no_scroll");
@@ -26,7 +26,7 @@ jQuery(document).ready(function ($) {
 
   $(".nav-mobile ul li.menu-item-has-children").click(function (event) {
     event.stopPropagation();
-    $(this).children("ul").toggleClass("open");
+    $(this).children("ul").toggleClass("sub-menu-open");
   });
 
   /*Desktop*/

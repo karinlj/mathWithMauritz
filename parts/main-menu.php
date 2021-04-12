@@ -39,7 +39,6 @@ wp_nav_menu(array(
     'theme_location' => 'primary',
 ));
 ?>
-
         <?php $button_color = get_field('button_color');?>
         <ul class="sign_up">
             <li>
