@@ -7,8 +7,6 @@
   @return rgba(255, 255, 255, $opacity);
 }
 
-
-
 //För vertikal centrering
 @mixin translate($x, $y) {
   -webkit-transform: translate($x, $y);
@@ -40,28 +38,12 @@
   display: flex !important;
 }
 
-@mixin flex ($x, $y, $z) {
+@mixin flex($x, $y, $z) {
   -webkit-box-flex: $x $y $z;
   -webkit-flex: $x $y $z;
   -ms-flex: $x $y $z;
   flex: $x $y $z;
   max-width: $z;
-}
-
-@mixin flex-column() {
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: normal !important;
-  -webkit-flex-direction: column !important;
-  -ms-flex-direction: column !important;
-  flex-direction: column !important;
-}
-
-@mixin flex-row() {
-  -webkit-box-orient: horizontal !important;
-  -webkit-box-direction: normal !important;
-  -webkit-flex-direction: row !important;
-  -ms-flex-direction: row !important;
-  flex-direction: row !important;
 }
 
 //Kolumner
@@ -84,19 +66,6 @@
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
   break-inside: avoid;
-}
-
-//Hyphens
-
-@mixin hyphens() {
-  -webkit-hyphens: auto;
-  /* Saf 5.1+ */
-  -moz-hyphens: auto;
-  /* Fx 6.0+ */
-  -ms-hyphens: auto;
-  /* IE 10+ */
-  hyphens: auto;
-  /* None yet */
 }
 
 @mixin appearance-none() {

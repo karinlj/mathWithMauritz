@@ -3,99 +3,7 @@ Theme Name: math-with-mauritz
 Author: Karin Ljunggren
 */
 @import "_mixins.scss";
-
-//$xs-max: 575.9px;
-$xs-max: 480px;
-$sm-min: 576px;
-
-$sm-max: 767.9px;
-$md-min: 768px;
-
-$md-max: 991.9px;
-$lg-min: 992px;
-
-$lg-max: 1199.9px;
-$xl-min: 1200px;
-
-$xl-max: 1309px;
-$max-page-width: 1380px;
-
-//other
-$themefont: "Roboto", "Helvetica", sans-serif;
-$navfont: $themefont;
-$headingfont: $themefont;
-$themeBorder_radius: 3px;
-$themeBox_shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
-$linkhoverOpacity: 0.7;
-
-/*transparent nav*/
-$navcolor: #fff;
-$navBg_transp: transparent;
-
-/* colors */
-$themecolor: #373c49;
-$themeHeadingcolor: #21242c;
-$themecolorLighter: #a8adbd;
-$themeBorderColor: #ebebeb;
-$lightgrey: #fafafb;
-$themewarmgrey: #d9d1ce;
-$mediumgrey: #f1f1f4;
-$linkhoverOpacity: 0.7;
-
-//skyblue
-$themeskyblue: #1ac8ed;
-$themeskyblueBg: linear-gradient(
-  to right bottom,
-  #afe8f0,
-  #b9ebf2,
-  #c2eef3,
-  #cbf0f5,
-  #d4f3f7
-); // #afe8f0;
-$themeskyblueOverlay: linear-gradient(
-  to right bottom,
-  rgba(175, 232, 240, 0.95),
-  rgba(212, 243, 247, 0.85)
-);
-
-//green
-$themecolorGreen: #7fe052; //#62d97b;
-$themecolorGreenBg: linear-gradient(
-  to right bottom,
-  #b0e996,
-  #b8eba1,
-  #c0eeab,
-  #c8f0b6,
-  #d0f2c0
-);
-$themecolorGreenOverlay: linear-gradient(
-  to right bottom,
-  rgba(176, 233, 150, 0.85),
-  rgba(208, 242, 192, 0.95)
-);
-
-//darkgrey
-$themecolordarkgrey: linear-gradient(40deg, #111111 33%, #333333);
-
-$themecolorDarkGreyBg: linear-gradient(
-  to right bottom,
-  #111111,
-  #1d1d1d,
-  #282828,
-  #343434,
-  #404040
-);
-// linear-gradient(to right bottom, #111111, #1a1a1a, #222222, #2a2a2a, #333333);
-
-$themecolorDarkGreyOverlay: linear-gradient(
-  to right bottom,
-  rgba(17, 17, 17, 0.5),
-  rgba(64, 64, 64, 0.5)
-);
-
-$linkcolor: $themeskyblue;
-
-// #60d136;//johans // #93c178; // vermillion// #81b135; //grass  //#1b7b34; //palm // // #6bbaa7; //aqua  //#328cc1;  //#cdbb98; //$themecolorBlue;
+@import "variables.scss";
 
 /*********************************************
     overlay and background - header and sections
@@ -225,7 +133,9 @@ body {
   background: #fff;
   -webkit-font-smoothing: antialiased;
 }
-
+body.no_scroll {
+  overflow: hidden;
+}
 .content_container_page {
   min-height: 30rem;
 }
@@ -1224,29 +1134,23 @@ centered text
 //aspect ratio blocks
 .two_columns_blocks {
   display: flex;
-  @include flex-column;
-
+  flex-direction: column;
   @media all and (min-width: $lg-min) {
     flex-direction: row !important;
   }
-
   .aspect_wrapper {
     width: 100%;
-
     @media all and (min-width: $lg-min) {
       width: 50%;
     }
-
     &.text {
       @media all and (max-width: $md-max) {
         order: -1;
       }
     }
-
     .box {
       &.image {
         position: relative;
-
         &:before {
           position: absolute;
           top: 0;
@@ -1258,31 +1162,24 @@ centered text
           display: block;
         }
       }
-
       &.text {
         min-height: 400px;
-
         @media all and (min-width: $sm-min) {
           min-height: auto;
         }
       }
     }
-
     &:nth-of-type(odd) {
       //first half
-
       .box.text .text_part {
         //padding for the left .text-part
         padding: 1.5rem;
-
         @media all and (min-width: $sm-min) {
           padding-left: 2.25rem;
         }
-
         @media all and (min-width: $md-min) {
           padding-left: 3rem;
         }
-
         @media all and (min-width: $lg-min) {
           padding-left: calc(3.75rem);
           padding-right: 5rem;
@@ -1291,22 +1188,17 @@ centered text
         }
       }
     }
-
     &:nth-of-type(even) {
       //second half
-
       .box.text .text_part {
         //padding for the right .text-part
         padding: 1.5rem;
-
         @media all and (min-width: $sm-min) {
           padding-right: 2.25rem;
         }
-
         @media all and (min-width: $md-min) {
           padding-right: 3rem;
         }
-
         @media all and (min-width: $lg-min) {
           padding-right: calc(2.25rem + 15px);
           padding-left: 5rem;
@@ -1316,21 +1208,17 @@ centered text
       }
     }
   }
-
   .box.text {
     //for aspect ratio div
     width: 100%;
     position: relative;
     padding-bottom: 60%;
-
     @media all and (min-width: $sm-min) {
       padding-bottom: 43%;
     }
-
     @media all and (min-width: $md-min) {
       padding-bottom: 66.67%;
     }
-
     .text_part {
       //for aspect ratio div
       position: absolute;
@@ -1340,11 +1228,9 @@ centered text
       right: 0;
       @include d-flex;
       align-items: center;
-
       a {
         text-decoration: none !important;
       }
-
       @media all and (min-width: $xl-min) {
         //max-width half of container
         max-width: calc((1380px / 2) + 2.25rem);
@@ -1352,7 +1238,6 @@ centered text
     }
   }
 }
-
 /**********************
   two columns round image
 ***********************/

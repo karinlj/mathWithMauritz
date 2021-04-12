@@ -25,7 +25,7 @@ Author: Karin Ljunggren
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(to right bottom, rgba(17, 17, 17, 0.5), rgba(64, 64, 64, 0.5));
+  background: linear-gradient(to right bottom, rgba(17, 17, 17, 0.7), rgba(64, 64, 64, 0.7));
   content: "";
   display: block;
 }
@@ -156,6 +156,10 @@ body {
   padding: 0;
   background: #fff;
   -webkit-font-smoothing: antialiased;
+}
+
+body.no_scroll {
+  overflow: hidden;
 }
 
 .content_container_page {
@@ -1162,11 +1166,7 @@ centered text
 *******************************************************************************/
 .two_columns_blocks {
   display: flex;
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: normal !important;
-  -webkit-flex-direction: column !important;
-  -ms-flex-direction: column !important;
-  flex-direction: column !important;
+  flex-direction: column;
 }
 @media all and (min-width: 992px) {
   .two_columns_blocks {

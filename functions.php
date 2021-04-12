@@ -6,7 +6,6 @@ function mwm_script_resourses()
     //name, absolute path, dependencies, version, in_footer
 
     wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(), '1.12.4', true);
-
 }
 add_action('wp_enqueue_scripts', 'mwm_script_resourses');
 
@@ -22,7 +21,6 @@ function mwm_style_resourses()
     wp_enqueue_style('font-awesome-5', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css', array(), null);
 
     wp_enqueue_style('math-with-mauritz-custom', get_stylesheet_directory_uri() . '/css/custom.css');
-
 }
 add_action('wp_enqueue_scripts', 'mwm_style_resourses');
 
@@ -40,26 +38,30 @@ function add_scripts()
 {
     wp_register_script('custom_script', home_url() . '/wp-content/themes/math-with-mauritz/js/custom_script.js', array('jquery'));
     wp_enqueue_script('custom_script');
-
 }
 add_action('wp_enqueue_scripts', 'add_scripts');
 
-function favicon()
-{?>
-
-<!-- <link rel="apple-touch-icon" sizes="57x57"
-  href="<?php echo get_stylesheet_directory_uri(); ?>/icon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32"
-  href="<?php echo get_stylesheet_directory_uri(); ?>/icon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16"
-  href="<?php echo get_stylesheet_directory_uri(); ?>/icon/favicon-16x16.png">
-<link rel="manifest" href="<?php echo get_stylesheet_directory_uri(); ?>/icon/site.webmanifest">
-<link rel="mask-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/icon/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff"> -->
+function favicon() {?>
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 
 <?php }
-add_action('wp_head', 'favicon', 99);
+    add_action('wp_head', 'favicon', 99);
 
 //Theme support
 function mwm_theme_setup()
@@ -70,7 +72,6 @@ function mwm_theme_setup()
     add_image_size('small-thummwmail', 230, 144, true);
     add_image_size('normal-thummwmail', 320, 380, true);
     add_image_size('large-thummwmail', 500, 375, true);
-
 }
 add_action('after_setup_theme', 'mwm_theme_setup');
 

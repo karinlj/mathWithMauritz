@@ -1,0 +1,90 @@
+//$xs-max: 575.9px;
+$xs-max: 480px;
+$sm-min: 576px;
+
+$sm-max: 767.9px;
+$md-min: 768px;
+
+$md-max: 991.9px;
+$lg-min: 992px;
+
+$lg-max: 1199.9px;
+$xl-min: 1200px;
+
+$xl-max: 1309px;
+$max-page-width: 1380px;
+
+//other
+$themefont: "Roboto", "Helvetica", sans-serif;
+$navfont: $themefont;
+$headingfont: $themefont;
+$themeBorder_radius: 3px;
+$themeBox_shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
+$linkhoverOpacity: 0.7;
+
+/*transparent nav*/
+$navcolor: #fff;
+$navBg_transp: transparent;
+
+/* colors */
+$themecolor: #373c49;
+$themeHeadingcolor: #21242c;
+$themecolorLighter: #a8adbd;
+$themeBorderColor: #ebebeb;
+$lightgrey: #fafafb;
+$themewarmgrey: #d9d1ce;
+$mediumgrey: #f1f1f4;
+$linkhoverOpacity: 0.7;
+
+//skyblue
+$themeskyblue: #1ac8ed;
+$themeskyblueBg: linear-gradient(
+  to right bottom,
+  #afe8f0,
+  #b9ebf2,
+  #c2eef3,
+  #cbf0f5,
+  #d4f3f7
+); // #afe8f0;
+$themeskyblueOverlay: linear-gradient(
+  to right bottom,
+  rgba(175, 232, 240, 0.95),
+  rgba(212, 243, 247, 0.85)
+);
+
+//green
+$themecolorGreen: #7fe052; //#62d97b;
+$themecolorGreenBg: linear-gradient(
+  to right bottom,
+  #b0e996,
+  #b8eba1,
+  #c0eeab,
+  #c8f0b6,
+  #d0f2c0
+);
+$themecolorGreenOverlay: linear-gradient(
+  to right bottom,
+  rgba(176, 233, 150, 0.85),
+  rgba(208, 242, 192, 0.95)
+);
+
+//darkgrey
+$themecolordarkgrey: linear-gradient(40deg, #111111 33%, #333333);
+$themecolorDarkGreyBg: linear-gradient(
+  to right bottom,
+  #111111,
+  #1d1d1d,
+  #282828,
+  #343434,
+  #404040
+);
+// linear-gradient(to right bottom, #111111, #1a1a1a, #222222, #2a2a2a, #333333);
+$themecolorDarkGreyOverlay: linear-gradient(
+  to right bottom,
+  rgba(17, 17, 17, 0.7),
+  rgba(64, 64, 64, 0.7)
+);
+
+$linkcolor: $themeskyblue;
+
+// #60d136;//johans // #93c178; // vermillion// #81b135; //grass  //#1b7b34; //palm // // #6bbaa7; //aqua  //#328cc1;  //#cdbb98; //$themecolorBlue;
