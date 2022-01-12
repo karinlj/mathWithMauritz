@@ -27,7 +27,7 @@ add_action('wp_enqueue_scripts', 'mwm_style_resourses');
 function google_fonts()
 {
     //Av någon anledning knasar det med wp_enqueue_script
-    ?>
+?>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
 
 <?php
@@ -41,7 +41,8 @@ function add_scripts()
 }
 add_action('wp_enqueue_scripts', 'add_scripts');
 
-function favicon() {?>
+function favicon()
+{ ?>
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -61,7 +62,7 @@ function favicon() {?>
 <meta name="theme-color" content="#ffffff">
 
 <?php }
-    add_action('wp_head', 'favicon', 99);
+add_action('wp_head', 'favicon', 99);
 
 //Theme support
 function mwm_theme_setup()
@@ -120,3 +121,18 @@ if (function_exists('acf_add_options_page')) {
         'position' => 3.33,
     ));
 }
+function my_acf_admin_head()
+{ ?>
+
+<script type="text/javascript">
+(function($) {
+    $(document).ready(function() {
+        $('.layout').addClass('-collapsed');
+        $('.acf-postbox').addClass('closed');
+    });
+})(jQuery);
+</script>
+<?php
+}
+
+add_action('acf/input/admin_head', 'my_acf_admin_head');

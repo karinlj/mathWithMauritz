@@ -235,7 +235,6 @@ h6 {
   font-family: $themefont;
   color: $themeHeadingcolor;
 }
-
 section {
   h2,
   h3,
@@ -243,7 +242,6 @@ section {
     margin-bottom: 1.2rem;
   }
 }
-
 p {
   font-size: 1rem;
   line-height: 1.7;
@@ -252,15 +250,12 @@ p {
 h1 {
   font-size: 2.5rem;
   font-weight: 500;
-
   @media all and (min-width: $md-min) {
     font-size: 2.9rem;
   }
-
   @media all and (min-width: $lg-min) {
     font-size: 3.1rem;
   }
-
   @media all and (min-width: $xl-min) {
     font-size: 3.3rem;
   }
@@ -269,15 +264,12 @@ h1 {
 h2 {
   font-size: 1.6rem;
   font-weight: 600;
-
   @media all and (min-width: $md-min) {
     font-size: 1.7rem;
   }
-
   @media all and (min-width: $lg-min) {
     font-size: 1.8rem;
   }
-
   @media all and (min-width: $xl-min) {
     font-size: 1.9rem;
   }
@@ -292,11 +284,9 @@ h3 {
   @media all and (min-width: $md-min) {
     font-size: 1.3rem;
   }
-
   @media all and (min-width: $lg-min) {
     font-size: 1.4rem;
   }
-
   @media all and (min-width: $xl-min) {
     font-size: 1.4rem;
   }
@@ -305,15 +295,12 @@ h3 {
 h4 {
   font-size: 1.1em;
   font-weight: 600;
-
   @media all and (min-width: $md-min) {
     font-size: 1.1em;
   }
-
   @media all and (min-width: $lg-min) {
     font-size: 1.2em;
   }
-
   @media all and (min-width: $xl-min) {
     font-size: 1.2em;
   }
@@ -322,11 +309,9 @@ h4 {
 h5 {
   font-size: 1em;
   font-weight: 600;
-
   @media all and (min-width: $md-min) {
     font-size: 1.1em;
   }
-
   @media all and (min-width: $xl-min) {
     font-size: 1.1em;
   }
@@ -335,11 +320,9 @@ h5 {
 h6 {
   font-size: 0.9em;
   font-weight: 600;
-
   @media all and (min-width: $md-min) {
     font-size: 0.9em;
   }
-
   @media all and (min-width: $xl-min) {
     font-size: 1em;
   }
@@ -386,7 +369,7 @@ a {
 .text_section,
 .post_text,
 .two_columns_round_image,
-.blurb_columns,
+.blurb_columns p,
 .two_columns_blocks,
 .footer_main {
   a {
@@ -916,38 +899,29 @@ nav {
     min-height: 600px;
   }
 }
-
 .header_small {
   min-height: 360px;
 }
-
 .header_items_section {
   padding: 0 calc(1.5rem - 15px) 4rem calc(1.5rem - 15px);
-
   @media all and (min-width: $sm-min) {
     padding: 0 calc(2.25rem - 15px) 4rem calc(2.25rem - 15px);
   }
-
   @media all and (min-width: $md-min) {
     padding: 0 calc(3rem - 15px) 4rem calc(3rem - 15px);
   }
-
   @media all and (min-width: $xl-min) {
     padding: 0 calc(3.75rem - 15px) 4rem calc(3.75rem - 15px);
   }
-
   .header_heading {
     color: #fff;
     margin-bottom: 1.5rem;
     text-align: center;
-
     @media all and (max-width: $xs-max) {
       text-align: center;
     }
-
     &.front {
       text-align: center;
-
       @media all and (min-width: $sm-min) {
         text-align: left;
       }
@@ -959,15 +933,12 @@ nav {
     color: #fff;
     margin-bottom: 1.5rem;
     text-align: center;
-
     @media all and (min-width: $md-min) {
       font-size: 1.4rem;
     }
-
     @media all and (min-width: $xl-min) {
       font-size: 1.5rem;
     }
-
     &.front {
       text-align: center;
 
@@ -976,18 +947,14 @@ nav {
       }
     }
   }
-
   .btn_wrapper {
     text-align: center;
-
     a.button_link {
       transition: 1s all ease-in-out;
       color: #fff;
-
       &.skyblue {
         background: $themeskyblue;
         border: 1px solid $themeskyblue;
-
         &:hover {
           color: $themeskyblue;
         }
@@ -996,12 +963,10 @@ nav {
       &.lightgreen {
         background: $themecolorGreen;
         border: 1px solid $themecolorGreen;
-
         &:hover {
           color: $themecolorGreen;
         }
       }
-
       &:hover {
         background: #fff;
         border: 1px solid #fff;
@@ -1037,7 +1002,6 @@ nav {
 *********************/
 .info_banner {
   //background and overlay: see scss section
-
   p {
     font-size: 1.1rem;
 
@@ -1045,69 +1009,61 @@ nav {
       font-size: 1.2rem;
     }
   }
-
   h2 {
     margin-bottom: 1.6rem;
     font-size: 1.9rem;
   }
-
   .link_wrapper {
     padding-top: 1rem;
   }
-
   .btn_wrapper {
     padding-top: 1rem;
   }
 }
-
 /********************************************
   two columns img or text on white background
 **********************************************/
 
 .two_columns_section {
   min-height: 300px;
-
   .column_row {
     padding-bottom: 4rem;
     display: flex;
     align-items: center;
     flex-direction: column;
-
     @media all and (min-width: $md-min) {
       flex-direction: row;
     }
-
     @media all and (min-width: $lg-min) {
       padding-bottom: 8rem;
     }
-
     .part {
       width: 100%;
-
       @media all and (min-width: $md-min) {
         width: 50%;
       }
-
       &.text {
         @media all and (max-width: $sm-max) {
           order: -1;
           padding: 1rem 0;
         }
-
         @media all and (min-width: $md-min) {
           padding: 0 2rem;
         }
-
         @media all and (min-width: $lg-min) {
           padding: 0 3rem;
         }
       }
-
       &.image {
         img {
           border-radius: $themeBorder_radius;
           box-shadow: $themeBox_shadow;
         }
+      }
+    }
+    &:last-child {
+      @media all and (min-width: $lg-min) {
+        padding-bottom: 4rem;
       }
     }
   }
@@ -1151,7 +1107,17 @@ centered text
     .box {
       &.image {
         position: relative;
-        &:before {
+        // &:before {
+        //   position: absolute;
+        //   top: 0;
+        //   right: 0;
+        //   bottom: 0;
+        //   left: 0;
+        //   background: rgba(0, 0, 0, 0.3);
+        //   content: "";
+        //   display: block;
+        // }
+        &.overlay-dark::before {
           position: absolute;
           top: 0;
           right: 0;
@@ -1247,25 +1213,22 @@ centered text
   justify-content: center;
   align-items: center;
   min-height: 400px;
-
   .text-part {
-    text-align: center;
+    @media all and (max-width: $sm-max) {
+      //text-align: center;
+    }
   }
-
   .image {
     img {
       max-width: 210px !important;
       margin: 0 auto;
       margin-bottom: 2rem;
-
       @media all and (min-width: $md-min) {
         max-width: 100% !important;
       }
-
       @media all and (max-width: $xs-max) {
       }
     }
-
     &.round {
       img {
         border: 5px solid #eee;
@@ -1634,31 +1597,25 @@ contact_form_block
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   @media all and (min-width: $lg-min) {
     height: 600px;
   }
-
   a {
     text-decoration: none !important;
   }
-
   .hero_heading {
     text-align: center;
     margin-bottom: 2rem;
     color: #fff;
   }
-
   .hero_text {
     text-align: center;
     max-width: 90%;
     color: #fff;
     margin: 1rem auto;
-
     @media all and (min-width: $lg-min) {
       max-width: 80%;
     }

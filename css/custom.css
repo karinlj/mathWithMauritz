@@ -434,7 +434,7 @@ a:hover {
 .text_section a,
 .post_text a,
 .two_columns_round_image a,
-.blurb_columns a,
+.blurb_columns p a,
 .two_columns_blocks a,
 .footer_main a {
   display: inline-block;
@@ -444,7 +444,7 @@ a:hover {
 .text_section a:before,
 .post_text a:before,
 .two_columns_round_image a:before,
-.blurb_columns a:before,
+.blurb_columns p a:before,
 .two_columns_blocks a:before,
 .footer_main a:before {
   opacity: 0.4;
@@ -462,7 +462,7 @@ a:hover {
 .text_section a:hover,
 .post_text a:hover,
 .two_columns_round_image a:hover,
-.blurb_columns a:hover,
+.blurb_columns p a:hover,
 .two_columns_blocks a:hover,
 .footer_main a:hover {
   opacity: 1;
@@ -471,7 +471,7 @@ a:hover {
 .text_section a:hover:before,
 .post_text a:hover:before,
 .two_columns_round_image a:hover:before,
-.blurb_columns a:hover:before,
+.blurb_columns p a:hover:before,
 .two_columns_blocks a:hover:before,
 .footer_main a:hover:before {
   width: 100%;
@@ -481,7 +481,7 @@ a:hover {
 .text_section a.arrow_link:after,
 .post_text a.arrow_link:after,
 .two_columns_round_image a.arrow_link:after,
-.blurb_columns a.arrow_link:after,
+.blurb_columns p a.arrow_link:after,
 .two_columns_blocks a.arrow_link:after,
 .footer_main a.arrow_link:after {
   content: "";
@@ -1149,6 +1149,11 @@ nav > .toggle_btn.clicked:hover > div {
   border-radius: 3px;
   box-shadow: 0 2px 20px 1px rgba(0, 0, 0, 0.1);
 }
+@media all and (min-width: 992px) {
+  .two_columns_section .column_row:last-child {
+    padding-bottom: 4rem;
+  }
+}
 
 /****************
 centered text 
@@ -1189,7 +1194,7 @@ centered text
 .two_columns_blocks .aspect_wrapper .box.image {
   position: relative;
 }
-.two_columns_blocks .aspect_wrapper .box.image:before {
+.two_columns_blocks .aspect_wrapper .box.image.overlay-dark::before {
   position: absolute;
   top: 0;
   right: 0;
@@ -1293,9 +1298,6 @@ centered text
   justify-content: center;
   align-items: center;
   min-height: 400px;
-}
-.two_columns_round_image .text-part {
-  text-align: center;
 }
 .two_columns_round_image .image img {
   max-width: 210px !important;

@@ -2,7 +2,6 @@
 //big hero image with text and optional linking
 
 if (get_row_layout() == 'hero_section') {
-
     $style = '';
     $hero_class = 'hero_section overlay-dark';
 
@@ -23,35 +22,35 @@ if (get_row_layout() == 'hero_section') {
 <section class="<?php echo $hero_class; ?>" <?php echo $style; ?>>
 
 
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
 
-        <?php
+                <?php
 if ($hero_text_link) {?>
-        <a href="<?php echo $hero_text_link; ?>">
-          <?php
+                <a href="<?php echo $hero_text_link; ?>">
+                    <?php
 }
 if ($hero_heading) {?>
 
-          <h2 class="hero_heading">
-            <?php echo $hero_heading ?>
-          </h2>
-          <?php
+                    <h2 class="hero_heading">
+                        <?php echo $hero_heading ?>
+                    </h2>
+                    <?php
 }
 if ($hero_text) {?>
 
-          <p class="hero_text">
-            <?php echo $hero_text ?>
-          </p>
-          <?php
+                    <p class="hero_text">
+                        <?php echo $hero_text ?>
+                    </p>
+                    <?php
 }
 
 if ($hero_text_link) {?>
-        </a>
-        <?php
+                </a>
+                <?php
 }?>
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
 </section>

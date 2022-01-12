@@ -1,0 +1,9 @@
+{
+    "require-dev": {
+        "giacocorsiglia/wordpress-stubs": "^5.1"
+    },
+    "require": {
+        "paulthewalton/acf-stubs": "^5.8",
+        "paulthewalton/acf-pro-stubs": "5.8.9.1"
+    }
+}
